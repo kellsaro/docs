@@ -1,0 +1,57 @@
+# Jekyll configuration precedence:
+# 1. Gruntfile task
+# 2. config.build.yml
+# 3. config.yml
+
+name: docs
+description: CeniHub Documentation
+author:
+  name: CenitHub
+  email: sanchojaf@gmail.com
+
+# Grunt handles images and assets.
+exclude: ['node_modules', 'img', 'css', 'js', 'fonts',
+          '**.png', '**.jpg', '**.jpeg', '**.gif', '**.webp', '**.svg', '**.ico']
+
+include: ['.htaccess']
+
+# Documentation Categories
+category-list: [General, API, Integrations, Data Definitions]
+
+# Keep as an empty string if served up at the root. If served up at a specific
+# path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
+baseurl: ''
+
+# Dates are not included in permalinks
+permalink: pretty
+
+# Syntax highlighting
+pygments: true
+
+# Since these are pages, it doesn't really matter
+future: true
+
+# Use the redcarpet Markdown renderer
+markdown: redcarpet
+redcarpet:
+    extensions: [
+        'no_intra_emphasis',
+        'fenced_code_blocks',
+        'autolink',
+        'strikethrough',
+        'superscript',
+        'with_toc_data',
+        'tables',
+        'hardwrap'
+    ]
+
+exclude:
+ - config
+ - unicorn.rb
+ - README.md
+ - Procfile
+ - Gemfile
+ - Gemfile.lock
+ - config.ru
+ - vendor
+ - app.json
