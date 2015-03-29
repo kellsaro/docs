@@ -2,7 +2,7 @@
 title: Quiet Logistics Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 10
 ---
@@ -28,6 +28,7 @@ This only means that the message was successfully placed on the SQS queue and th
 ####Request
 
 ---purchase_order_new.json---
+
 ```json
 {
   "message": "purchase_order.new",
@@ -172,6 +173,7 @@ This only means that the message was successfully placed on the SQS queue and S3
 
 #### Request
 ---shipment_order.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",
@@ -346,6 +348,7 @@ Polls a SQS queue for incoming messages sent by Quiet Logistics.
 
 ### Request
 ---quiet_logistics_messages_poll.json---
+
 ```json
 
 {
@@ -468,6 +471,7 @@ Retrieves a document from a Quiet Logistics S3 bucket. The response message will
 Indicates that a purchase order was received by Quiet Logistics.
 
 ---purchase_order_received.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Integrations
+title: Introduction
 categories: Integrations
 resource: true
 description: Connect to internet services.
@@ -11,6 +11,10 @@ index_title: Integrations
 order: 1
 ---
 
-# Coming Soon!
+# Integrations
 
-Product walk-throughs and tutorials.
+Special thanks to Wombat for making many [integration codes](/integrations/amazon_integration "Integration code repo") open sources.
+
+[Mandrill integration](/integrations/mandrill_integration  "Mandrill integration"). 
+
+[Twilio integration](/integrations/twilio_integration  "Twilio integration"). 

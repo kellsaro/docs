@@ -2,7 +2,7 @@
 title: Amazon Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 1
 ---
@@ -35,6 +35,7 @@ Returns all new orders created in the Amazon store since the `amazon.last_update
 ####Request
 
 ---amazon_order_poll.json---
+
 ```json
 {
   "message": "amazon:order:poll",
@@ -57,6 +58,7 @@ Returns all new orders created in the Amazon store since the `amazon.last_update
 #### Response
 
 ---order_import.json---
+
 ```json
 {
   "message_id": "1234567",
@@ -183,6 +185,7 @@ Returns a specific order from Amazon store filtered by `amazon_order_id`.
 ####Request
 
 ---amazon_import_by_number.json---
+
 ```json
 {
   "message": "amazon:import:by_number",
@@ -206,7 +209,9 @@ Returns a specific order from Amazon store filtered by `amazon_order_id`.
 #### Response
 
 ---order_import.json---
+
 ```json
+
 {
   "message_id": "1234567",
   "messages": [
@@ -329,6 +334,7 @@ Confirm an order inside of Amazon as shipped using Amazon's MWS Feeds API. This 
 ####Request
 
 ---shipment_confirm.json---
+
 ```json
 {
   "message": "shipment:confirm",
@@ -385,6 +391,7 @@ Confirm an order inside of Amazon as shipped using Amazon's MWS Feeds API. This 
 #### Response
 
 ---amazon_feed_status.json---
+
 ```json
 {
   "message_id": "123456",
@@ -406,6 +413,7 @@ Check the status of a submitted feed to see if it was successfully processed.
 ####Request
 
 ---amazon_feed_status.json---
+
 ```json
 {
   "message_id": "!23456",
@@ -428,6 +436,7 @@ Check the status of a submitted feed to see if it was successfully processed.
 #### Response
 
 ---notification_info.json---
+
 ```json
 {
   "message_id": "123456",

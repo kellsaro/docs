@@ -2,7 +2,7 @@
 title: VPD Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 18
 ---
@@ -20,6 +20,7 @@ Send's shipment details to VPD.
 #### Request
 
 ---shipment_ready.json---
+
 ```json
 {
     "message_id": "51af1dc5fe53543f1200f519",
@@ -121,8 +122,8 @@ Once shipments have be packaged, and collected by the delivery service you can p
 #### Request
 
 ---vpd_shipment_pickup_poll.json---
-```json
 
+```json
 {
   "message_id": "51af1dc5fe53543f1200f519",
   "message": "vpd:shipment:pickup:poll",
@@ -140,6 +141,7 @@ Once shipments have be packaged, and collected by the delivery service you can p
 #### Response
 
 ---vdp_shipment_pickup_response.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",
@@ -163,8 +165,8 @@ Once shipments have been confirmed as dispatched by the delivery service you can
 #### Request
 
 ---vpd_shipment_confirmation_poll.json---
-```json
 
+```json
 {
   "message_id": "51af1dc5fe53543f1200f519",
   "message": "vpd:shipment:confirmation:poll",
@@ -182,6 +184,7 @@ Once shipments have been confirmed as dispatched by the delivery service you can
 #### Response
 
 ---vdp_shipment_confirmation_response.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",
@@ -207,6 +210,7 @@ You can query the VPD stock levels for given SKU's by passing `stock:query` mess
 #### Request
 
 ---vp_stock_query_resquest.json---
+
 ```json
 
 {
@@ -227,6 +231,7 @@ You can query the VPD stock levels for given SKU's by passing `stock:query` mess
 #### Response
 
 ---vdp_shipment_confirmation_response.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",

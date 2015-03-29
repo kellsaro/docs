@@ -2,7 +2,7 @@
 title: Mandrill Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 9
 ---
@@ -38,6 +38,7 @@ The Mandrill Integration sends a collection of Merge Variables which can be used
 This Service should be triggered when an order is completed, or when an existing order is updated. When the Endpoint receives a validly-formatted Message to the `/order_confirmation` URL, it passes the order's information on to Mandrill's API. Mandrill then sends an email to the user using its matching stored [template](#template), confirming that their order was received.
 
 <pre class="headers"><code>A new order is created</code></pre>
+
 ```json
 {
   "message": "order:new",
@@ -50,6 +51,7 @@ This Service should be triggered when an order is completed, or when an existing
 ```
 
 <pre class="headers"><code>An order is updated</code></pre>
+
 ```json
 {
   "message": "order:updated",
@@ -72,6 +74,7 @@ This Service should be triggered when an order is completed, or when an existing
 
 
 #### Example Template
+
 ```html
 <h1>*|ORDER_NUMBER|*</h1>
 

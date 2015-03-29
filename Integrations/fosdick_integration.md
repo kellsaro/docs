@@ -2,7 +2,7 @@
 title: Fosdick Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 7
 ---
@@ -24,6 +24,7 @@ Send a shipment to Fosdick .
 #### Request
 
 ---shipment_ready.json---
+
 ```json
 {
     "message_id": "51af1dc5fe53543f1200f519",
@@ -118,6 +119,7 @@ Check an S3 bucket to see if there are any shipment result files ready to be dow
 #### Request
 
 ---fosdick_shipment_results_poll.json---
+
 ```json
 
 {
@@ -138,6 +140,7 @@ Check an S3 bucket to see if there are any shipment result files ready to be dow
 #### Response
 
 ---shipment_confirm.json---
+
 ```json
 {
   "message_id": "51af1dc5fe53543f1200f519",

@@ -2,7 +2,7 @@
 title: SMTP Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 14
 ---
@@ -41,6 +41,7 @@ We use the [pony](https://github.com/benprew/pony) gem internally and always con
 ####Request
 
 ---notification_info.json---
+
 ```json
 {
   "store_id":"1234",
@@ -92,6 +93,7 @@ We use the [pony](https://github.com/benprew/pony) gem internally and always con
 #### Response
 
 ---success_response.json---
+
 ```json
 {
   "message_id":"abc",
@@ -107,6 +109,7 @@ We use the [pony](https://github.com/benprew/pony) gem internally and always con
 When an exception occures when sending the email we will catch the exception and send an error_response. Any exception that comes up will end up in the error_response. That way it's easy to find out what happend. For convenience we also send back all the parameters used while the error occured.
 
 ---error_response.json---
+
 ```json
 {
   "message_id":"abc",

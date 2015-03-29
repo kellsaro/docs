@@ -55,3 +55,14 @@ exclude:
  - config.ru
  - vendor
  - app.json
+ - .bowerrc
+ - .csslintrc
+ - .editorconfig
+ - .gitattributes
+ - .jshintrc
+ - Capfile
+ - Gruntfile.js
+ - _config.build.yml
+ - bower.json
+ - package.json
+ 

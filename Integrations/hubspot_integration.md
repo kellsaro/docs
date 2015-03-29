@@ -2,7 +2,7 @@
 title: HubSpot Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 9
 ---
@@ -55,6 +55,7 @@ Processes incoming orders that are new, updated, or canceled and either creates 
 #### Request
 
 ---order_new.json---
+
 ```json
 {
   "message": "order:new",
@@ -137,6 +138,7 @@ Processes incoming orders that are new, updated, or canceled and either creates 
 This type of message is generated when an existing order is updated.
 
 ---order_updated.json---
+
 ```json
 {
   "message": "order:updated",
@@ -246,6 +248,7 @@ This type of message is generated when an existing order is updated.
 This type of message is sent whenever an order is canceled, whether by the customer or by a store administrator.
 
 ---order_canceled.json---
+
 ```json
 {
   "message": "order:canceled",

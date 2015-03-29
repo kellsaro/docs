@@ -2,7 +2,7 @@
 title: MailChimp Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 8
 ---
@@ -26,6 +26,7 @@ Subscribe an e-mail to your MailChimp list
 ### order:new
 
 ---order_new.json---
+
 ```json
 {
   "message": "order:new",
@@ -73,6 +74,7 @@ Subscribe an e-mail to your MailChimp list
 This type of message is generated when an existing order is updated.
 
 ---order_updated.json---
+
 ```json
 {
   "message": "order:updated",

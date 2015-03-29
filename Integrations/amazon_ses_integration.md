@@ -2,7 +2,7 @@
 title: Amazon Simple Email Service (SES) Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 2
 ---
@@ -26,6 +26,7 @@ Send e-mail information to Amazon Simple Email Service.
 ### email:send
 
 ---send_email.json---
+
 ```json
 {
    "message": "email:send",

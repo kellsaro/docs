@@ -18,11 +18,39 @@
         <!-- endbuild -->
 
     </head>
-    <body>
+    <body>   
         <div class="main">
           <div class="site-content">
+            <div id='title' class="sc__lead clr-primary">
+              <div class="navbar-header" >
+                 <!--
+                <div class="sidebar-toggle" >
+                  <div class="line"></div>
+                  <div class="line"></div>
+                  <div class="line"></div>
+                </div>
+                 -->   
+                <h3><a class="navbar-brand" href="http://www.cenitsaas.com">Cenit SaaS</a></h3><br/><br/>
+              </div>
+
+              <div class="sc__lead-mid">
+                <h1>{{ page.categories }}: {{ page.title }} </h1>
+              </div>
+            </div>
+            
+            
             <div class="docs">
               <div class="content">
+                <a href="/"> Documentation </a> 
+                
+                {% if page.categories %}
+                  >> <a href="/{{ page.categories }}"> {{ page.categories }} </a>
+                {% endif %}
+
+                {% if page.title %}
+                  >> {{ page.title }}
+                {% endif %}
+                
                 {{ content }}
               </div>
             </div>

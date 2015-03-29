@@ -2,7 +2,7 @@
 title: RLM Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 11
 ---
@@ -67,6 +67,7 @@ In the endpoint we have access to this hash through the `@config` variable. We c
 #### Request
 
 ---shipment_ready.json---
+
 ```json
 {
   "message":"shipment:ready",
@@ -871,6 +872,7 @@ Files are generated in a temp location on the server the endpoint is running on.
 #### Request
 
 ---flush_message.json---
+
 ```json
 {
   "message":"rlm:line:flush",
@@ -887,6 +889,7 @@ Files are generated in a temp location on the server the endpoint is running on.
 ```
 
 #### Response
+
 ```json
 {
   "message_id":"52263b13b43957220e004c1a",

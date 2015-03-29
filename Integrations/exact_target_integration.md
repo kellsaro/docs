@@ -2,7 +2,7 @@
 title: ExactTarget Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 6
 ---
@@ -28,6 +28,7 @@ Preprocessors could be used to modify the payload to include the "email" hash th
 ### order:new
 
 ---send_email.json---
+
 ```json
 {
    "message": "order:new",

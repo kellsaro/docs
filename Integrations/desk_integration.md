@@ -2,7 +2,7 @@
 title: Desk Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 4
 ---
@@ -24,6 +24,7 @@ Imports a notification message of type "notification:error" or "notification:war
 #### Request
 
 ---notification:error---
+
 ```json
 {
   "message": "notification:error",
@@ -36,6 +37,7 @@ Imports a notification message of type "notification:error" or "notification:war
 ```
 
 ---notification:warning---
+
 ```json
 {
   "message": "notification:warning",
@@ -62,6 +64,7 @@ Imports a notification message of type "notification:error" or "notification:war
 #### Response
 
 ```json
+
 {
   "message_id": "518726r84910515003",
   "notifications": [

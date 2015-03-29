@@ -1,50 +1,56 @@
 ---
 layout: page
-title: Overview
+title: Introduction
 categories: General
 resource: true
 description: Basic blocks and introduction.
-image: /img/general.jpg
+image: /img/general.png
 type: parent
 order: 1
 index_order: 1
 index_title: General
 ---
 
-# Cenit Integration Guide
+# Introduction
 
-The Cenit hub connects your endpoints to third-party applications and services, and provides a reliable and managed platform for you to build your own custom integrations.
+CenitHub is an **open source hub for data and business integrations**. This guide will give you a high level introduction to the CenitHub, and provide details on all the features currently available.
 
-Leveraging the power of our hub is simple as it uses basic HTTP calls to relay messages to your system as they occur within a Cenit storefront. This form of integration is often referred to as Web Hooks or HTTP Callbacks.
+##Overview
 
-This guide will give you a high level introduction to the Cenit hub, and provide details on all the features currently available.
+The hub is a messaging system that pulls events as they happen from your endpoints, and using it’s customizable routing and decision layer helps to direct the messages to independent integrations.
 
-[Overview](/general/overview.html "Overview"). 
+These integrations connect to key line of business applications for accounting, logistics, customer support and much more.
 
-[Configuration](/general/configuration.html "Configuration"). 
+Special thanks to Wombat for making many integration codes open sources.
 
-[Consuming](/general/consuming.html "Consuming"). 
+With Cenit are could benefit organizations that has the next kind of systems:
 
-[Mapping basics](/general/mapping_basics.html "Mapping basics"). 
+Special thanks to Wombat for making many [integration codes]( https://github.com/wombat.git "integration codes").
 
-[Message overview](/general/messages_overview.html "Message overview").
+With Cenit are could benefit organizations that has the next kind of systems:
 
-[Terminology](/general/terminology.html "Terminology"). 
+**ERP /Accounting  / Customer Service / Customer Support / Credit Card Processing / CRM / Ecommerce / Email /  Fulfillment / Inventory / Marketing / Logistics / POS / Shipping / Store**
 
-[Supported integrations](/general/generaled_integrations.html "Supported integrations"). 
+and want make integrations between them or with third party services om internet. 
 
-[Mapping basics](/general/mapping_basics.html "Mapping basics"). 
+This systems can interchange json objects using straight forward approach, the objects are register using Schemas. Can exchange JSON, XML and EDI documents with a rich router logic for build custom Flows to connect the Hub with different endpoints and third party services. CenitHub provides a rich router logic for message and manage custom events that trigger flows with a wide logic behind. 
 
-[Message basics](/general/message_basics.html "Message basics"). 
+```
+Zenith (es: cenit) refers to an imaginary point directly "above" a particular location, on the imaginary celestial sphere.
+```
 
-[Reporting](/general/reporting.html "Reporting"). 
+##Features
 
-[Push](/general/push.html "Push"). 
+* Open source and community friendly. 
 
-[Custom Attributes](/general/customization/custom_attributes.html "Custom attributes"). 
+* Router Logic for redirect documents to different endpoints.
 
-[Custom Integrations](/general/customization/custom_integrations.html "Custom integrations"). 
+* Powerful transformation tools.
 
-[Custom Messages](/general/customization/custom_messages.html "Custom messages"). 
+* Manage Data Specifications. Load dynamic Data Types from Schemas. 
 
-[Testing Tools](/general/customization/testing_tools.html "Testing tools"). 
+* Setup API for remote configuration.
+
+* Support exchange of multiple format XML, JSON, and EDI.
+
+* Multi-tenancy with shared-schema database.

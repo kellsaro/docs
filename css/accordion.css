@@ -9,12 +9,18 @@
 
 #title.sc__lead .sc__lead-mid {
   /*width: 1920px;*/
-  /*display: block;*/
+  display: block;
+}
+.navbar-header {
+  /*float: left;*/
 }
 
 .navbar-header h3 a {
   /*width: 1920px;*/
+  float: left;
   color: #fff;
+  display: block;
+  padding-left: 300px;
 }
 
 .sidebar-toggle {

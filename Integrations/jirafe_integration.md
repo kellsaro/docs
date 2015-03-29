@@ -2,7 +2,7 @@
 title: Jirafe Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 7
 ---
@@ -28,6 +28,7 @@ Send shopping cart data to Jirafe.
 ### cart:new, cart:updated
 
 ---import_cart.json---
+
 ```json
 {
   "message": "cart:new",
@@ -86,6 +87,7 @@ available for that order.
 ### order:new, order:updated
 
 ---new_order.json---
+
 ```json
 {
   "message": "order:new",

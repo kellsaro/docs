@@ -2,7 +2,7 @@
 title: Simparel Endpoint
 layout: page
 description:
-categories: Help & Support
+categories: Integrations
 resource: true
 order: 13
 ---
