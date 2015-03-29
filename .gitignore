@@ -32,6 +32,11 @@ Thumbs.db
 *.tar
 *.zip
 
+
+_site
+.ruby-version
+.sass-cache/*
+
 # Ignore for Yeoman-Jekyll projects #
 _bower_components
 dist
