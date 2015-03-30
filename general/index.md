@@ -54,3 +54,15 @@ Zenith (es: cenit) refers to an imaginary point directly "above" a particular lo
 * Support exchange of multiple format XML, JSON, and EDI.
 
 * Multi-tenancy with shared-schema database.
+
+##Frameworks and tools
+
+* Rails 4.x.x
+
+* Mongoid
+
+* RailsAdmin for build the complete UI.
+
+* RabbitMQ for internal pipeline for exchange messages.
+
+* Devise and CanCan.
