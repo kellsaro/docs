@@ -44,7 +44,7 @@
                 <a href="/"> Documentation </a> 
                 
                 {% if page.categories %}
-                  >> <a href="/{{ page.categories }}"> {{ page.categories }} </a>
+                  >> <a href="/{{ page.categories | downcase }}"> {{ page.categories }} </a>
                 {% endif %}
 
                 {% if page.title %}
