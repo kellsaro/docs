@@ -21,6 +21,8 @@ You need a Twilio account, you can create a free test account at www.twilio.com/
 
 Then you need your Test Account Sid and Test Auth Token.
 
+![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
+
 ***
 The source code for the [Twilio Integration](https://github.com/wombat/twilio_integration "Twilio integration") is available on Github.
 
@@ -62,36 +64,55 @@ Sample Json SMS:
 }
 ```
 
+Request for Twilio Integration:
+
+
+```json
+{
+"parameters": {
+    "twilio_account_sid": "twqyewe7367wuyeqyu767326",
+    "twilio_auth_token": "36473647hsdjdsjahd777828738"
+},
+"sms":{"from":"+155555555",
+        "message":"Welcome Joe!",
+        "phone":"+157845847548"
+      },
+"request_id":"5519811a43454e16463a0100"
+}
+```
+ 
 ## Flow samples
 
 ### SMS Order
 
 Sends a SMS for every new order that arrive to Cenit.
 
-### SMS Ship
+#### Translator
 
-Sends a SMS every time a shipment ships.
+![Convert Order to SMS](/img/integrations/twilio/convert_order_sms.jpg)
 
-#### Parameters
+#### Flow
 
-Both services need the same parameters
+![Convert Order to SMS for every new order](/img/integrations/twilio/flow_order_sms.jpg)
 
-| Name | Value | Example |
-| :----| :-----| :------ |
-| twilio.account_sid | The SID value provided by Twilio on your account | regw45432542ragregewrgewrg4r |
-| twilio.auth_token | The Auth token provided by Twilio on your account | 234534regegrewgwergergwegeg |
-| twilio.phone_from | The phone number provided by Twilio on your account | 315 4566 3455 |
-| twilio.address_type | Specify which address should phone number be picked from | billing |
+### SMS Customer
 
-#### Response
+Sends a SMS for every new Customer that create on Cenit.
 
-```json
-{
-  "message_id": "518726r84910515003",
-  "notifications": [
-    "level": "info",
-    "subject": "SMS confirmation sent to +55 86 8869 9999",
-    "description": "Hey Bob! Your order R4534543535 has been received."
-  ]
-}
-```
+#### Translator
+
+![Convert Customer to SMS](/img/integrations/twilio/convert_customer_sms.jpg)
+
+#### Flow
+
+![Convert Customer to SMS for every new order](/img/integrations/twilio/flow_customer_sms.jpg)
+
+#### Send SMS with Twilio
+
+All data types, translators and flows required to send sms are available in Shared Collection Twilio Integration
+
+![Send SMS flow](/img/integrations/twilio/flow_send_sms.png)
+
+#### Notification
+
+![Notification](/img/integrations/twilio/twilio_notification.png)
