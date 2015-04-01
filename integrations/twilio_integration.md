@@ -21,6 +21,8 @@ You need a Twilio account, you can create a free test account at www.twilio.com/
 
 Then you need your Test Account Sid and Test Auth Token.
 
+###Pull Collection
+
 ![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
 
 ***
@@ -83,9 +85,23 @@ Request for Twilio Integration:
  
 ## Flow samples
 
-### SMS Order
+### Send SMS for new Order  
 
 Sends a SMS for every new order that arrive to Cenit.
+
+#### Translator
+
+![Export Order to Twilio SMS Request ](/img/integrations/twilio/export_order_to_sms.png)
+
+#### Flow
+
+Send SMS with Twilio Webhook 
+
+![Convert Order to SMS for every new order](/img/integrations/twilio/send_sms.png)
+
+### Convert Order to SMS
+
+Convert order to SMS for every new order that arrive to Cenit.
 
 #### Translator
 
@@ -95,9 +111,9 @@ Sends a SMS for every new order that arrive to Cenit.
 
 ![Convert Order to SMS for every new order](/img/integrations/twilio/flow_order_sms.jpg)
 
-### SMS Customer
+### Convert Customer to SMS
 
-Sends a SMS for every new Customer that create on Cenit.
+Convert customer to SMS for every new Customer that create on Cenit.
 
 #### Translator
 
