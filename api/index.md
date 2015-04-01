@@ -607,7 +607,7 @@ In order to securely push Data to Wombat you will need to include the following 
 
 | Name                    | Description               |
 | :-----------------------| :-------------------------|
-| **X-Hub-Store	The**      | The identifier for the store you are pushing to.
+| **X-Hub-Store The**      | The identifier for the store you are pushing to.
 | **X-Hub-Access-Token**  | The secure access token associated with your store.
 
 ###Command line example
