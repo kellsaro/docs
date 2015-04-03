@@ -19,10 +19,20 @@ Special thanks to Wombat for making many [integration codes](/integrations/amazo
 
 [Overview](/general/overview ). 
 
+[Terminology](/general/terminology ). 
+
 [Webhooks](/general/webhooks ). 
 
 [Events](/general/events ). 
 
-[Custom integrations](/general/custom_integrations  "Custom integrations"). 
+[Custom integrations](/general/custom_integrations ). 
+
+[Endpoint authentication](/general/endpoint_authentication ). 
+
+[Multi-tenancy](/general/multitenancy ). 
 
 [Deploy with Nginx and Unicorn](/general/deploy ). 
+
+[Style conventions](/general/style_conventions ). 
+
+[Contributing to code](/general/contributing_to_code)
