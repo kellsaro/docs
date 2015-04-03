@@ -9,7 +9,7 @@ image: /img/docs-api.png
 type: parent
 version: v2
 order: 1
-index_order: 2
+index_order: 3
 index_title: API
 
 ---
@@ -20,7 +20,7 @@ Allows you to send Data to CenitHub.
 
 There is a single API endpoint for sending push to CenitHub:
 
-https://push.cenithub.com
+https://cenithub.com/cenit
 
 ## PUSHING OBJECTS
 
@@ -603,11 +603,11 @@ The response will include the number of each type of object received.
 
 ###HEADERS
 
-In order to securely push Data to Wombat you will need to include the following values as part of the request header:
+In order to securely push Data to CenitHub you will need to include the following values as part of the request header:
 
 | Name                    | Description               |
 | :-----------------------| :-------------------------|
-| **X-Hub-Store The**      | The identifier for the store you are pushing to.
+| **X-Hub-Store**         | The identifier for the store you are pushing to.
 | **X-Hub-Access-Token**  | The secure access token associated with your store.
 
 ###Command line example
