@@ -8,3 +8,4 @@ gem 'unicorn'
 
 gem 'rdiscount'
 gem 'compass', '>=0.12'
+gem 'nanoc'

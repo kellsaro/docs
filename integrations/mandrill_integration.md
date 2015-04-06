@@ -15,18 +15,78 @@ order: 9
 * notify a user that their order was canceled, or
 * send shipment confirmation to a customer.
 
-## Requirements
+## Prerequisites
 
-In order to configure and use the [mandrill_endpoint](https://github.com/spree/mandrill_endpoint), you will need to first have:
+In order to configure and use [mandrill] (https://github.com/spree/mandrill_endpoint), you will need to first have:
 
 * an account on Mandrill,
 * an API token from that account, and
 * templates set up in your Mandrill account
 
-## Services
+##Pull Collection
 
+![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
+
+***
+The source code for the [Mandrill Integration](https://github.com/wombat/mandrill_integration "Mandrill integration") is available on Github.
+
+***
+
+###Configuration
+
+##Schema
+
+CenitHub has a pre-defined Email Schema:
+
+```json
+{ 
+   "title": "Email",
+   "type": "object",
+   "properties": {
+        "to": {"type": "string"},
+        "from": {"type": "string"},
+        "from_name": {"type": "string"},
+        "subject": {"type": "string"},
+        "body_text": {"type": "string"},
+        "body_html": {"type": "string"},
+        "template": {"type": "string"}
+   }
+ }
 ```
-To see thorough detail on how a particular JSON Message should be formatted, check out the [Notification Messages guide](notification_messages).
+
+Sample Json Email:
+
+```json
+{
+  "email": {
+    "from": "demo@example.com",
+    "to": "cenit@example.com",
+    "subject": "Order R12345 was shipped!",
+    "template": "order_confirmation"
+  }
+}
+```
+
+Request for Mandrill Integration:
+
+
+```json
+{
+   "request_id": "12e12341523e449c3000001",
+   "parameters": { "mandrill_api_key": "abc123"},
+   "email": {
+         "to": "cenit@example.com, odoo@example.com",
+         "from": "demo@example.com",
+         "subject": "Order R123456 was shipped!",
+         "template": "order_confirmation",
+         "variables": {
+            "customer.name": "John Smith",
+            "order.total": "99.99",
+            "order.tracking": "BSB4343"
+         }
+   }
+}
+
 ```
 
 ### Templates
@@ -65,12 +125,12 @@ This Service should be triggered when an order is completed, or when an existing
 
 #### Parameters
 
-| Name | Value | Example |
-| :----| :-----| :------ |
-| mandrill.api_key | Your Mandrill API Key | Aqws3958dhdjwb39 |
-| mandrill.order_confirmation.from | Email Address to Send From | orders@spreecommerce.com |
-| mandrill.order_confirmation.subject | Subject Line of Email | Your Order is Complete |
-| mandrill.order_confirmation.template | Mandrill Template to Fill In | order_confirmation |
+| Name                                  | Value                         | Example                   |
+| :----                                 | :-----                        | :------                   |
+| mandrill.api_key                      | Your Mandrill API Key         | Aqws3958dhdjwb39          |
+| mandrill.order_confirmation.from      | Email Address to Send From    | orders@spreecommerce.com  |
+| mandrill.order_confirmation.subject   | Subject Line of Email         | Your Order is Complete    |
+| mandrill.order_confirmation.template  | Mandrill Template to Fill In  | order_confirmation        |
 
 
 #### Example Template

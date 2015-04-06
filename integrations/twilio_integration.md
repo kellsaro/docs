@@ -1,5 +1,5 @@
 ---
-title: Twilio Integration
+title: Twilio Endpoint
 layout: page
 description:
 categories: Integrations
