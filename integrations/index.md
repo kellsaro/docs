@@ -17,4 +17,8 @@ Special thanks to Wombat for making many [integration codes](/integrations/amazo
 
 [Mandrill integration](/integrations/mandrill_integration  "Mandrill integration"). 
 
-[Twilio integration](/integrations/twilio_integration  "Twilio integration"). 
+[Twilio integration](/integrations/twilio_integration  "Twilio integration").
+
+[Mailchimp integration](/integrations/mailchimp_integration  "Mailchimp integration"). 
+
+[Tender integration](/integrations/tender_integration  "Tender integration"). 

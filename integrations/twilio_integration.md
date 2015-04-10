@@ -25,6 +25,12 @@ Then you need your Test Account Sid and Test Auth Token.
 
 ![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
 
+#### Parameters
+
+| Name | Value | Example |
+| :----| :-----| :------ |
+| tender.domain | Your Tender Domain | mywidgets |
+
 ***
 The source code for the [Twilio Integration](https://github.com/wombat/twilio_integration "Twilio integration") is available on Github.
 

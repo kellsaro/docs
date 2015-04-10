@@ -7,6 +7,8 @@ resource: true
 order: 16
 ---
 
+![Tender](/img/integrations/tender.png)
+
 ## Overview
 
 [Tender](http://www.tenderapp.com/) offers a customer service software platform. Integration with Tender allows you to create and process support discussions in support of your customer base.
@@ -21,33 +23,9 @@ The source code for the [Tender Endpoint](https://github.com/spree/tender_endpoi
 
 Imports a notification message of type "notification:error" or "notification:warning" and creates a Tender discussion for it.
 
-#### Request
+###Pull Collection
 
----notification:error---
-
-```json
-{
-  "message": "notification:error",
-  "message_id": "518726r84910515003",
-  "payload": {
-    "subject": "Product not in stock.",
-    "description": "Attempted to order a product that wasn't in stock."
-  }
-}
-```
-
----notification:warning---
-
-```json
-{
-  "message": "notification:warning",
-  "message_id": "518726r84910515103",
-  "payload": {
-    "subject": "Shipment was delayed.",
-    "description": "Shipment for order R123456789 was delayed due to weather."
-  }
-}
-```
+![Pull Tender Shared Collection](/img/integrations/tender/tender_config.jpg)
 
 #### Parameters
 
@@ -60,15 +38,63 @@ Imports a notification message of type "notification:error" or "notification:war
 | tender.category_id | The ID of the category the discussion should be created under | 777 |
 | tender.public | Should newly created discussions be public? Must be either true or false | true |
 
-#### Response
+###Configuration
+
+##Schema
+
+CenitHub has a pre-defined Ticket Schema:
 
 ```json
 {
-  "message_id": "518726r84910515003",
-  "notifications": [
-    "level": "info",
-    "subject": "TenderApp Discussion Created",
-    "description": "New TenderApp discussion 'Something went wrong' created at https://mywidgets.tenderapp.com/discussions/questions/4."
-  ]
+  "title": "Ticket",
+  "type": "object",
+  "properties": {
+    "subject": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
 }
+```
+
+Sample Json SMS:
+
+```json
+{
+  "sms": {
+        "subject": "Error sending sms",
+         "description": "Twilio integretion not OK"
+  }
+}
+```
+
+Request for Tender Integration:
+
+
+```json
+{ 
+   "request_id":  "12e12341523e449c3000001",
+   "parameters": {
+                "tender_domain": "openjaf",
+                "tender_api_key": "api-key",
+                "tender_author_name": "CENITHub",
+                "tender_author_email": "info@openjaf.com",
+                "tender_category_id": "85600",
+                "tender_public": "false"
+   }, 
+    "ticket": {
+                "subject": "Test request from Wombat Integration",
+                "description": "Test request from Wombat Integration"
+    }
+}
+```
+#### Response
+
+```json
+    {
+    "request_id": "12e12341523e449c3000001",
+    "summary": "New TenderApp discussion 'Example Ticket' created at https://openjaf.tenderapp.com/discussions/problems/12."
+    }
 ```

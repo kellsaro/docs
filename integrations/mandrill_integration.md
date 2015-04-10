@@ -7,6 +7,8 @@ resource: true
 order: 9
 ---
 
+![Mandrill](/img/integrations/mandrill.png)
+
 ## Overview
 
 [Mandrill](http://mandrill.com/) is a transactional email platform that you can use to automatically process your store's emails through the Spree Integrator. Mandrill could be called on any time you needed to, for example:
@@ -26,6 +28,12 @@ In order to configure and use [mandrill] (https://github.com/spree/mandrill_endp
 ##Pull Collection
 
 ![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
+
+#### Parameters
+
+| Name                                  | Value                         | Example                   |
+| :----                                 | :-----                        | :------                   |
+| mandrill.api_key                      | Your Mandrill API Key         | Aqws3958dhdjwb39          |
 
 ***
 The source code for the [Mandrill Integration](https://github.com/wombat/mandrill_integration "Mandrill integration") is available on Github.
@@ -75,15 +83,15 @@ Request for Mandrill Integration:
    "request_id": "12e12341523e449c3000001",
    "parameters": { "mandrill_api_key": "abc123"},
    "email": {
-         "to": "cenit@example.com, odoo@example.com",
-         "from": "demo@example.com",
-         "subject": "Order R123456 was shipped!",
-         "template": "order_confirmation",
-         "variables": {
-            "customer.name": "John Smith",
-            "order.total": "99.99",
-            "order.tracking": "BSB4343"
-         }
+             "to": "cenit@example.com, odoo@example.com",
+             "from": "demo@example.com",
+             "subject": "Order R123456 was shipped!",
+             "template": "order_confirmation",
+             "variables": {
+                    "customer.name": "John Smith",
+                    "order.total": "99.99",
+                    "order.tracking": "BSB4343"
+             }
    }
 }
 
@@ -122,16 +130,6 @@ This Service should be triggered when an order is completed, or when an existing
   }
 }
 ```
-
-#### Parameters
-
-| Name                                  | Value                         | Example                   |
-| :----                                 | :-----                        | :------                   |
-| mandrill.api_key                      | Your Mandrill API Key         | Aqws3958dhdjwb39          |
-| mandrill.order_confirmation.from      | Email Address to Send From    | orders@spreecommerce.com  |
-| mandrill.order_confirmation.subject   | Subject Line of Email         | Your Order is Complete    |
-| mandrill.order_confirmation.template  | Mandrill Template to Fill In  | order_confirmation        |
-
 
 #### Example Template
 
