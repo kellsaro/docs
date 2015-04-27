@@ -1,7 +1,7 @@
 ---
 
 layout: page
-title: Cenit API V1
+title: V1
 categories: API
 resource: true
 description: API for full remotly management.
