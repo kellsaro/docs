@@ -1,7 +1,7 @@
 ---
 
 layout: page
-title: Push API
+title: Cenit API V1
 categories: API
 resource: true
 description: API for full remotly management.
@@ -14,18 +14,80 @@ index_title: API
 
 ---
 
-# PUSH API
+# CenitHub API.v1
 
-Allows you to send Data to CenitHub.
+## Routes
 
-There is a single API endpoint for sending push to CenitHub:
+In Rails, a resourceful route provides a mapping between HTTP verbs and URLs to controller actions. 
 
-https://cenithub.com/cenit
+With the next `rake task` you could visualize the diffents routes for CenitHub api:
 
-## PUSHING OBJECTS
+```bash
+rake routes
+```
+
+| Prefix Verb             | URI Pattern                      | Controller#Action
+| :-----------------------| :--------------------------------|:--------------------
+| api_v1_push POST        | api/v1/push(.:format)            | api/v1/api#push
+| api_v1 GET              | /api/v1/:model(.:format)         | api/v1/api#index 
+| GET                     | /api/v1/:model/:id(.:format)     | api/v1/api#index 
+| DELETE                  | /api/v1/:model/:id(.:format)     | api/v1/api#destroy
 
 
-###Create an Object
+##Authentication
+
+###Headers 
+
+In order to securely you will need to include the following values as part of the request header:
+
+| Name                    | Description               |
+| :-----------------------| :-------------------------|
+| **X-Hub-Store**         | The identifier for the store you are pushing to.
+| **X-Hub-Access-Token**  | The secure access token associated with your store.
+
+Is possible use user credentials too:
+
+| Name                    | Description               |
+| :-----------------------| :-------------------------|
+| **'X-User-Access-Key**  | The identifier for the user account.
+| **X-User-Access-Token** | The secure access token associated with your user account.
+
+
+
+###Command line example
+
+The following example shows how you can include the headers when posting from the command line.
+
+```
+$ curl --data @./objects.json -i -X POST \
+    -H 'X-Hub-Store: YOUR_STORE_ID' \ 
+    -H 'X-Hub-Access-Token: YOUR_ACCESS_TOKEN' \
+    -H 'Content-type:application/json' 
+    http://www.cenithub.com/api/v1/push
+```
+or
+
+```
+$ curl --data @./objects.json -i -X POST \
+    -H 'X-User-Access-Key: YOUR_USER_KEY' \ 
+    -H 'X-User-Access-Token: YOUR_USER_ACCESS_TOKEN' \
+    -H 'Content-type:application/json' 
+    http://www.cenithub.com/api/v1/push
+```
+
+## Pushing Objects
+
+Allows you to send Data to CenitHub. 
+
+Is possible use for:
+* setup models: connection, connection_role, flow, etc.
+* data models: any data model loaded dinamiclyv: orders, products, emails, etc.
+
+```
+https://cenithub.com/api/v1/push
+```
+
+### Create an Object
 
 For create a new Order you can do a similar call to that:
 
@@ -104,23 +166,29 @@ For create a new Order you can do a similar call to that:
 }
 ```
 
-A succsess response will send the count of the number of objects received:
+Now an example with setup models
 
 ```json
 {
-  "orders": 1
+  "connection_role": {
+    "name": "con_role_062",
+    "webhooks": [
+        {
+          "name": "web_032",
+          "path": "algo"
+        }
+     ],
+     "connections": [{
+       "name": "con_184",
+       "url": "aasas"
+     }]
+   }
 }
 ```
 
-## Update
+### Update
 
 For update is possible send only a partial
-
-```json
-{
-  "orders": 1
-}
-```
 
 {
   "orders": [
@@ -131,7 +199,7 @@ For update is possible send only a partial
   ]
 }
 
-##Colection of objects
+### Colection of objects
 
 Is possible push a collection of objects in a uniq request
 
@@ -278,16 +346,7 @@ Is possible push a collection of objects in a uniq request
 }
 ```
 
-
-In this case the response will response:
-
-```json
-{
-  "orders": 2
-}
-```
-
-## Collection of diferent objects
+### Collection of diferent objects
 
 Is possible push multiple an different objects in the same request.
 
@@ -580,51 +639,60 @@ Is possible push multiple an different objects in the same request.
 }
 ```
 
-
-The response will include the number of each type of object received.
-
-```json
-{
-  "orders": 2,
-  "products": 2
-}
-```
-
-##Custom attributes for Objects
+With setup moedels
 
 ```json
 {
-  "orders": 2,
-  "products": 2
+ "connection": [
+    {
+      "name": "con_182",
+      "url": "localhost:3000"
+    },
+    {
+      "name": "con_183",
+      "url": "localhost:3000"
+    }
+  ],
+  
+  "connection_role": {
+    "name": "con_role_062",
+    "webhooks": [
+        {
+          "name": "web_032",
+          "path": "algo"
+        }
+     ],
+     "connections": [{
+       "name": "con_184",
+       "url": "aasas"
+     }]
+   }
 }
 ```
 
-##AUTHENTICATION
+## Show
 
-###HEADERS
-
-In order to securely push Data to CenitHub you will need to include the following values as part of the request header:
-
-| Name                    | Description               |
-| :-----------------------| :-------------------------|
-| **X-Hub-Store**         | The identifier for the store you are pushing to.
-| **X-Hub-Access-Token**  | The secure access token associated with your store.
-
-###Command line example
-
-
-The following example shows how you can include the headers when posting from the command line.
-
+```bash
+curl -i -X GET \
+  -H 'X-User-Access-Key: N196371715' \
+  -H 'X-User-Access-Token: sAgxA1kviRKnMA3eFx5_' \
+  http://www.cenithub.com/api/v1/connections/553995c06d69677e50000000
 ```
-$ curl -i -X POST -H 'X-Hub-Store: YOUR_STORE_ID' \ -H
-    'X-Hub-Access-Token: YOUR_ACCESS_TOKEN' -d'{ "shipments":[ { "id":
-    "1111111111", "order_id": "R1111111111", "email": "spree@example.com",
-    "cost": 5.0, "status": "ready", "stock_location": "default",
-    "shipping_method": "UPS Ground (USD)", "tracking": "", "updated_at": null,
-    "shipped_at": "2014-02-03T17:33:55.343Z", "shipping_address": {
-    "firstname": "Joe", "lastname": "Smith", "address1": "1234 Awesome Street",
-    "address2": "", "zipcode": "90210", "city": "Hollywood", "state":
-    "California", "country": "US", "phone": "0000000000" }, "items": [ {
-    "name": "Spree T-Shirt", "product_id": "SPREE-T-SHIRT", "quantity": 1,
-    "price": 30.0, "options": { } } ] } ] }' https://push.cenithub.com 
+
+## Index
+
+```bash
+curl -i -X GET \
+  -H 'X-User-Access-Key: N196371715' \
+  -H 'X-User-Access-Token: sAgxA1kviRKnMA3eFx5_' \ 
+  http://www.cenithub.com/api/v1/connections
+```
+
+## Delete
+
+```bash
+curl -i -X DELETE \
+  -H 'X-User-Access-Key: N196371715' \
+  -H 'X-User-Access-Token: sAgxA1kviRKnMA3eFx5_' \    
+  http://www.cenithub.com/api/v1/connections/553995c06d69677e50000000
 ```
