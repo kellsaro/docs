@@ -20,7 +20,7 @@ Allows you to send Data to CenitHub.
 
 There is a single API endpoint for sending push to CenitHub:
 
-https://cenithub.com/cenit
+https://www.cenithub.com/api/v1/{library}/push
 
 ## PUSHING OBJECTS
 

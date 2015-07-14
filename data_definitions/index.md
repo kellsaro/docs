@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Introduction
-categories: Data Definitions
+categories: Data-Definitions
 resource: true
 description: Libraries, Schemas & Data Types.
 image: /img/data-definitions.png
@@ -13,24 +13,23 @@ order: 1
 
 # Libraries, Schemas & Data Types
 
-Libraries are collections of schemas.
+Libraries are collections of schemas and data types.
 
 Schemas define data types.
 
-Most of actions in Cenit involves a data type.
+File data types can be validated against a schema.
 
-![Data Definitions](/img/data_definitions/types.png)
+![Data Definitions](/img/data_definitions/model.png)
 
 ## Schemas
 
-Define a data type is as simple as a JSON Schema.
+Define a data type is as simple as a JSON Schema 
+http://json-schema.org
 
 ```json
 {
   "title": "Customer",
-
   "type": "object",
-
   "properties": {
     "firstname": {
       "type": "string"
@@ -40,12 +39,6 @@ Define a data type is as simple as a JSON Schema.
     },
     "email": {
       "type": "string"
-    },
-    "shipping_address": {
-      "$ref": "Address"
-    },
-    "billing_address": {
-      "$ref": "Address"
     }
   },
   "required": ["firstname", "lastname"]
@@ -77,12 +70,6 @@ Properties is mandatory for enhanced data types interaction.
   },
   "email": {
       "type": "string"
-  },
-  "shipping_address": {
-      "$ref": "Address"
-  },
-  "billing_address": {
-      "$ref": "Address"
   }
 }
 ```
@@ -161,4 +148,72 @@ Cenit automatically links data types when referencing XML Schemas.
 URIs and data type names must be unique in the same library but data types versions with the same URI or name can be defined in different libraries.
 
 ![Reusing Schemas](/img/data_definitions/versioning_schema.png)
+
+##Data Type Storage
+
+Data type records derived from schemas are stored as JSONs structured documents.
+
+![Data Type Storage](/img/data_definitions/screen_3.png)
+
+Limitations:
+
+* Mapping XML documents to JSON is not always feasible.
+
+* What about data structured in other formats?
+
+* What about data non structured at all?
+
+##File Data Types
+
+File data types allow to store files as records.
+
+Files content can be validated against a validator.
+
+If no validator is selected then the file content can have any structure.
+
+![New File Data Types](/img/data_definitions/screen_4.png)
+
+###File Data Types & Validators
+
+By default every schema is also a validator.
+
+Every file records can be fully validated against a XML Schema or a JSON Schema.
+
+![Validator](/img/data_definitions/screen_5.png)
+
+Cenit prevents to store invalid data so every file content is validated when uploading and before storing.
+
+![Validated when uploading and before storing](/img/data_definitions/screen_6.png)
+
+##Custom Validators: EDI
+
+Cenit allows to customize file validators.
+
+EDI Validators use schemas as grammars for EDI formats based on model storage by segments containing record fields:
+
+```
+Costumer*Jhon*Stark*stark@mail.com
+billing_addres*1*Street*City
+shipping_addres*2*Street*City
+```
+
+![Custom Validators](/img/data_definitions/screen_7.png)
+
+Several formats can be described by using JSON Schemas as grammars:
+
+* ASCX12
+
+* EDIFACT
+
+* TRADACOM
+
+* CATAIR
+
+* …
+
+![Grammar of X12 IEA Segment](/img/data_definitions/screen_8.png)
+
+
+
+
 
