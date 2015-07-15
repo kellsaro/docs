@@ -27,9 +27,10 @@ Then you need your Test Account Sid and Test Auth Token.
 
 #### Parameters
 
-| Name | Value | Example |
-| :----| :-----| :------ |
-| tender.domain | Your Tender Domain | mywidgets |
+ * **account_sid:** Account Session ID, example AC4a3205csadsca58b4af140b4224494d3b8
+ 
+ * **auth_token:** Auth Token, example af32219458asabeaae737552ca21aa45
+
 
 ***
 The source code for the [Twilio Integration](https://github.com/wombat/twilio_integration "Twilio integration") is available on Github.

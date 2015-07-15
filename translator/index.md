@@ -90,7 +90,7 @@ elements =
 elements.each { |e|  target_data_type.create_from_xml!(e) }
 ```
 
-##Export Translators
+## Export Translators
 
 Export translators format data type records into data going outside Cenit.
 
@@ -149,7 +149,7 @@ else
 end
 ```
 
-###XSLT style
+### XSLT style
 
 The logic of an export translator can be described as an XML Stylesheet transformation.
 
@@ -161,7 +161,7 @@ The following XSLT transformation changes the value of every attribute with name
 
 ![XSLT style](/img/translator/screen_4.png)
 
-##Update Translators
+## Update Translators
 
 Update translators update data type records.
 
@@ -173,14 +173,14 @@ The logic of an import translator is described in ruby style.
 
 ![Update Translators](/img/translator/screen_6.png)
 
-###Ruby style
+### Ruby style
 Update translators are non bulkable so they are applied to a single target record which is available through the variable target:
 
 ```ruby
 target.email = "sample@mail.com"
 ```
 
-##Conversion Translators
+## Conversion Translators
 
 Conversion translators transform records into others.
 
@@ -190,7 +190,7 @@ The logic of an import translator can be described in several format: ruby, XSLT
 
 ![Conversion Translators](/img/translator/screen_7.png)
 
-###Ruby style
+### Ruby style
 
 Conversion translators are non bulkable so they convert a record at the time. The source and target records are available through the variables target and source. Converting a costumer from a message would be as simple as:
 
@@ -200,7 +200,7 @@ target.subject = "Hello #{source.first_name}"
 target.boby = "Just to say hello!"
 ```
 
-###XSLT style
+### XSLT style
 Even if records are not stored in XML format an XSLT transformation is possible for Cenit by the following steps:
 
 Format the source record into XML if necessary.
@@ -209,7 +209,7 @@ Applies the XSLT transformation to the XML formatted record.
 
 Create a target data from the transformed XML document.
 
-###Chain style
+### Chain style
 
 Chain style convert records by concatenating two conversion translator:
 

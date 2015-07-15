@@ -29,14 +29,9 @@ Imports a notification message of type "notification:error" or "notification:war
 
 #### Parameters
 
-| Name | Value | Example |
-| :----| :-----| :------ |
-| tender.domain | Your Tender Domain | mywidgets |
-| tender.api_key | Your Tender API Key | 1234567890 |
-| tender.author_name | The name that will be used when creating new discussions  | Joe Jackson |
-| tender.author_email | The email that will be used when creating new discussions |  joe_jackson@example.com |
-| tender.category_id | The ID of the category the discussion should be created under | 777 |
-| tender.public | Should newly created discussions be public? Must be either true or false | true |
+* **domain:**  Your Tender Domain, example myapp
+* **api_key:** Your Tender API Key, example 1234567890
+* **public:** Should newly created discussions be public? Must be either true or false, example  true. 
 
 ###Configuration
 

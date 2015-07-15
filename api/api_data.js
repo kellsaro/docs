@@ -240,7 +240,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/connection_rol/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\"  https://www.cenithub.com/api/v1/setup/connection_rol/1",
         "type": "json"
       },
       {
@@ -307,7 +307,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/connection_rol",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/connection_rol",
         "type": "json"
       },
       {
@@ -418,7 +418,7 @@ define({ "api": [
     "groupTitle": "Connection_Rol",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -594,7 +594,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/connection/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/connection/1",
         "type": "json"
       },
       {
@@ -689,7 +689,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/connection",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/connection",
         "type": "json"
       },
       {
@@ -828,7 +828,7 @@ define({ "api": [
     "groupTitle": "Connection",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -943,7 +943,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/data_type/556370a143454e22a1b10000",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/data_type/556370a143454e22a1b10000",
         "type": "json"
       },
       {
@@ -1058,7 +1058,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/data_type",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/data_type",
         "type": "json"
       },
       {
@@ -1225,7 +1225,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/event/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/event/1",
         "type": "json"
       },
       {
@@ -1292,7 +1292,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/observer",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/observer",
         "type": "json"
       },
       {
@@ -1403,7 +1403,7 @@ define({ "api": [
     "groupTitle": "Event_Observer",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -1558,7 +1558,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/scheduler/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/scheduler/1",
         "type": "json"
       },
       {
@@ -1632,7 +1632,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/scheduler",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/scheduler",
         "type": "json"
       },
       {
@@ -1760,7 +1760,7 @@ define({ "api": [
     "groupTitle": "Event_Sheduler",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -1964,7 +1964,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/flow/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/flow/1",
         "type": "json"
       },
       {
@@ -2087,7 +2087,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/flow",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/flow",
         "type": "json"
       },
       {
@@ -2261,7 +2261,7 @@ define({ "api": [
     "groupTitle": "Flow",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -2402,7 +2402,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/library/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/library/1",
         "type": "json"
       },
       {
@@ -2462,7 +2462,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/library",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/library",
         "type": "json"
       },
       {
@@ -2566,7 +2566,7 @@ define({ "api": [
     "groupTitle": "Library",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -2721,7 +2721,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/schema/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/schema/1",
         "type": "json"
       },
       {
@@ -2808,7 +2808,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/Schema",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/Schema",
         "type": "json"
       },
       {
@@ -3115,7 +3115,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/translator/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/translator/1",
         "type": "json"
       },
       {
@@ -3210,7 +3210,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/translator",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/translator",
         "type": "json"
       },
       {
@@ -3349,7 +3349,7 @@ define({ "api": [
     "groupTitle": "Translator",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },
@@ -3511,7 +3511,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/webhook/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/webhook/1",
         "type": "json"
       },
       {
@@ -3592,7 +3592,7 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -i https://www.cenithub.com/api/v1/setup/webhook",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/webhook",
         "type": "json"
       },
       {
@@ -3717,7 +3717,7 @@ define({ "api": [
     "groupTitle": "Webhook",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/push"
+        "url": "https://www.cenithub.com/api/v1/setup/push"
       }
     ]
   },

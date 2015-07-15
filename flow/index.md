@@ -37,22 +37,24 @@ Events are of two types:
  ![Observer](/img/flow/observer.png)
  
  ![Scheduler](/img/flow/scheduler.png)
- 
- ## Translator 
+
+## Translator 
  
  Every flow have a translator that performs the main data processing.
     
-    Depending on the translator type a flow can:
+ Depending on the translator type a flow can:
     
-     * Pull (import) data into Cenit
-     * Export data outside Cenit
-     * Update/Convert data inside Cenit
+   * Pull (import) data into Cenit
+   
+   * Export data outside Cenit
+   
+   * Update/Convert data inside Cenit
     
-    A flow must define a data type unless its translator defines one.
+ A flow must define a data type unless its translator defines one.
   
    ![Translator](/img/flow/flow.png)
    
- ##Scope
+## Scope
  
  If a flow is not of type import then it must define a scope for data processing.
  
@@ -63,8 +65,8 @@ Events are of two types:
   * Filter scope process the records following some criteria.
   
   ![Scope](/img/flow/scope.png) 
-  
-  ##Update/convert
+
+## Update/convert
   
   When the flow translator is of type update/convert no further configuration is needed beyond the scope.
   
@@ -72,7 +74,7 @@ Events are of two types:
   
   ![Update/convert](/img/flow/update-convert.png) 
   
-  ##Export/Import
+## Export/Import
   
   When the flow translator is of type:
   
@@ -85,7 +87,7 @@ Events are of two types:
   
   ![Export/Import](/img/flow/imp-exp.png) 
   
-##Connections
+## Connections
 
 A connection consist in an URL and a set of parameters, headers and template parameters.
 

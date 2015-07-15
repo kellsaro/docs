@@ -28,10 +28,7 @@ Subscribe an e-mail to your MailChimp list
 
 #### Parameters
 
-| Name | Value | Example |
-| :----| :-----| :------ |
-| mailchimp.api_key | Your MailChimp API key | dj20492dhjkdj20492dhjk |
-| mailchimp.list_id | MailChimp List ID | dj20492dhjk |
+ * **mailchimp.api_key:** Your MailChimp API key, example dj20492dhjkdj20492dhjk.
 
 ###Configuration
 
