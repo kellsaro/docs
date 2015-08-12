@@ -1,0 +1,410 @@
+---
+title: Shipstation Endpoint
+layout: page
+description:
+categories: Integrations
+resource: true
+order: 22
+---
+
+![Data Definitions](/img/integrations/shipstation.png)
+
+## Overview
+
+[ShipStation](http://www.shipstation.com/), is a web-based software designed to help eCommerce retailers process, fulfill, and ship their orders from all the most popular marketplaces and shopping carts using all the top carriers.
+
+For more information about the feature of ShipStation you can read more in www.shipstation.com/features/.
+
+###ShipStation API
+
+ The ShipStation API allows developers to build applications which interface with the ShipStation platform. The API can be used to automate many tasks including:
+
+  * Managing Orders
+  * Managing Shipments
+  * Managing Warehouse
+  * and more!
+
+###-API Documentation
+
+ The API Documentation can be found here: **http://www.shipstation.com/developer-api/**
+
+
+###Prerequisites
+
+First, you will need an active Shipstation account. If you don’t have one, you can get started with a free 30-day trial at shipstation.com.
+
+For generate the keys is necesary to enter in *API Setting -> Regenerate API Keys*.
+
+![Regenerate API Keys](/img/integrations/shipstation/api_keys.png)
+
+
+###Pull Collection
+
+![Pull Shiptstation Shared Collection](/img/integrations/shipstation/shipstation_config.png)
+
+#### Parameters
+
+ * **API Key:** Key, example 72628b53a70d4cd4b589f5wicnwyfonciwci9
+
+ * **API Secret:** Secret, example 296c217452064f51d69ndo2dpncowmc
+
+
+### List of features that offers CenitHub with Shipstation.
+
+-------------------------------------
+ Carriers
+
+ * List Tags
+ * List Services
+ * List Carriers
+ * Get Carrier
+ * List Packages
+
+-------------------------------------
+Customers
+
+ * List Customers
+ * Get Customer
+
+-------------------------------------
+Orders
+
+ * Create Order
+ * List Order
+ * Order Assign User
+ * Order Hold Until
+
+-------------------------------------
+Product
+
+ * Lis Product
+ * Get Product
+
+---------------------------------------------
+Shipment
+
+ * List Shipment
+
+------------------------------------
+Warehouse
+
+ * List Warehouse
+ * Get Warehouse
+ * Update Warehouse
+ * Creat Warehouse
+ * List Users
+
+
+
+##Configuration
+
+###Schema for Order
+
+CenitHub has a pre-defined Order Schema:
+
+```json
+{
+    "title": "Order",
+    "type": "object",
+    "properties": {
+       "orderId": {
+            "type": "integer"
+        },
+        "orderNumber": {
+            "type": "string"
+        },
+        "orderKey": {
+            "type": "string"
+        },
+        "orderDate": {
+            "type": "string"
+        },
+        "modifyDate": {
+            "type": "string"
+        },
+        "paymentDate": {
+            "type": "string"
+        },
+        "orderStatus": {
+            "type": "string"
+        },
+        "customerUsername":{
+            "type": "string"
+        },
+        "customerEmail": {
+            "type": "string"
+        },
+        "items": {
+            "type": "array",
+            "items": {
+                "$ref": "order_item.json"
+            }
+        },
+        "orderTotal": {
+        "type": "number"
+    },
+        "amountPaid": {
+            "type": "number"
+        },
+        "taxAmount": {
+            "type": "number"
+        },
+        "shippingAmount": {
+            "type": "number"
+        },
+        "customerNotes":{
+            "type": "string"
+        },
+        "internalNotes":{
+            "type": "string"
+        },
+        "gift":{
+            "type": "boolean"
+        },
+        "giftMessage":{
+            "type": "string"
+        },
+        "requestedShippingService":{
+            "type": "string"
+        },
+        "paymentMethod":{
+            "type": "string"
+        },
+        "carrierCode":{
+            "type": "string"
+        },
+        "serviceCode":{
+            "type": "string"
+        },
+        "packageCode":{
+            "type": "string"
+        },
+        "confirmation":{
+            "type": "string"
+        },
+        "shipDate": {
+            "type": "string"
+        },
+        "holdUntilDate": {
+            "type": "string"
+        },
+        "weight": {
+            "$ref": "weight.json"
+        },
+        "dimensions": {
+            "$ref": "dimension.json"
+        },
+        "internationalOptions": { "$ref": "international_option.json" },
+        "insuranceOptions": { "$ref": "insurance_option.json" },
+        "advancedOptions": { "$ref": "advanced_option.json" },
+        "shipTo": {
+            "$ref": "address.json", "title":"Ship To"
+        },
+        "billTo": {
+            "$ref": "address.json", "title":"Bill To"
+        },
+        "tagIds": {
+          "type": "array", "items": {"type": "integer"}
+        },
+        "userId": {
+            "type": "string"
+        }
+    }
+
+}
+```
+
+Sample Json Order:
+
+```json
+{
+{
+       "orderNumber": "TEST-ORDER-API-DOCS",
+       "orderKey": "0f6bec18-3e89-4771-83aa-f392d84f4c74",
+       "orderDate": "2015-06-29T08:46:27.0000000",
+       "paymentDate": "2015-06-29T08:46:27.0000000",
+       "orderStatus": "awaiting_shipment",
+       "customerUsername": "cenithub@cenitsaas.com",
+       "customerEmail": "cenithub@cenitsaas.gov",
+       "billTo": {
+         "name": "The President",
+         "company": null,
+         "street1": null,
+         "street2": null,
+         "street3": null,
+         "city": null,
+         "state": null,
+         "postalCode": null,
+         "country": null,
+         "phone": null,
+         "residential": null
+       },
+       "shipTo": {
+         "name": "The President",
+         "company": "US Govt",
+         "street1": "1600 Pennsylvania Ave",
+         "street2": "Oval Office",
+         "street3": null,
+         "city": "Washington",
+         "state": "DC",
+         "postalCode": "20500",
+         "country": "US",
+         "phone": "555-555-5555",
+         "residential": true
+       },
+       "items": [
+         {
+           "lineItemKey": "vd08-MSLbtx",
+           "sku": "ABC123",
+           "name": "Test item #1",
+           "imageUrl": null,
+           "weight": {
+             "value": 24,
+             "units": "ounces"
+           },
+           "quantity": 2,
+           "unitPrice": 99.99,
+           "warehouseLocation": "Aisle 1, Bin 7",
+           "options": [
+             {
+               "name": "Size",
+               "value": "Large"
+             }
+           ],
+           "adjustment": false
+         },
+         {
+           "lineItemKey": null,
+           "sku": "DISCOUNT CODE",
+           "name": "10% OFF",
+           "imageUrl": null,
+           "weight": {
+             "value": 0,
+             "units": "ounces"
+           },
+           "quantity": 1,
+           "unitPrice": -20.55,
+           "warehouseLocation": null,
+           "options": [],
+           "adjustment": true
+         }
+       ],
+       "amountPaid": 218.73,
+       "taxAmount": 5,
+       "shippingAmount": 10,
+       "customerNotes": "Thanks for ordering!",
+       "internalNotes": "Customer called and would like to upgrade shipping",
+       "gift": true,
+       "giftMessage": "Thank you!",
+       "paymentMethod": "Credit Card",
+       "requestedShippingService": "Priority Mail",
+       "carrierCode": "fedex",
+       "serviceCode": "fedex_2day",
+       "packageCode": "package",
+       "confirmation": "delivery",
+       "shipDate": "2015-07-02",
+       "weight": {
+         "value": 25,
+         "units": "ounces"
+       },
+       "dimensions": {
+         "units": "inches",
+         "length": 7,
+         "width": 5,
+         "height": 6
+       },
+       "insuranceOptions": {
+         "provider": "carrier",
+         "insureShipment": true,
+         "insuredValue": 200
+       },
+       "internationalOptions": {
+         "contents": null,
+         "customsItems": null
+       },
+       "advancedOptions": {
+         "warehouseId": 31654,
+         "nonMachinable": false,
+         "saturdayDelivery": false,
+         "containsAlcohol": false,
+         "storeId": 12345,
+         "customField1": "Custom data",
+         "customField2": "Per UI settings, this information",
+         "customField3": "can appear on some carrier's shipping labels",
+         "source": "Webstore"
+       }
+     }
+     }
+```
+
+## Flow samples
+
+### 1.Create Order
+
+ Create Order in Shipstation from Cenit.
+
+#### Translator
+
+![Export model of Order to Shipstation ](/img/integrations/shipstation/export_model.png)
+
+#### Flow
+
+Create Order with Shipstation API Webhook
+
+![Create Order for Shipstation](/img/integrations/shipstation/create_order.png)
+
+
+### 2.Get Order
+
+  Get Order by Id
+
+####   Webhook
+
+![Webhook for Get Order by ID](/img/integrations/shipstation/get_order.png)
+
+
+####   Translator
+
+![Import model for Shipstation](/img/integrations/shipstation/import_model.png)
+
+####   Flow
+
+![Get Order](/img/integrations/shipstation/flow_getorder.png)
+
+
+### 3.List Product
+
+ Obtains a list of products.
+
+####  Webhook
+
+![List All Products](/img/integrations/shipstation/list_products.png)
+
+
+#### Translator
+
+![Import Model List](/img/integrations/shipstation/import_model_list_root.png)
+
+
+#### Flow
+
+![List Product Model List](/img/integrations/shipstation/flow_listproduct.png)
+
+
+### 4.Get Carrier
+
+Retrieves the shipping carrier account details for the specified carrierCode. Use this method to determine a carrier's account balance.
+
+####  Webhook
+
+![Get Carrier](/img/integrations/shipstation/get_carrier.png)
+
+
+#### Translator
+
+![Export Carrier](/img/integrations/shipstation/export_carrier_code.png)
+
+
+#### Flow
+
+![Flow Get Carrier](/img/integrations/shipstation/flow_getcarrier.png)
