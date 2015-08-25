@@ -15,6 +15,8 @@ order: 1
 
 Special thanks to Wombat for making many [integration codes](/integrations/amazon_integration "Integration code repo") open sources.
 
+[Shipwire integration](/integrations/shipwire_integration  "Shipwire integration").
+
 [Shipstation integration](/integrations/shipstation_integration  "Shipstation integration").
 
 [Mandrill integration](/integrations/mandrill_integration  "Mandrill integration").
