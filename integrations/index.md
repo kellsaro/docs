@@ -15,6 +15,8 @@ order: 1
 
 Special thanks to Wombat for making many [integration codes](/integrations/amazon_integration "Integration code repo") open sources.
 
+[Asana integration](/integrations/asana_integration  "Asana integration").
+
 [Shipwire integration](/integrations/shipwire_integration  "Shipwire integration").
 
 [Shipstation integration](/integrations/shipstation_integration  "Shipstation integration").
