@@ -1235,7 +1235,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data",
-        "content": "{\n      \"event\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"library\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n}",
+        "content": "{\n      \"event\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"namespace\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n}",
         "type": "json"
       }
     ],
@@ -1302,7 +1302,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data:",
-        "content": "[\n    {\n      \"event\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"library\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n    },\n    {\n      \"event\": {\n              \"id\": \"2\",\n              \"name\": \"Communication | SMS on update_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"updated_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_presence_change\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"library\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n    }\n]",
+        "content": "[\n    {\n      \"event\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"namespace\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n    },\n    {\n      \"event\": {\n              \"id\": \"2\",\n              \"name\": \"Communication | SMS on update_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"updated_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_presence_change\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"namespace\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n    }\n]",
         "type": "json"
       }
     ],
@@ -1393,7 +1393,7 @@ define({ "api": [
         },
         {
           "title": "Sample Data:",
-          "content": "{\n     \"observer\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"library\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n  }",
+          "content": "{\n     \"observer\": {\n              \"id\": \"1\",\n              \"name\": \"Communication | SMS on created_at\",\n              \"_type\": \"Setup::Observer\",\n              \"triggers\": \"{\\\"created_at\\\":{\\\"0\\\":{\\\"o\\\":\\\"_not_null\\\",\\\"v\\\":[\\\"\\\",\\\"\\\",\\\"\\\"]}}}\",\n              \"data_type\": {\n                \"_reference\": true,\n                \"name\": \"Sms\",\n                \"schema\": {\n                  \"_reference\": true,\n                  \"uri\": \"sms.json\",\n                  \"namespace\": {\n                    \"_reference\": true,\n                    \"name\": \"Communication\"\n                  }\n                }\n              }\n     }\n  }",
           "type": "json"
         }
       ]
@@ -1974,7 +1974,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data",
-        "content": "{\n    \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"Library | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"library\": {\n                  \"_reference\": true,\n                  \"name\": \"Library\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n    }\n}",
+        "content": "{\n    \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"namespace | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"namespace\": {\n                  \"_reference\": true,\n                  \"name\": \"namespace\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n    }\n}",
         "type": "json"
       }
     ],
@@ -2097,7 +2097,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data:",
-        "content": "[\n    {\n        \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"Library | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"library\": {\n                  \"_reference\": true,\n                  \"name\": \"Library\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    },\n    {\n        \"flow\": {\n            \"id\": \"2\",\n            \"name\": \"Sample flow 2\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"Library | Sample on create_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"library\": {\n                  \"_reference\": true,\n                  \"name\": \"Library\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    }\n]",
+        "content": "[\n    {\n        \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"namespace | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"namespace\": {\n                  \"_reference\": true,\n                  \"name\": \"namespace\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    },\n    {\n        \"flow\": {\n            \"id\": \"2\",\n            \"name\": \"Sample flow 2\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"namespace | Sample on create_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"namespace\": {\n                  \"_reference\": true,\n                  \"name\": \"namespace\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    }\n]",
         "type": "json"
       }
     ],
@@ -2251,7 +2251,7 @@ define({ "api": [
         },
         {
           "title": "Sample Data:",
-          "content": "{\n        \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"Library | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"library\": {\n                  \"_reference\": true,\n                  \"name\": \"Library\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    }",
+          "content": "{\n        \"flow\": {\n            \"id\": \"1\",\n            \"name\": \"Sample flow\",\n            \"active\": true,\n            \"data_type_scope\": \"Event source\",\n            \"last_trigger_timestamps\": \"2015-05-29 13:15:49 UTC\",\n            \"event\": {\n              \"_reference\": true,\n              \"name\": \"namespace | Sample on updated_at\"\n            },\n            \"translator\": {\n              \"_reference\": true,\n              \"name\": \"Sample translator\"\n            },\n            \"custom_data_type\": {\n              \"_reference\": true,\n              \"name\": \"Sample\",\n              \"schema\": {\n                \"_reference\": true,\n                \"uri\": \"sample.json\",\n                \"namespace\": {\n                  \"_reference\": true,\n                  \"name\": \"namespace\"\n                }\n              }\n            },\n            \"webhook\": {\n              \"_reference\": true,\n              \"name\": \"Sample | Send model\"\n            }\n        }\n    }",
           "type": "json"
         }
       ]
@@ -2267,18 +2267,18 @@ define({ "api": [
   },
   {
     "type": "delete",
-    "url": "/setup/library/:id",
+    "url": "/setup/namespace/:id",
     "title": "Delete",
     "name": "delete",
-    "description": "<p>Permanently deletes a Library. It cannot be undone.</p> ",
+    "description": "<p>Permanently deletes a namespace. It cannot be undone.</p> ",
     "error": {
       "fields": {
         "Error 4xx": [
           {
             "group": "Error 4xx",
             "optional": false,
-            "field": "LibraryNotFound",
-            "description": "<p>The <code>id</code> of the Library was not found.</p> "
+            "field": "namespaceNotFound",
+            "description": "<p>The <code>id</code> of the namespace was not found.</p> "
           }
         ]
       },
@@ -2290,7 +2290,7 @@ define({ "api": [
         }
       ]
     },
-    "group": "Library",
+    "group": "namespace",
     "parameter": {
       "fields": {
         "Parameter": [
@@ -2299,7 +2299,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Librarys unique ID.</p> "
+            "description": "<p>namespaces unique ID.</p> "
           }
         ]
       }
@@ -2312,42 +2312,42 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Id of the Librarys.</p> "
+            "description": "<p>Id of the namespaces.</p> "
           }
         ]
       },
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"status\": \"success\", \"message\": { \"library\": [{\"id\": \"1\"}]}}",
+          "content": "{\"status\": \"success\", \"message\": { \"namespace\": [{\"id\": \"1\"}]}}",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "api_def/setup/library.rb",
-    "groupTitle": "Library",
+    "filename": "api_def/setup/namespace.rb",
+    "groupTitle": "namespace",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/setup/library/:id"
+        "url": "https://www.cenithub.com/api/v1/setup/namespace/:id"
       }
     ]
   },
   {
     "type": "get",
-    "url": "/setup/library/:id",
+    "url": "/setup/namespace/:id",
     "title": "Get",
     "name": "get",
-    "group": "Library",
-    "description": "<p>Retrieves the details of an existing Library. You need only supply the unique Library identifier that was returned upon Library creation.</p> ",
+    "group": "namespace",
+    "description": "<p>Retrieves the details of an existing namespace. You need only supply the unique namespace identifier that was returned upon namespace creation.</p> ",
     "error": {
       "fields": {
         "Error 4xx": [
           {
             "group": "Error 4xx",
             "optional": false,
-            "field": "LibraryNotFound",
-            "description": "<p>The <code>id</code> of the Library was not found.</p> "
+            "field": "namespaceNotFound",
+            "description": "<p>The <code>id</code> of the namespace was not found.</p> "
           }
         ]
       },
@@ -2367,7 +2367,7 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Librarys unique ID.</p> "
+            "description": "<p>namespaces unique ID.</p> "
           }
         ]
       }
@@ -2380,14 +2380,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Id of the Librarys.</p> "
+            "description": "<p>Id of the namespaces.</p> "
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<p>Name of the Librarys.</p> "
+            "description": "<p>Name of the namespaces.</p> "
           },
           {
             "group": "Success 200",
@@ -2402,36 +2402,36 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/library/1",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/namespace/1",
         "type": "json"
       },
       {
         "title": "Example Ruby:",
-        "content": "* model = \"library\"\n* id = \"556370a143454e22a1b10000\")\n* Cenit::Client.show(model,id)",
+        "content": "* model = \"namespace\"\n* id = \"556370a143454e22a1b10000\")\n* Cenit::Client.show(model,id)",
         "type": "json"
       },
       {
         "title": "Sample Data",
-        "content": "{\n    \"library\": {\n            \"id\": \"1\",\n            \"name\": \"My Library\",\n            \"slug\": \"my_library\"\n    }\n}",
+        "content": "{\n    \"namespace\": {\n            \"id\": \"1\",\n            \"name\": \"My namespace\",\n            \"slug\": \"my_namespace\"\n    }\n}",
         "type": "json"
       }
     ],
     "version": "0.0.0",
-    "filename": "api_def/setup/library.rb",
-    "groupTitle": "Library",
+    "filename": "api_def/setup/namespace.rb",
+    "groupTitle": "namespace",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/setup/library/:id"
+        "url": "https://www.cenithub.com/api/v1/setup/namespace/:id"
       }
     ]
   },
   {
     "type": "get",
-    "url": "/setup/library",
+    "url": "/setup/namespace",
     "title": "List",
-    "description": "<p>Returns a list of Library you've previously created. The Library are returned in sorted order, with the most recent Library appearing first.</p> ",
+    "description": "<p>Returns a list of namespace you've previously created. The namespace are returned in sorted order, with the most recent namespace appearing first.</p> ",
     "name": "list",
-    "group": "Library",
+    "group": "namespace",
     "success": {
       "fields": {
         "Success 200": [
@@ -2440,14 +2440,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Id of the Librarys.</p> "
+            "description": "<p>Id of the namespaces.</p> "
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<p>Name of the Librarys.</p> "
+            "description": "<p>Name of the namespaces.</p> "
           },
           {
             "group": "Success 200",
@@ -2462,26 +2462,26 @@ define({ "api": [
     "examples": [
       {
         "title": "Example curl:",
-        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/library",
+        "content": "* curl -H \"X-User-Access-Key: N63563526\" -H \"X-User-Access-Token: TYQTWY454521QQ12\" https://www.cenithub.com/api/v1/setup/namespace",
         "type": "json"
       },
       {
         "title": "Example Ruby:",
-        "content": "* model = \"library\"\n* Cenit::Client.list(model)",
+        "content": "* model = \"namespace\"\n* Cenit::Client.list(model)",
         "type": "json"
       },
       {
         "title": "Sample Data:",
-        "content": "[\n  {\n    \"library\": {\n            \"id\": \"1\",\n            \"name\": \"My Library\",\n            \"slug\": \"my_library\"\n    }\n  },\n  {\n    \"library\": {\n            \"id\": \"2\",\n            \"name\": \"My Library 2\",\n            \"slug\": \"my_library_2\"\n    }\n  }\n]",
+        "content": "[\n  {\n    \"namespace\": {\n            \"id\": \"1\",\n            \"name\": \"My namespace\",\n            \"slug\": \"my_namespace\"\n    }\n  },\n  {\n    \"namespace\": {\n            \"id\": \"2\",\n            \"name\": \"My namespace 2\",\n            \"slug\": \"my_namespace_2\"\n    }\n  }\n]",
         "type": "json"
       }
     ],
     "version": "0.0.0",
-    "filename": "api_def/setup/library.rb",
-    "groupTitle": "Library",
+    "filename": "api_def/setup/namespace.rb",
+    "groupTitle": "namespace",
     "sampleRequest": [
       {
-        "url": "https://www.cenithub.com/api/v1/setup/library"
+        "url": "https://www.cenithub.com/api/v1/setup/namespace"
       }
     ]
   },
@@ -2490,8 +2490,8 @@ define({ "api": [
     "url": "/push",
     "title": "Push",
     "name": "push",
-    "group": "Library",
-    "description": "<p>Updates the specified Library by setting the values of the parameters passed. Any parameters not provided will be left unchanged.</p> ",
+    "group": "namespace",
+    "description": "<p>Updates the specified namespace by setting the values of the parameters passed. Any parameters not provided will be left unchanged.</p> ",
     "error": {
       "fields": {
         "Error 4xx": [
@@ -2499,13 +2499,13 @@ define({ "api": [
             "group": "Error 4xx",
             "optional": false,
             "field": "ParserError",
-            "description": "<p>The <code>json</code> of the Library parser error.</p> "
+            "description": "<p>The <code>json</code> of the namespace parser error.</p> "
           },
           {
             "group": "Error 4xx",
             "optional": false,
             "field": "ValidatorError",
-            "description": "<p>The <code>json</code> of the Library validation error.</p> "
+            "description": "<p>The <code>json</code> of the namespace validation error.</p> "
           }
         ]
       },
@@ -2530,14 +2530,14 @@ define({ "api": [
             "type": "String",
             "optional": false,
             "field": "id",
-            "description": "<p>Id of the Librarys.</p> "
+            "description": "<p>Id of the namespaces.</p> "
           },
           {
             "group": "Success 200",
             "type": "String",
             "optional": false,
             "field": "name",
-            "description": "<p>Name of the Librarys.</p> "
+            "description": "<p>Name of the namespaces.</p> "
           },
           {
             "group": "Success 200",
@@ -2551,19 +2551,19 @@ define({ "api": [
       "examples": [
         {
           "title": "Success-Response:",
-          "content": "{\"status\": \"success\", \"message\": { \"library\": [{\"id\": \"1\"}]}}",
+          "content": "{\"status\": \"success\", \"message\": { \"namespace\": [{\"id\": \"1\"}]}}",
           "type": "json"
         },
         {
           "title": "Sample Data:",
-          "content": "{\n    \"library\": {\n            \"id\": \"2\",\n            \"name\": \"My Library 2\",\n            \"slug\": \"my_library_2\"\n    }\n  }",
+          "content": "{\n    \"namespace\": {\n            \"id\": \"2\",\n            \"name\": \"My namespace 2\",\n            \"slug\": \"my_namespace_2\"\n    }\n  }",
           "type": "json"
         }
       ]
     },
     "version": "0.0.0",
-    "filename": "api_def/setup/library.rb",
-    "groupTitle": "Library",
+    "filename": "api_def/setup/namespace.rb",
+    "groupTitle": "namespace",
     "sampleRequest": [
       {
         "url": "https://www.cenithub.com/api/v1/setup/push"
@@ -2703,10 +2703,10 @@ define({ "api": [
           },
           {
             "group": "Success 200",
-            "type": "<p>Library</p> ",
+            "type": "<p>namespace</p> ",
             "optional": false,
-            "field": "library",
-            "description": "<p>Library reference.</p> "
+            "field": "namespace",
+            "description": "<p>namespace reference.</p> "
           },
           {
             "group": "Success 200",
@@ -2731,7 +2731,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data",
-        "content": "{\n  \"id\": \"55a5246543454e1d18010000\",\n  \"uri\": \"message.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n  \"library\": {\n    \"_reference\": true,\n    \"id\": \"555f591b43454e0e4b690000\",\n    \"slug\": \"communication\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a5246543454e1d18020000\",\n      \"slug\": \"message\",\n      \"title\": \"Message\",\n      \"name\": \"message.json\",\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Message\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"text\\\":{\\\"type\\\":\\\"string\\\"}}}\"\n    }\n  ]\n}",
+        "content": "{\n  \"id\": \"55a5246543454e1d18010000\",\n  \"uri\": \"message.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n  \"namespace\": {\n    \"_reference\": true,\n    \"id\": \"555f591b43454e0e4b690000\",\n    \"slug\": \"communication\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a5246543454e1d18020000\",\n      \"slug\": \"message\",\n      \"title\": \"Message\",\n      \"name\": \"message.json\",\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Message\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"text\\\":{\\\"type\\\":\\\"string\\\"}}}\"\n    }\n  ]\n}",
         "type": "json"
       }
     ],
@@ -2790,10 +2790,10 @@ define({ "api": [
           },
           {
             "group": "Success 200",
-            "type": "<p>Library</p> ",
+            "type": "<p>namespace</p> ",
             "optional": false,
-            "field": "library",
-            "description": "<p>Library reference.</p> "
+            "field": "namespace",
+            "description": "<p>namespace reference.</p> "
           },
           {
             "group": "Success 200",
@@ -2818,7 +2818,7 @@ define({ "api": [
       },
       {
         "title": "Sample Data:",
-        "content": "[\n{\n  \"id\": \"55a5246543454e1d18010000\",\n  \"uri\": \"message.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n  \"library\": {\n    \"_reference\": true,\n    \"id\": \"555f591b43454e0e4b690000\",\n    \"slug\": \"communication\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a5246543454e1d18020000\",\n      \"slug\": \"message\",\n      \"title\": \"Message\",\n      \"name\": \"message.json\",\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Message\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"text\\\":{\\\"type\\\":\\\"string\\\"}}}\"\n    }\n  ]\n},\n{\n  \"id\": \"55a03aef43454e0b44040000\",\n  \"uri\": \"tweet.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Tweet\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"tweet_id\\\": {\\\"type\\\": \\\"integer\\\"},\\r\\n    \\\"status\\\": {\\\"type\\\": \\\"string\\\"}\\r\\n  }\\r\\n}\",\n  \"library\": {\n    \"_reference\": true,\n    \"id\": \"558975e743454e120b000000\",\n    \"slug\": \"twitter\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a03aef43454e0b44050000\",\n      \"slug\": \"tweet\",\n      \"title\": \"Tweet\",\n      \"name\": \"tweet.json\",\n      \"show_navigation_link\": true,\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Tweet\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"tweet_id\\\":{\\\"type\\\":\\\"integer\\\"},\\\"status\\\":{\\\"type\\\":\\\"string\\\"}}}\",\n      \"events\": [\n        {\n          \"_reference\": true,\n          \"id\": \"55a03b4e43454e0b44080000\",\n          \"name\": \"Twitter | Tweet on created_at\"\n        }\n      ]\n    }\n  ]\n}\n]",
+        "content": "[\n{\n  \"id\": \"55a5246543454e1d18010000\",\n  \"uri\": \"message.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n  \"namespace\": {\n    \"_reference\": true,\n    \"id\": \"555f591b43454e0e4b690000\",\n    \"slug\": \"communication\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a5246543454e1d18020000\",\n      \"slug\": \"message\",\n      \"title\": \"Message\",\n      \"name\": \"message.json\",\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Message\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"text\\\":{\\\"type\\\":\\\"string\\\"}}}\"\n    }\n  ]\n},\n{\n  \"id\": \"55a03aef43454e0b44040000\",\n  \"uri\": \"tweet.json\",\n  \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Tweet\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"tweet_id\\\": {\\\"type\\\": \\\"integer\\\"},\\r\\n    \\\"status\\\": {\\\"type\\\": \\\"string\\\"}\\r\\n  }\\r\\n}\",\n  \"namespace\": {\n    \"_reference\": true,\n    \"id\": \"558975e743454e120b000000\",\n    \"slug\": \"twitter\"\n  },\n  \"data_types\": [\n    {\n      \"id\": \"55a03aef43454e0b44050000\",\n      \"slug\": \"tweet\",\n      \"title\": \"Tweet\",\n      \"name\": \"tweet.json\",\n      \"show_navigation_link\": true,\n      \"_type\": \"Setup::DataType\",\n      \"model_schema\": \"{\\\"title\\\":\\\"Tweet\\\",\\\"type\\\":\\\"object\\\",\\\"properties\\\":{\\\"tweet_id\\\":{\\\"type\\\":\\\"integer\\\"},\\\"status\\\":{\\\"type\\\":\\\"string\\\"}}}\",\n      \"events\": [\n        {\n          \"_reference\": true,\n          \"id\": \"55a03b4e43454e0b44080000\",\n          \"name\": \"Twitter | Tweet on created_at\"\n        }\n      ]\n    }\n  ]\n}\n]",
         "type": "json"
       }
     ],
@@ -2907,10 +2907,10 @@ define({ "api": [
           },
           {
             "group": "Success 200",
-            "type": "<p>Library</p> ",
+            "type": "<p>namespace</p> ",
             "optional": false,
-            "field": "library",
-            "description": "<p>Library reference.</p> "
+            "field": "namespace",
+            "description": "<p>namespace reference.</p> "
           },
           {
             "group": "Success 200",
@@ -2929,7 +2929,7 @@ define({ "api": [
         },
         {
           "title": "Sample Data:",
-          "content": "{\n    \"Schema\": {\n      \"uri\": \"message.json\",\n      \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n      \"library\": {\n        \"_reference\": true,\n        \"slug\": \"communication\"\n      }\n    }\n  }",
+          "content": "{\n    \"Schema\": {\n      \"uri\": \"message.json\",\n      \"schema\": \"{\\r\\n  \\\"title\\\": \\\"Message\\\",\\r\\n  \\\"type\\\": \\\"object\\\",\\r\\n  \\\"properties\\\": {\\r\\n    \\\"text\\\": {\\r\\n      \\\"type\\\": \\\"string\\\"\\r\\n    }\\r\\n  }\\r\\n}\",\n      \"namespace\": {\n        \"_reference\": true,\n        \"slug\": \"communication\"\n      }\n    }\n  }",
           "type": "json"
         }
       ]

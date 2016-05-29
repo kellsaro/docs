@@ -4,7 +4,7 @@ layout: page
 title: Push API
 categories: API
 resource: true
-description: API for full remotly management.
+description: API for full remotely management.
 image: /img/docs-api.png
 type: parent
 version: v2
@@ -16,11 +16,11 @@ index_title: API
 
 # PUSH API
 
-Allows you to send Data to CenitHub.
+Allows to send Data to CenitHub.
 
 There is a single API endpoint for sending push to CenitHub:
 
-https://www.cenithub.com/api/v1/{library}/push
+https://www.cenithub.com/api/v1/{namespace}/push
 
 ## PUSHING OBJECTS
 
@@ -104,7 +104,7 @@ For create a new Order you can do a similar call to that:
 }
 ```
 
-A succsess response will send the count of the number of objects received:
+A successful response will send the count of the number of objects received:
 
 ```json
 {
@@ -279,7 +279,7 @@ Is possible push a collection of objects in a uniq request
 ```
 
 
-In this case the response will response:
+In this case the response will be:
 
 ```json
 {
@@ -289,7 +289,7 @@ In this case the response will response:
 
 ## Collection of diferent objects
 
-Is possible push multiple an different objects in the same request.
+Is possible to push multiple and different objects in the same request.
 
 ```json
 {
@@ -626,5 +626,5 @@ $ curl -i -X POST -H 'X-Hub-Store: YOUR_STORE_ID' \ -H
     "address2": "", "zipcode": "90210", "city": "Hollywood", "state":
     "California", "country": "US", "phone": "0000000000" }, "items": [ {
     "name": "Spree T-Shirt", "product_id": "SPREE-T-SHIRT", "quantity": 1,
-    "price": 30.0, "options": { } } ] } ] }' https://push.cenithub.com 
+    "price": 30.0, "options": { } } ] } ] }' https://push.cenithub.com
 ```
