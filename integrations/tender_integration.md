@@ -7,7 +7,7 @@ resource: true
 order: 16
 ---
 
-![Tender](/img/integrations/tender.png)
+![Tender](/docs/img/integrations/tender.png)
 
 ## Overview
 
@@ -25,7 +25,7 @@ Imports a notification message of type "notification:error" or "notification:war
 
 ###Pull Collection
 
-![Pull Tender Shared Collection](/img/integrations/tender/tender_config.jpg)
+![Pull Tender Shared Collection](/docs/img/integrations/tender/tender_config.jpg)
 
 #### Parameters
 

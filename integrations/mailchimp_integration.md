@@ -7,7 +7,7 @@ resource: true
 order: 8
 ---
 
-![MailChimp](/img/integrations/mailchimp.png)
+![MailChimp](/docs/img/integrations/mailchimp.png)
 
 ## Overview
 
@@ -24,7 +24,7 @@ Subscribe an e-mail to your MailChimp list
 
 ###Pull Collection
 
-![Pull Mailchimp Shared Collection](/img/integrations/mailchimp/mailchimp_config.jpg)
+![Pull Mailchimp Shared Collection](/docs/img/integrations/mailchimp/mailchimp_config.jpg)
 
 #### Parameters
 

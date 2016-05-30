@@ -7,7 +7,7 @@ resource: true
 order: 22
 ---
 
-![Data Definitions](/img/integrations/shipstation.png)
+![Data Definitions](/docs/img/integrations/shipstation.png)
 
 ## Overview
 
@@ -35,12 +35,12 @@ First, you will need an active Shipstation account. If you don’t have one, you
 
 For generate the keys is necesary to enter in *API Setting -> Regenerate API Keys*.
 
-![Regenerate API Keys](/img/integrations/shipstation/api_keys.png)
+![Regenerate API Keys](/docs/img/integrations/shipstation/api_keys.png)
 
 
 ###Pull Collection
 
-![Pull Shiptstation Shared Collection](/img/integrations/shipstation/shipstation_config.png)
+![Pull Shiptstation Shared Collection](/docs/img/integrations/shipstation/shipstation_config.png)
 
 #### Parameters
 
@@ -646,13 +646,13 @@ Sample Json Order:
 
 #### Translator
 
-![Export model of Order to Shipstation ](/img/integrations/shipstation/export_model.png)
+![Export model of Order to Shipstation ](/docs/img/integrations/shipstation/export_model.png)
 
 #### Flow
 
 Create Order with Shipstation API Webhook
 
-![Create Order for Shipstation](/img/integrations/shipstation/create_order.png)
+![Create Order for Shipstation](/docs/img/integrations/shipstation/create_order.png)
 
 
 ### 2. Get Order
@@ -661,16 +661,16 @@ Create Order with Shipstation API Webhook
 
 ####   Webhook
 
-![Webhook for Get Order by ID](/img/integrations/shipstation/get_order.png)
+![Webhook for Get Order by ID](/docs/img/integrations/shipstation/get_order.png)
 
 
 ####   Translator
 
-![Import model for Shipstation](/img/integrations/shipstation/import_model.png)
+![Import model for Shipstation](/docs/img/integrations/shipstation/import_model.png)
 
 ####   Flow
 
-![Get Order](/img/integrations/shipstation/flow_getorder.png)
+![Get Order](/docs/img/integrations/shipstation/flow_getorder.png)
 
 
 ### 3. List Product
@@ -679,17 +679,17 @@ Create Order with Shipstation API Webhook
 
 ####  Webhook
 
-![List All Products](/img/integrations/shipstation/list_products.png)
+![List All Products](/docs/img/integrations/shipstation/list_products.png)
 
 
 #### Translator
 
-![Import Model List](/img/integrations/shipstation/import_model_list_root.png)
+![Import Model List](/docs/img/integrations/shipstation/import_model_list_root.png)
 
 
 #### Flow
 
-![List Product Model List](/img/integrations/shipstation/flow_listproduct.png)
+![List Product Model List](/docs/img/integrations/shipstation/flow_listproduct.png)
 
 
 ### 4. Get Carrier
@@ -698,17 +698,17 @@ Retrieves the shipping carrier account details for the specified carrierCode. Us
 
 ####  Webhook
 
-![Get Carrier](/img/integrations/shipstation/get_carrier.png)
+![Get Carrier](/docs/img/integrations/shipstation/get_carrier.png)
 
 
 #### Translator
 
-![Export Carrier](/img/integrations/shipstation/export_carrier_code.png)
+![Export Carrier](/docs/img/integrations/shipstation/export_carrier_code.png)
 
 
 #### Flow
 
-![Flow Get Carrier](/img/integrations/shipstation/flow_getcarrier.png)
+![Flow Get Carrier](/docs/img/integrations/shipstation/flow_getcarrier.png)
 
 ## Shipstation Reference Integration with Odoo
 

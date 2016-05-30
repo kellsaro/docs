@@ -4,12 +4,12 @@
     {% if page.index_order == index_order %}
     {% if page.type == "parent" %}
   <div class="grid__cell unit-1-1 unit-1-2--desktop">
-    <a href="{{page.url}}">
+    <a href="{{page.url | prepend: site.baseurl}}">
 
       <div class="box-d">
         <div class="media">
           <div class="media-img">
-            <img src="{{ page.image }}"/>
+            <img src="{{ page.image | prepend: site.baseurl }}"/>
           </div>          
           <div class="media-content">
             <h2 class="h2-sub color-primary">{{ page.index_title }}</h2>

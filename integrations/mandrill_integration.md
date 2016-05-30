@@ -7,7 +7,7 @@ resource: true
 order: 9
 ---
 
-![Mandrill](/img/integrations/mandrill.png)
+![Mandrill](/docs/img/integrations/mandrill.png)
 
 ## Overview
 
@@ -27,7 +27,7 @@ In order to configure and use [mandrill] (https://github.com/spree/mandrill_endp
 
 ##Pull Collection
 
-![Pull Twilio Shared Collection](/img/integrations/twilio/twilio_config.jpg)
+![Pull Twilio Shared Collection](/docs/img/integrations/twilio/twilio_config.jpg)
 
 #### Parameters
 

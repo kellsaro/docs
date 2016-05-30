@@ -15,16 +15,16 @@ order: 1
 
 Special thanks to Wombat for making many [integration codes](/integrations/amazon_integration "Integration code repo") open sources.
 
-[Asana integration](/integrations/asana_integration  "Asana integration").
+[Asana integration](/docs/integrations/asana_integration  "Asana integration").
 
-[Shipwire integration](/integrations/shipwire_integration  "Shipwire integration").
+[Shipwire integration](/docs/integrations/shipwire_integration  "Shipwire integration").
 
-[Shipstation integration](/integrations/shipstation_integration  "Shipstation integration").
+[Shipstation integration](/docs/integrations/shipstation_integration  "Shipstation integration").
 
-[Mandrill integration](/integrations/mandrill_integration  "Mandrill integration").
+[Mandrill integration](/docs/integrations/mandrill_integration  "Mandrill integration").
 
-[Twilio integration](/integrations/twilio_integration  "Twilio integration").
+[Twilio integration](/docs/integrations/twilio_integration  "Twilio integration").
 
-[Mailchimp integration](/integrations/mailchimp_integration  "Mailchimp integration"). 
+[Mailchimp integration](/docs/integrations/mailchimp_integration  "Mailchimp integration"). 
 
-[Tender integration](/integrations/tender_integration  "Tender integration"). 
+[Tender integration](/docs/integrations/tender_integration  "Tender integration"). 

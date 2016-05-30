@@ -17,22 +17,22 @@ CenitHub is an **open source hub for data and business integrations**. This guid
 
 Special thanks to Wombat for making many [integration codes](/integrations/amazon_integration "Integration code repo") open sources.
 
-[Overview](/general/overview ). 
+[Overview](/docs/general/overview ). 
 
-[Terminology](/general/terminology ). 
+[Terminology](/docs/general/terminology ). 
 
-[Webhooks](/general/webhooks ). 
+[Webhooks](/docs/general/webhooks ). 
 
-[Events](/general/events ). 
+[Events](/docs/general/events ). 
 
-[Custom integrations](/general/custom_integrations ). 
+[Custom integrations](/docs/general/custom_integrations ). 
 
-[Endpoint authentication](/general/endpoint_authentication ). 
+[Endpoint authentication](/docs/general/endpoint_authentication ). 
 
-[Multi-tenancy](/general/multitenancy ). 
+[Multi-tenancy](/docs/general/multitenancy ). 
 
-[Deploy with Nginx and Unicorn](/general/deploy ). 
+[Deploy with Nginx and Unicorn](/docs/general/deploy ). 
 
-[Style conventions](/general/style_conventions ). 
+[Style conventions](/docs/general/style_conventions ). 
 
-[Contributing to code](/general/contributing_to_code)
+[Contributing to code](/docs/general/contributing_to_code)

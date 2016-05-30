@@ -19,7 +19,7 @@ Schemas define data types.
 
 File data types can be validated against a schema.
 
-![Data Definitions](/img/data_definitions/model.png)
+![Data Definitions](/docs/img/data_definitions/model.png)
 
 ## Schemas
 
@@ -84,25 +84,25 @@ Required properties definition is optional.
 
 Every schema have an URI and must be included in a library.
 
-![The new schema action](/img/data_definitions/screen_1.png)
+![The new schema action](/docs/img/data_definitions/screen_1.png)
 
 ##Loading Data types
 
 When loading a data type Cenit creates a class model on the fly that can be used as any other model in the administration view.
 
-![Loading Data types](/img/data_definitions/screen_2.png)
+![Loading Data types](/docs/img/data_definitions/screen_2.png)
 
-![Loading Data types](/img/data_definitions/loading_data_types.png)
+![Loading Data types](/docs/img/data_definitions/loading_data_types.png)
 
 ##Enhancing Schemas
 
-![Enhancing Schemas](/img/data_definitions/enhacing_2.png)
+![Enhancing Schemas](/docs/img/data_definitions/enhacing_2.png)
 
-![Enhancing Schemas](/img/data_definitions/enhacing_3.png)
+![Enhancing Schemas](/docs/img/data_definitions/enhacing_3.png)
 
 ##Reusing Schemas
 
-![Reusing Schemas](/img/data_definitions/reusing.png)
+![Reusing Schemas](/docs/img/data_definitions/reusing.png)
 
 
 ##XML Schemas
@@ -141,19 +141,19 @@ This example defines two data types, **type:Address** and **element:Costumer**
 
 Cenit automatically links data types when referencing XML Schemas.
 
-![Reusing Schemas](/img/data_definitions/xml_reusing.png)
+![Reusing Schemas](/docs/img/data_definitions/xml_reusing.png)
 
 ##Versioning Schemas
 
 URIs and data type names must be unique in the same library but data types versions with the same URI or name can be defined in different libraries.
 
-![Reusing Schemas](/img/data_definitions/versioning_schema.png)
+![Reusing Schemas](/docs/img/data_definitions/versioning_schema.png)
 
 ##Data Type Storage
 
 Data type records derived from schemas are stored as JSONs structured documents.
 
-![Data Type Storage](/img/data_definitions/screen_3.png)
+![Data Type Storage](/docs/img/data_definitions/screen_3.png)
 
 Limitations:
 
@@ -171,7 +171,7 @@ Files content can be validated against a validator.
 
 If no validator is selected then the file content can have any structure.
 
-![New File Data Types](/img/data_definitions/screen_4.png)
+![New File Data Types](/docs/img/data_definitions/screen_4.png)
 
 ###File Data Types & Validators
 
@@ -179,11 +179,11 @@ By default every schema is also a validator.
 
 Every file records can be fully validated against a XML Schema or a JSON Schema.
 
-![Validator](/img/data_definitions/screen_5.png)
+![Validator](/docs/img/data_definitions/screen_5.png)
 
 Cenit prevents to store invalid data so every file content is validated when uploading and before storing.
 
-![Validated when uploading and before storing](/img/data_definitions/screen_6.png)
+![Validated when uploading and before storing](/docs/img/data_definitions/screen_6.png)
 
 ##Custom Validators: EDI
 
@@ -197,7 +197,7 @@ billing_addres*1*Street*City
 shipping_addres*2*Street*City
 ```
 
-![Custom Validators](/img/data_definitions/screen_7.png)
+![Custom Validators](/docs/img/data_definitions/screen_7.png)
 
 Several formats can be described by using JSON Schemas as grammars:
 
@@ -211,7 +211,7 @@ Several formats can be described by using JSON Schemas as grammars:
 
 * …
 
-![Grammar of X12 IEA Segment](/img/data_definitions/screen_8.png)
+![Grammar of X12 IEA Segment](/docs/img/data_definitions/screen_8.png)
 
 
 

@@ -8,6 +8,9 @@ description: CeniHub Documentation
 author:
   name: CenitHub
   email: sanchojaf@gmail.com
+  
+# destination:  ./docs/_site
+
 
 # Grunt handles images and assets.
 exclude: ['node_modules', 'img', 'css', 'js', 'fonts',
@@ -20,7 +23,7 @@ category-list: [General, API, Integrations, Data Definitions]
 
 # Keep as an empty string if served up at the root. If served up at a specific
 # path (e.g. on GitHub pages) leave off the trailing slash, e.g. /my-project
-baseurl: ''
+baseurl: /docs
 
 # Dates are not included in permalinks
 permalink: pretty
