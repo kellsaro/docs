@@ -7,7 +7,7 @@ resource: true
 order: 12
 ---
 
-![Data Definitions](/docs/img/integrations/shipwire.png)
+![Data Definitions]({{site.baseurl}}/img/integrations/shipwire.png)
 
 ## Overview
 
@@ -249,17 +249,17 @@ First, you will need an active Shipwire account. If you don’t have one, you ca
 
 #### Webhook
 
-![Webhook for Create Order](/docs/img/integrations/shipwire/createOrder.png)
+![Webhook for Create Order]({{site.baseurl}}/img/integrations/shipwire/createOrder.png)
 
 
 #### Translator
 
-![Translator for Create Order](/docs/img/integrations/shipwire/export_model.png)
+![Translator for Create Order]({{site.baseurl}}/img/integrations/shipwire/export_model.png)
 
 
 #### Flow
 
-![Flow for Create Order](/docs/img/integrations/shipwire/flow_createOrder.png)
+![Flow for Create Order]({{site.baseurl}}/img/integrations/shipwire/flow_createOrder.png)
 
 
 ### 2.List Orders
@@ -269,18 +269,18 @@ First, you will need an active Shipwire account. If you don’t have one, you ca
 #### Webhook
 
 
-![Webhook for List Orders](/docs/img/integrations/shipwire/listOrder.png)
+![Webhook for List Orders]({{site.baseurl}}/img/integrations/shipwire/listOrder.png)
 
 
 #### Translator
 
 
-![Translator for List Orders](/docs/img/integrations/shipwire/import_list.png)
+![Translator for List Orders]({{site.baseurl}}/img/integrations/shipwire/import_list.png)
 
 
 #### Flow
 
-![Flow for List Orders](/docs/img/integrations/shipwire/flow_listOrder.png)
+![Flow for List Orders]({{site.baseurl}}/img/integrations/shipwire/flow_listOrder.png)
 
 
 ### 3.List Stocks
@@ -290,17 +290,17 @@ Get stock information for your products.
 #### Webhook
 
 
-![Webhook for Get Stock](/docs/img/integrations/shipwire/getStock.png)
+![Webhook for Get Stock]({{site.baseurl}}/img/integrations/shipwire/getStock.png)
 
 
 #### Translator
 
 
-![Translator for List Stock](/docs/img/integrations/shipwire/import_stock_list.png)
+![Translator for List Stock]({{site.baseurl}}/img/integrations/shipwire/import_stock_list.png)
 
 #### Flow
 
 
-![Flow for List Stock](/docs/img/integrations/shipwire/listStock.png)
+![Flow for List Stock]({{site.baseurl}}/img/integrations/shipwire/listStock.png)
 
 

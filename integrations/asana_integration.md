@@ -7,7 +7,7 @@ resource: true
 order: 27
 ---
 
-![Data Definitions](/docs/img/integrations/asana.png)
+![Data Definitions]({{site.baseurl}}/img/integrations/asana.png)
 
 ## Overview
 
@@ -30,12 +30,12 @@ The API is available for free to everyone with an Asana account and can be acces
 You must first register your application with Asana to receive a client ID and client secret. Fortunately, this process is fast and easy: visit your Account Settings dialog, click the Apps tab, and “Add New Application”.
 The applications can be created from the “Apps” tab of your account settings, where you will find your Client ID and Client Secret.
 
-![Regenerate API Keys](/docs/img/integrations/asana/token.png)
+![Regenerate API Keys]({{site.baseurl}}/img/integrations/asana/token.png)
 
 
 ###Pull Collection
 
-![Pull Asana Shared Collection](/docs/img/integrations/asana/pull_collection.png)
+![Pull Asana Shared Collection]({{site.baseurl}}/img/integrations/asana/pull_collection.png)
 
 #### Parameters
 
@@ -219,13 +219,13 @@ Sample Json Project:
 
 Extract Id from Hash.
 
-![Algorithms for  Extract model](/docs/img/integrations/asana/extractmodel.png)
+![Algorithms for  Extract model]({{site.baseurl}}/img/integrations/asana/extractmodel.png)
 
 ### 2.transform_model
 
 Transform Id with Model and reference model.
 
-![Algorithms for  Transform model](/docs/img/integrations/asana/transformmodel.png)
+![Algorithms for  Transform model]({{site.baseurl}}/img/integrations/asana/transformmodel.png)
 
 ## Flow samples
 
@@ -235,18 +235,18 @@ This method creates a new project and returns its full record.
 
 ### Webhook
 
-![Webhook for Create Project](/docs/img/integrations/asana/createProject.png)
+![Webhook for Create Project]({{site.baseurl}}/img/integrations/asana/createProject.png)
 
 
 #### Translator
 
-![Export model of Project to Asana ](/docs/img/integrations/asana/export_model.png)
+![Export model of Project to Asana ]({{site.baseurl}}/img/integrations/asana/export_model.png)
 
 #### Flow
 
 Create Project with Shipstation API Webhook
 
-![Create Project for Asana](/docs/img/integrations/asana/flow_create_project.png)
+![Create Project for Asana]({{site.baseurl}}/img/integrations/asana/flow_create_project.png)
 
 
 ### 2.Create SubTask
@@ -255,16 +255,16 @@ Creating a subtask is the same as a creating an normal task, but instead of spec
 
 ####   Webhook
 
-![Webhook for Create SubTask](/docs/img/integrations/asana/create_subtask.png)
+![Webhook for Create SubTask]({{site.baseurl}}/img/integrations/asana/create_subtask.png)
 
 
 ####   Translator
 
-![Import Model for Asana](/docs/img/integrations/asana/update_model.png)
+![Import Model for Asana]({{site.baseurl}}/img/integrations/asana/update_model.png)
 
 ####   Flow
 
-![Create SubTasks on Project](/docs/img/integrations/asana/flow_create_subtask_project.png)
+![Create SubTasks on Project]({{site.baseurl}}/img/integrations/asana/flow_create_subtask_project.png)
 
 
 ### 3.List User
@@ -273,16 +273,16 @@ This method returns the user records, described above, for all users in all work
 
 ####  Webhook
 
-![List All Users](/docs/img/integrations/asana/list_users.png)
+![List All Users]({{site.baseurl}}/img/integrations/asana/list_users.png)
 
 
 #### Translator
 
-![Import List](/docs/img/integrations/asana/import_list.png)
+![Import List]({{site.baseurl}}/img/integrations/asana/import_list.png)
 
 
 #### Flow
 
-![List Users ](/docs/img/integrations/asana/flow_list_users.png)
+![List Users ]({{site.baseurl}}/img/integrations/asana/flow_list_users.png)
 
 

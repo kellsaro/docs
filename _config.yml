@@ -9,7 +9,7 @@ author:
   name: CenitHub
   email: sanchojaf@gmail.com
   
-# destination:  ./docs/_site
+# destination:  .{{site.baseurl}}/_site
 
 
 # Grunt handles images and assets.

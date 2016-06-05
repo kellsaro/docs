@@ -6,14 +6,14 @@
         <title>{{ page.title }}</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-        <!-- build:css({app,.tmp}) /docs/css/main.css -->
+        <!-- build:css({app,.tmp}) {{site.baseurl}}/css/main.css -->
         <!-- Syntax highlighting CSS -->
-        <link rel="stylesheet" href="/docs/css/syntax.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/syntax.css">
 
         <!-- Custom CSS -->
-        <link rel="stylesheet" href="/docs/css/screen.css">
-        <link rel="stylesheet" href="/docs/css/main.css">
-        <link rel="stylesheet" href="/docs/css/accordion.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/screen.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/main.css">
+        <link rel="stylesheet" href="{{site.baseurl}}/css/accordion.css">
 
         <!-- endbuild -->
 
@@ -30,7 +30,7 @@
                   <div class="line"></div>
                 </div>
                  -->   
-                <h3><a class="navbar-brand" href="https://cenit.io"><img alt="cenit logo" height="26" src="/docs/img/cenit-logo.png" width="51"></img> cenit.io
+                <h3><a class="navbar-brand" href="https://cenit.io"><img alt="cenit logo" height="26" src="{{site.baseurl}}/img/cenit-logo.png" width="51"></img> cenit.io
                 </a></h3><br/><br/>
               </div>
 
@@ -42,10 +42,10 @@
             
             <div class="docs">
               <div class="content">
-                <a href="/docs/"> Docs </a> 
+                <a href="{{site.baseurl}}/"> Docs </a> 
                 
                 {% if page.categories %}
-                  >> <a href="/docs/{{ page.categories | downcase }}"> {{ page.categories }} </a>
+                  >> <a href="{{site.baseurl}}/{{ page.categories | downcase }}"> {{ page.categories }} </a>
                 {% endif %}
 
                 {% if page.title %}

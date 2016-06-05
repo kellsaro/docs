@@ -7,7 +7,7 @@ resource: true
 order: 17
 ---
 
-![Data Definitions](/docs/img/integrations/twilio.png)
+![Data Definitions]({{site.baseurl}}/img/integrations/twilio.png)
 
 ## Overview
 
@@ -23,7 +23,7 @@ Then you need your Test Account Sid and Test Auth Token.
 
 ###Pull Collection
 
-![Pull Twilio Shared Collection](/docs/img/integrations/twilio/twilio_config.jpg)
+![Pull Twilio Shared Collection]({{site.baseurl}}/img/integrations/twilio/twilio_config.jpg)
 
 #### Parameters
 
@@ -98,13 +98,13 @@ Sends a SMS for every new order that arrive to Cenit.
 
 #### Translator
 
-![Export Order to Twilio SMS Request ](/docs/img/integrations/twilio/export_order_to_sms.png)
+![Export Order to Twilio SMS Request ]({{site.baseurl}}/img/integrations/twilio/export_order_to_sms.png)
 
 #### Flow
 
 Send SMS with Twilio Webhook 
 
-![Convert Order to SMS for every new order](/docs/img/integrations/twilio/send_sms.png)
+![Convert Order to SMS for every new order]({{site.baseurl}}/img/integrations/twilio/send_sms.png)
 
 ### Convert Order to SMS
 
@@ -112,11 +112,11 @@ Convert order to SMS for every new order that arrive to Cenit.
 
 #### Translator
 
-![Convert Order to SMS](/docs/img/integrations/twilio/convert_order_sms.jpg)
+![Convert Order to SMS]({{site.baseurl}}/img/integrations/twilio/convert_order_sms.jpg)
 
 #### Flow
 
-![Convert Order to SMS for every new order](/docs/img/integrations/twilio/flow_order_sms.jpg)
+![Convert Order to SMS for every new order]({{site.baseurl}}/img/integrations/twilio/flow_order_sms.jpg)
 
 ### Convert Customer to SMS
 
@@ -124,18 +124,18 @@ Convert customer to SMS for every new Customer that create on Cenit.
 
 #### Translator
 
-![Convert Customer to SMS](/docs/img/integrations/twilio/convert_customer_sms.jpg)
+![Convert Customer to SMS]({{site.baseurl}}/img/integrations/twilio/convert_customer_sms.jpg)
 
 #### Flow
 
-![Convert Customer to SMS for every new order](/docs/img/integrations/twilio/flow_customer_sms.jpg)
+![Convert Customer to SMS for every new order]({{site.baseurl}}/img/integrations/twilio/flow_customer_sms.jpg)
 
 #### Send SMS with Twilio
 
 All data types, translators and flows required to send sms are available in Shared Collection Twilio Integration
 
-![Send SMS flow](/docs/img/integrations/twilio/flow_send_sms.png)
+![Send SMS flow]({{site.baseurl}}/img/integrations/twilio/flow_send_sms.png)
 
 #### Notification
 
-![Notification](/docs/img/integrations/twilio/twilio_notification.png)
+![Notification]({{site.baseurl}}/img/integrations/twilio/twilio_notification.png)
