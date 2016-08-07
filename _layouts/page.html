@@ -30,7 +30,7 @@
                   <div class="line"></div>
                 </div>
                  -->   
-                <h3><a class="navbar-brand" href="https://cenit.io"><img alt="cenit logo" height="26" src="{{site.baseurl}}/img/cenit-logo.png" width="51"></img> cenit.io
+                <h3><a class="navbar-brand" href="https://cenit.io"><img alt="cenit logo" height="26" src="{{site.baseurl}}/img/cenit-logo.png" width="51"></img> Cenit IO
                 </a></h3><br/><br/>
               </div>
 
@@ -45,7 +45,7 @@
                 <a href="{{site.baseurl}}/"> Docs </a> 
                 
                 {% if page.categories %}
-                  >> <a href="{{site.baseurl}}/{{ page.categories | downcase }}"> {{ page.categories }} </a>
+                  >> <a href="{{site.baseurl}}/{{ page.categories | downcase | replace: '-', '_' }}"> {{ page.categories }} </a>
                 {% endif %}
 
                 {% if page.title %}
