@@ -1,27 +1,40 @@
 <div class="grid">
   {% for index_order in (1..12) %}
-  {% for page in site.pages %}
-    {% if page.index_order == index_order %}
-    {% if page.type == "parent" %}
-  <div class="grid__cell unit-1-1 unit-1-2--desktop">
-    <a href="{{page.url | prepend: site.baseurl}}">
+    {% for page in site.pages %}
+      {% if page.index_order == index_order %}
+        {% if page.type == "parent" %}
+        
+          <div class="grid__cell unit-1-1 unit-1-2--desktop">
+            <a href="{{page.url | prepend: site.baseurl}}">
 
-      <div class="box-d">
-        <div class="media">
-          <div class="media-img">
-            <img src="{{ page.image | prepend: site.baseurl }}"/>
-          </div>          
-          <div class="media-content">
-            <h2 class="h2-sub color-primary">{{ page.index_title }}</h2>
-            <p class="sub">{{page.description}}</p>
+              <div class="box-d">
+                <div class="media">
+                  <div class="media-img">
+                    {% if page.icon %}
+                      {% if page.icon == 'fa-sitemap'%}
+                        <div>
+                        <i class="fa fa-sitemap" style="font-size: 4em; -ms-transform: rotate(90deg);-webkit-transform: rotate(90deg);transform: rotate(90deg)"></i>
+<i class="fa fa-sitemap" style="font-size: 4em; -ms-transform: rotate(-90deg);-webkit-transform: rotate(-90deg);transform: rotate(-90deg);position: absolute;left: 25%;"></i>
+                        </div>
+                      {% else %}
+                        <i class="fa {{ page.icon }}" style="font-size: 6em;"></i>
+                      {% endif %} 
+                    {% else %}
+                      <img src="{{ page.image | prepend: site.baseurl }}"/>
+                    {% endif %} 
+                  </div>          
+                  <div class="media-content">
+                    <h2 class="h2-sub color-primary">{{ page.index_title }}</h2>
+                    <p class="sub">{{page.description}}</p>
+                  </div>
+                </div>
+              </div>
+            
+            </a>
           </div>
-        </div>
-      </div>
-    
-    </a>
-  </div>
-    {% endif %} 
+        {% endif %} 
       {% endif %} 
-      {% endfor %}
+    {% endfor %}
   {% endfor %}
 </div>
+

@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Introduction
-categories: Translator
+categories: Compute
 resource: true
 description: Define a logic for data manipulation.
 image: /img/translator.png
+icon: fa-cog
 type: parent
 index_order: 3
-index_title: Translator
+index_title: Compute
 order: 1
 ---
 
@@ -25,13 +26,13 @@ Data manipulation can occurs in the following scenarios:
 
  * Exporting data outside Cenit
 
-![Data Definitions](/img/translator/flow.png)
+![Data Definitions]({{site.baseurl}}/img/translator/flow.png)
 
 ## Import Translators
 
 Import translators create data type records from outside data.
 
-![Type Import](/img/translator/screen_1.png)
+![Type Import]({{site.baseurl}}/img/translator/screen_1.png)
 
 ### Target data type
 
@@ -39,7 +40,7 @@ The target data type defines the type of the records to be created.
 
 If no target data type is defined then the translator is supposed to be able to import data into any data type.
 
-![Type Import](/img/translator/screen_3.png)
+![Type Import]({{site.baseurl}}/img/translator/screen_3.png)
 
 ### Ruby style
 
@@ -100,7 +101,7 @@ If no source data type is defined then the translator is supposed to be able to 
 
 A MIME type can be optionally defined.
 
-![Type Export](/img/translator/screen_5.png)
+![Type Export]({{site.baseurl}}/img/translator/screen_5.png)
 
 ### Ruby style
 
@@ -159,7 +160,7 @@ Cenit convert the source record to XML format if necessary and the applies the X
 
 The following XSLT transformation changes the value of every attribute with name email by sample@mail.com:
 
-![XSLT style](/img/translator/screen_4.png)
+![XSLT style]({{site.baseurl}}/img/translator/screen_4.png)
 
 ## Update Translators
 
@@ -171,7 +172,7 @@ If no target data type is defined then the translator is supposed to be able to 
 
 The logic of an import translator is described in ruby style.
 
-![Update Translators](/img/translator/screen_6.png)
+![Update Translators]({{site.baseurl}}/img/translator/screen_6.png)
 
 ### Ruby style
 Update translators are non bulkable so they are applied to a single target record which is available through the variable target:
@@ -188,7 +189,7 @@ The source and target data types defines the records conversion types.
 
 The logic of an import translator can be described in several format: ruby, XSLT and chain.
 
-![Conversion Translators](/img/translator/screen_7.png)
+![Conversion Translators]({{site.baseurl}}/img/translator/screen_7.png)
 
 ### Ruby style
 
@@ -217,7 +218,7 @@ The source exporter: convert the source record to an intermediate data type.
 
 The target importer: convert the intermediate record to the target data type.
 
-![Chain Translators](/img/translator/screen_8.png)
+![Chain Translators]({{site.baseurl}}/img/translator/screen_8.png)
 
 
 

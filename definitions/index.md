@@ -1,13 +1,14 @@
 ---
 layout: page
 title: Introduction
-categories: Data-Definitions
+categories: Definitions
 resource: true
-description: Libraries, Schemas & Data Types.
+description: Validators & Data Types.
 image: /img/data-definitions.png
+icon: fa-puzzle-piece
 type: parent
 index_order: 2
-index_title: Data Definitions
+index_title: Definitions
 order: 1
 ---
 

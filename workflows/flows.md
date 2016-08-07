@@ -1,15 +1,14 @@
 ---
 layout: page
 title: Introduction
-categories: Flow
+categories: Workflows
 resource: true
-description: Flow, Connection and Webhook.
-image: /img/flow.png
-type: parent
+description: Flow, Data Events & Schedulers.
+icon: fa-cogs
 index_order: 3
-index_title: Flow
 order: 1
 ---
+
 
 # Flow
 

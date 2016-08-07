@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Webhooks
-categories: General
+categories: Connectors
 resource: true
 description: Description Webhooks
 index_order: 1

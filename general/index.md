@@ -5,6 +5,7 @@ categories: General
 resource: true
 description: Basic blocks and introduction.
 image: /img/general.png
+icon: fa-commenting-o
 type: parent
 order: 1
 index_order: 1
@@ -21,18 +22,8 @@ Special thanks to Wombat for making many [integration codes](/integrations/amazo
 
 [Terminology]({{site.baseurl}}/general/terminology ). 
 
-[Webhooks]({{site.baseurl}}/general/webhooks ). 
-
-[Events]({{site.baseurl}}/general/events ). 
-
-[Custom integrations]({{site.baseurl}}/general/custom_integrations ). 
-
-[Endpoint authentication]({{site.baseurl}}/general/endpoint_authentication ). 
-
 [Multi-tenancy]({{site.baseurl}}/general/multitenancy ). 
 
-[Deploy with Nginx and Unicorn]({{site.baseurl}}/general/deploy ). 
-
-[Style conventions]({{site.baseurl}}/general/style_conventions ). 
+[Deploy with Nginx and Unicorn]({{site.baseurl}}/general/deploy ).
 
 [Contributing to code]({{site.baseurl}}/general/contributing_to_code)
