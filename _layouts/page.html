@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <link href="{{site.baseurl}}/css/font-awesome.min.css" rel="stylesheet">
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <title>{{ page.title }}</title>
@@ -36,11 +37,11 @@
                 <a href="{{site.baseurl}}/"> Docs </a> 
                 
                 {% if page.categories %}
-                  >> <a href="{{site.baseurl}}/{{ page.categories | downcase | replace: '-', '_' }}"> {{ page.categories }} </a>
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i> <a href="{{site.baseurl}}/{{ page.categories | downcase | replace: '-', '_' }}"> {{ page.categories }} </a>
                 {% endif %}
 
                 {% if page.title %}
-                  >> {{ page.title }}
+                  <i class="fa fa-angle-double-right" aria-hidden="true"></i> {{ page.title }}
                 {% endif %}
                 
                 {{ content }}

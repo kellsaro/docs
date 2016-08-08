@@ -4,13 +4,13 @@ layout: page
 title: Push API
 categories: API
 resource: true
-description: API for full remotely management.
+description: API for full remotely management
 image: /img/docs-api.png
 type: parent
 icon: fa-send-o
 version: v2
 order: 1
-index_order: 10
+index_order: 12
 index_title: API
 
 ---

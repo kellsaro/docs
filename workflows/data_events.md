@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Events
+title: Data Events
 categories: Workflows
 resource: true
-description: Description of Events
+description: Description of Data Events
 index_order: 1
 order: 1
 ---

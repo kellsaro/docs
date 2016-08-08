@@ -3,11 +3,11 @@ layout: page
 title: Introduction
 categories: Definitions
 resource: true
-description: Validators & Data Types.
+description: Validators & Data Types
 image: /img/data-definitions.png
 icon: fa-puzzle-piece
 type: parent
-index_order: 2
+index_order: 3
 index_title: Definitions
 order: 1
 ---
