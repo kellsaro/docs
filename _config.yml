@@ -29,7 +29,7 @@ baseurl: /docs
 permalink: pretty
 
 # Syntax highlighting
-highlighter: true
+highlighter: rouge
 
 # Since these are pages, it doesn't really matter
 future: true
