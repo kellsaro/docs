@@ -12,7 +12,7 @@ index_title: Compute
 order: 1
 ---
 
-[Algorithms](). 
+[Algorithms]({{site.baseurl}}/compute/algorithms ). 
 
 [Translators]({{site.baseurl}}/compute/translators ). 
 
