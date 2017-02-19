@@ -24,7 +24,7 @@ Events are invisible to your integrations. Your integrations only deal with rece
 
 ## Custom Event
 
-Using the approach of RailsAdmin for filter 
+Using the approach of RailsAdmin for filter
 
 ### Number [Decimal, Float, Integer]
 * number: especific_number
@@ -36,12 +36,12 @@ Using the approach of RailsAdmin for filter
 * Between … and …
 * Today
 * Yesterday
-* This [Week, Month, Trimestral, Semestre, Year] 
+* This [Week, Month, Trimestral, Semestre, Year]
 * Last [Week, Month, Trimestral, Semestre, Year]
 * is_present? (insure that is present)
 * is_black? (nil or zero)
 
-###String 
+###String
 * Is exactly
 * contain
 * Start with: (prefix)

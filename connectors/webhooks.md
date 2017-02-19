@@ -10,13 +10,17 @@ order: 1
 
 #Webhooks
 
+The webhook are the final step in a flow, implemented like a request HTTP to an endpoint, for sent or receive data.
+
+Define an HTTP Method and params.
+
 Webhooks are simple HTTP requests that contain JSON or XML formatted data relating to an event on Cenit.
 
 Every Webhook include some common fields along with the specific object data for the event, these fields are:
 
 Name	Description
-request_id	
-parameters	
+request_id
+parameters
 object	The object key can be any object within CenitHub (i.e. order, product, user, cart, etc)
 
 | Name                    | Description               |
