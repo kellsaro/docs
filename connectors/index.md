@@ -11,10 +11,8 @@ index_title: Connectors
 order: 1
 ---
 
-[Connections](). 
+[Connections]({{site.baseurl}}/connectors/connections).
 
-[Connection Roles](). 
+[Connection Roles]({{site.baseurl}}/connectors/connection_roles).
 
-[Webhooks]({{site.baseurl}}/connectors/webhooks). 
-
-
+[Webhooks]({{site.baseurl}}/connectors/webhooks).
