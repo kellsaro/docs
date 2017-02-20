@@ -61,6 +61,23 @@ It is able to read JSON Schema resources and use them to define Ruby classes in 
 
 Also parses JSON conforming to a JSON schema, and instantiates objects corresponding to the JSON Schema classes created.
 
+##Translator
+
+A translator defines a logic for data manipulation. Data manipulation can occurs in the following scenarios:
+
+* Importing outside data into Cenit
+
+* Updating data already stored in Cenit
+
+* Converting data already stored in Cenit
+
+* Exporting data outside Cenit
+
+## Namespace
+
+Define space of names to use across all the tenants
+
+
 ## Collections
 
 Collection are complete or partially basic block in Cenit, that can included Connection, ConnectionRole, Flow, Webhooks, Events, Traslators, Libraries, Schemas and Data Types.
