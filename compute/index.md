@@ -7,15 +7,13 @@ description: Algorithms, Translators, Applications
 image: /img/translator.png
 icon: fa-cog
 type: parent
-index_order: 7
+index_order: 9
 index_title: Compute
 order: 1
 ---
 
-[Algorithms]({{site.baseurl}}/compute/algorithms ). 
+[Algorithms]({{site.baseurl}}/compute/algorithms ).
 
-[Translators]({{site.baseurl}}/compute/translators ). 
+[Translators]({{site.baseurl}}/compute/translators ).
 
 [Applications]({{site.baseurl}}/compute/applications ).
-
-

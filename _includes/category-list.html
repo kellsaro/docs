@@ -3,7 +3,7 @@
     {% for page in site.pages %}
       {% if page.index_order == index_order %}
         {% if page.type == "parent" %}
-        
+
           <div class="grid__cell unit-1-1 unit-1-2--desktop">
             <a href="{{page.url | prepend: site.baseurl}}">
 
@@ -18,23 +18,22 @@
                         </div>
                       {% else %}
                         <i class="fa {{ page.icon }}" style="font-size: 6em;"></i>
-                      {% endif %} 
+                      {% endif %}
                     {% else %}
                       <img src="{{ page.image | prepend: site.baseurl }}"/>
-                    {% endif %} 
-                  </div>          
+                    {% endif %}
+                  </div>
                   <div class="media-content">
                     <h2 class="h2-sub color-primary">{{ page.index_title }}</h2>
                     <p class="sub">{{page.description}}</p>
                   </div>
                 </div>
               </div>
-            
+
             </a>
           </div>
-        {% endif %} 
-      {% endif %} 
+        {% endif %}
+      {% endif %}
     {% endfor %}
   {% endfor %}
 </div>
-
