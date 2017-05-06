@@ -11,62 +11,211 @@ index_title: Transformations
 order: 1
 ---
 
-## Transformation
 
- Every flow have a Transformation that performs the main data processing.
+# Transformation
 
- Depending on the Transformation type a flow can:
+A Transformation defines a logic for data manipulation.
 
-   * Pull (import) data into Cenit
+Data manipulation can occurs in the following scenarios:
 
-   * Export data outside Cenit
+ * Importing outside data into Cenit
 
-   * Update/Convert data inside Cenit
+ * Updating data already stored in Cenit
 
- A flow must define a data type unless its Transformation defines one.
+ * Converting data already stored in Cenit
 
-   ![Transformation]({{site.baseurl}}/img/flow/flow.png)
+ * Exporting data outside Cenit
 
-## Scope
+![Data Definitions]({{site.baseurl}}/img/Transformation/flow.png)
 
- If a flow is not of type import then it must define a scope for data processing.
+## Import Transformations
 
- The scope can be defined depending on the flow event, Transformation data type or the flow custom data type:
+Import Transformations create data type records from outside data.
 
-  * Event source process only the record who fire the event
-  * All records scope process all the records
-  * Filter scope process the records following some criteria.
+![Type Import]({{site.baseurl}}/img/Transformation/screen_1.png)
 
-  ![Scope]({{site.baseurl}}/img/flow/scope.png)
+### Target data type
 
-## Update/convert
+The target data type defines the type of the records to be created.
 
-  When the flow Transformation is of type update/convert no further configuration is needed beyond the scope.
+If no target data type is defined then the Transformation is supposed to be able to import data into any data type.
 
-  The active option prevent the flow processing even if its event is fired when it is not checked.
+![Type Import]({{site.baseurl}}/img/Transformation/screen_3.png)
 
-  ![Update/convert]({{site.baseurl}}/img/flow/update-convert.png)
+### Ruby style
 
-## Export/Import
+The logic of an import Transformation is described in ruby style
 
-  When the flow Transformation is of type:
+The Transformation transformation is written in a DSL based on the Ruby Programming Language.
 
-   * Import, then the data will be pulled into Cenit
-   * Export, then the data will be send outside Cenit
+The variables data and target_data_type are available and represent the outside data and the target data type respectively.
 
-  In any case an end-point is needed to pull or send the data.
+A simple JSON importer can be defined by the following transformation:
 
-  An end-point is determined by a connection and a webhook
+```ruby
+target_data_type.create_from_json!(data)
+```
 
-  ![Export/Import]({{site.baseurl}}/img/flow/imp-exp.png)
+A little more of transformation code allows to parse the outside data and to create multiple records:
 
+```ruby
+if (parsed_data = JSON.parse(data)).is_a?(Array)
+  parsed_data.each { |item|  target_data_type.create_from_json!(item) }
+else   
+  target_data_type.create_from_json!(parsed_data)
+end
+```
 
-## Export Flows
+There are several methods available on the target data type object that can be invoked to create records. They all have the following pattern:
 
-If the flow Transformation is of type export it is possible to process the request response with a response Transformation.
+```
+(create|new)_from_(json|xml|edi)[!]
 
-Response Transformations are of type import and may require a response data type if they do not define one.
+Example: create_from_xml, new_from_edi
+```
 
-Response Transformations may create other records which may fire new event that trigger other flow processing…
+The new methods does not persist the created record an a further invocation of a save method is needed.
 
- ![Export Flows]({{site.baseurl}}/img/flow/export.png)
+The create methods attempt to persist the records, halting on error only if the method name ends with the exclamation symbol.
+
+The following transformation parse a data using Nokogiri and creates one or multiple records from XML document elements:
+
+```ruby
+xml_doc = Nokogiri::XML(data)
+elements =
+  if xml_doc.root['type'] == 'array'
+     xml_doc.root.element_children
+  else   
+     [xml_doc.root]
+  end
+elements.each { |e|  target_data_type.create_from_xml!(e) }
+```
+
+## Export Transformations
+
+Export Transformations format data type records into data going outside Cenit.
+
+The source data type defines the type of the records to be formatted.
+
+If no source data type is defined then the Transformation is supposed to be able to format records of any data type.
+
+A MIME type can be optionally defined.
+
+![Type Export]({{site.baseurl}}/img/Transformation/screen_5.png)
+
+### Ruby style
+
+The Transformation transformation can be written in ruby style.
+
+Depending on the Transformation having the option bulk source, the variable source or  sources is available representing a single record or an enumeration of records to be formatted.
+
+A simple non bulkable JSON exporter can be defined by the following transformation:
+
+```ruby
+source.to_json
+```
+If the Transformation is bulkable a little more of transformation code is needed to format all the source records into a single JSON data:
+
+```ruby
+if (jsons = sources.collect { |source| source.to_json(pretty: true) } ).length == 1
+  jsons[0]
+else
+  "[#{jsons.join(',')}]"
+end
+```
+
+Note: the result of the translation execution is the value of the latest evaluated expression.
+
+There are a set of predefined methods available on record objects that can be used for basic formats:
+
+```
+to_(json|xml|edi)
+```
+
+Every formatter method can receive options, for example:
+
+```ruby
+source.to_json(pretty: true)
+source.to_xml(with_blanks: true)
+source.to_edi(field_separator: ‘+’)
+```
+
+The variable source_data_type is a reference to the Transformation source data type and for facility a method to_xml_array have been added to records enumeration, so a transformation for bulkable XML exporter  can be written as following:
+
+```ruby
+if sources.count == 1
+  sources.first.to_xml
+else
+  sources.to_xml_array(root: source_data_type.slug)
+end
+```
+
+### XSLT style
+
+The logic of an export Transformation can be described as an XML Stylesheet transformation.
+
+XSLT style Transformations are no bulkable.
+
+Cenit convert the source record to XML format if necessary and the applies the XSLT transformation.
+
+The following XSLT transformation changes the value of every attribute with name email by sample@mail.com:
+
+![XSLT style]({{site.baseurl}}/img/Transformation/screen_4.png)
+
+## Update Transformations
+
+Update Transformations update data type records.
+
+The target data type defines the type of the records to be updated.
+
+If no target data type is defined then the Transformation is supposed to be able to update records of any data type.
+
+The logic of an import Transformation is described in ruby style.
+
+![Update Transformations]({{site.baseurl}}/img/Transformation/screen_6.png)
+
+### Ruby style
+Update Transformations are non bulkable so they are applied to a single target record which is available through the variable target:
+
+```ruby
+target.email = "sample@mail.com"
+```
+
+## Conversion Transformations
+
+Conversion Transformations transform records into others.
+
+The source and target data types defines the records conversion types.
+
+The logic of an import Transformation can be described in several format: ruby, XSLT and chain.
+
+![Conversion Transformations]({{site.baseurl}}/img/Transformation/screen_7.png)
+
+### Ruby style
+
+Conversion Transformations are non bulkable so they convert a record at the time. The source and target records are available through the variables target and source. Converting a costumer from a message would be as simple as:
+
+```ruby
+target.email = source.email
+target.subject = "Hello #{source.first_name}"
+target.boby = "Just to say hello!"
+```
+
+### XSLT style
+Even if records are not stored in XML format an XSLT transformation is possible for Cenit by the following steps:
+
+Format the source record into XML if necessary.
+
+Applies the XSLT transformation to the XML formatted record.
+
+Create a target data from the transformed XML document.
+
+### Chain style
+
+Chain style convert records by concatenating two conversion Transformation:
+
+The source exporter: convert the source record to an intermediate data type.
+
+The target importer: convert the intermediate record to the target data type.
+
+![Chain Transformations]({{site.baseurl}}/img/Transformation/screen_8.png)

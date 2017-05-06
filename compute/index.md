@@ -3,7 +3,7 @@ layout: page
 title: Introduction
 categories: Compute
 resource: true
-description: Algorithms, Translators, Applications
+description: Algorithms, Applications, Snippets, Notebooks
 image: /img/translator.png
 icon: fa-cog
 type: parent
@@ -13,7 +13,5 @@ order: 1
 ---
 
 [Algorithms]({{site.baseurl}}/compute/algorithms ).
-
-[Translators]({{site.baseurl}}/compute/translators ).
 
 [Applications]({{site.baseurl}}/compute/applications ).
