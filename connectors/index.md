@@ -6,7 +6,7 @@ resource: true
 description: Connections & Webhooks
 icon: fa-plug
 type: parent
-index_order: 5
+index_order: 7
 index_title: Connectors
 order: 1
 ---

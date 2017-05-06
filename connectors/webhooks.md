@@ -8,7 +8,7 @@ index_order: 1
 order: 1
 ---
 
-#Webhooks
+# Webhooks
 
 The webhook are the final step in a flow, implemented like a request HTTP to an endpoint, for sent or receive data.
 
@@ -29,7 +29,7 @@ object	The object key can be any object within CenitHub (i.e. order, product, us
 | **parameters**          | An array of Parameters.
 | **object**              | The object key can be any object within CenitHub (i.e. order, product, user, cart, etc).
 
-##Authentication
+## Authentication
 
 Each Webhook call contains two HTTP headers to identify the specific store that the Webhook is referencing and a token to verify that the Webhook is coming from CenitHub, and not some other third party.
 
@@ -45,7 +45,7 @@ This key is unique per integration or storefront.
 
 It’s important to ensure that all Webhook calls are made over HTTPS, as these calls include sensitive information that, if intercepted, could cause potential security breaches.
 
-###Parameters
+### Parameters
 
 Integrations are intended to be simple stateless applications, and so store-specific information (like credentials) are passed as part of each Webhook POST.
 
@@ -53,7 +53,7 @@ This allows each Integration to support multiple customers at once, and supports
 
 The Parameters value within the Webhook body is a simple object with multiple key values, for example:
 
-###Sample
+### Sample
 
 ```json
 {
@@ -72,9 +72,9 @@ API implementations of a Webhook must always send an acknowledgement with the or
 
 Summary information returned to CenitHub will be used to create notifications that are presented to storefront admin staff in the CenitHub client application.
 
-##Response
+## Response
 
-###Success
+### Success
 
 If the Webhook has been completed successfully, it should return a 200 response code along with the request_id that is provided by CenitHub.
 
@@ -146,3 +146,31 @@ SAMPLE WEBHOOK FAILURE RESPONSE
 ```
 
 Make sure to return a 500 response code so that CenitHub knows the request was not successful.
+
+### Webhooks example: Twilio API
+
+The Twilio connection is just the base URL for the actions of the Twilio API, and these way is how occurs almost in every API.
+
+It is possible the same URL to indicate different actions depending on the HTTP method, for example
+
+https://api.twilio.com/2010-04-01/Accounts/{account_sid}/Messages.json
+
+send messages using the POST method but retrieve messages when using GET.
+
+All those actions are defined as Webhooks.
+
+So a webhook is basically a path that completes the connection URL, and HTTP method and can define also a set of headers, parameters and template parameters.
+
+The webhook path of the Twilio API will be:
+
+ * Messages.json by GET list the messages.
+
+ * Messages.json by POST send a message.
+
+ * Messages/{{id}}.json by GET retrieve a message with a SID.
+
+ Since the webhook defines the action the flow will submit to the end-point then the webhook is primary over connection.
+
+ It is possible to submit the same action to several end-points, so the connections are not specified directly but through a connection role.
+
+  ![Flow Webhook]({{site.baseurl}}/img/flow/webhook.png)

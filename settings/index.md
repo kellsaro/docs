@@ -6,12 +6,12 @@ resource: true
 description: Configuration stuff
 icon: fa-sliders
 type: parent
-index_order: 10
+index_order: 13
 index_title: Configurations
 order: 1
 ---
 
-[Algorithms](). 
+[Algorithms]().
 
 [Namespaces]()
 
@@ -26,6 +26,3 @@ order: 1
 [Bindings]()
 
 [Parameters]()
-
-
-
