@@ -15,7 +15,7 @@ order: 2
 
 ## Connections
 
-Connection are the representation of endpoint or integration in Cenit.
+Connection are the representation of a service that you need integrate with Cenit.
 
 ## Webhooks
 
@@ -29,13 +29,13 @@ Flows define how Data is routed between endpoints and all integrations in order 
 
 A flow defines how data is processed by the execution of one or more actions, if the data is coming in to Cenit or going out of Cenit. Data processing involve:
 
-₋ An execution trigger to start the data processing
+* An execution trigger to start the data processing
 
-₋ Data types
+* Data types
 
-₋ Translators
+* transformations
 
-₋ Connections & Webhooks
+* Connections & Webhooks
 
 ## Data Events
 
@@ -61,9 +61,9 @@ It is able to read JSON Schema resources and use them to define Ruby classes in 
 
 Also parses JSON conforming to a JSON schema, and instantiates objects corresponding to the JSON Schema classes created.
 
-##Translator
+## Transformation
 
-A translator defines a logic for data manipulation. Data manipulation can occurs in the following scenarios:
+A transformation defines a logic for data manipulation. Data manipulation can occurs in the following scenarios:
 
 * Importing outside data into Cenit
 
@@ -81,6 +81,7 @@ Define space of names to use across all the tenants
 ## Collections
 
 Collection are complete or partially basic block in Cenit, that can included Connection, ConnectionRole, Flow, Webhooks, Events, Traslators, Libraries, Schemas and Data Types.
+
 
 ## Shared Collections
 

@@ -11,3 +11,17 @@ run `jekyll serve`
 open in the browser `http://localhost:4000/docs/`
 
 the last '/' is required in the URL.
+
+
+Contributing
+----------------------
+
+Cenit IO is an open source project and we encourage contributions to help improve documentation.
+
+In the spirit of [free software](http://www.fsf.org/licensing/essays/free-sw.html), **everyone** is encouraged to help
+improve this project.
+
+Here are some ways **you** can contribute:
+
+* by reporting [bugs](https://github.com/cenit-io/docs/issues/new)
+* by writing or editing [documentation](https://github.com/cenit-io/docs)
