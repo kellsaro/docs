@@ -1,4 +1,4 @@
-# File
+# Files
 
 The files are a way of organizing your file types. They are links to the records of file types refered in File types sctructures.
 

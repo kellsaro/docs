@@ -1,4 +1,4 @@
-# Object
+# Objects
 
 The objects are a way of organizing your data types. They are links to the records of data types refered in each one.
 
