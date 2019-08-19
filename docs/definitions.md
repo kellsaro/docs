@@ -9,12 +9,12 @@
 The Definitions are grouped by Validations and Data Types.
 
 
-![Definition Menu](_images/definitions_1.png "Definition Menu")
+![Definition Menu](https://user-images.githubusercontent.com/30662690/63291288-3e226a00-c291-11e9-9cda-581e5fe66235.png "Definition Menu")
 
 ## Validators
 
 
-## Data Types
+### Data Types
 
 The Data Types are the data with we will manage in Cenit on the flows, workflows,translators, etc. They can be: JSON Data Types,File Types, and Cenit Types.
 
@@ -29,7 +29,7 @@ The Data Types are the data with we will manage in Cenit on the flows, workflows
 
 The JSON Data Types correspond to a JSON Schema. To learn more about JSON Schema visit this page http://json-schema.org/
 
-![JSON Types List](_images/JSON_types_list.png "JSON Types List")
+![JSON Types List](https://user-images.githubusercontent.com/30662690/63291934-9443dd00-c292-11e9-8fdd-8bb7bc964548.jpg "JSON Types List")
 
 >For JSON types objects, you have the "Actions" options. Go to [Actions of Dashboard section](markdown.md) to have more details.
 
@@ -37,8 +37,8 @@ The most important Actions in this section are:
 
 #### Add New
 
-![Create JSON type](_images/create_json_type1.png)
-![Create JSON type](_images/new_json_type2.png)
+![Create JSON type](https://user-images.githubusercontent.com/30662690/63292137-fe5c8200-c292-11e9-92d1-2d2e1a912a90.png)
+![Create JSON type](https://user-images.githubusercontent.com/30662690/63292190-1e8c4100-c293-11e9-93b0-2590d393ee7b.png)
 
 This is the principal form to create a JSON data type, following the sctructure: http://json-schema.org/ in the schema box.
 
