@@ -11,6 +11,7 @@
 
   - [Data](data.md)
     - [Definitions](definitions.md)
+    - [Objects](object.md)
   - [Workflows](quickstart.md)
   - [Transforms](plugins.md)
   - [Gatweay](quickstart.md)
