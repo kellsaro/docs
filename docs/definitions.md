@@ -14,7 +14,7 @@ The Definitions are grouped by Validations and Data Types.
 ## Validators
 
 
-### Data Types
+## Data Types
 
 The Data Types are the data with we will manage in Cenit on the flows, workflows,translators, etc. They can be: JSON Data Types,File Types, and Cenit Types.
 
@@ -56,9 +56,5 @@ Data type methods:
 - In this box, the user could define algorithms linked to some attributes of the records created of the data type. Is like a method for an specific attribute, and it could be execute in a code of your integration.
 
 
-### File Types
-### Cenit Types
-
-- Type: `Boolean|String`
-- Default: `false`
-
+<!-- ### File Types -->
+<!-- ### Cenit Types -->
