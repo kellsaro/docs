@@ -7,109 +7,48 @@ In a integration generally you must have the need to create three kinds of integ
   2. Converter: It refers to a transformation between two data in Cenit. This kind of flow don't do any request outside Cenit.
   3. Export/Translator: It refers to a flow where the data is transform in a translator wich result is export while a POST/UPDATE/DELETE petition to a API.
 
->> For more detail of how to do a basic integration go to ![Basic Cenit Integrations](See Cenit Basics integrations)
-
-
-
+>For more detail of how to do a basic integration go to [Basic Cenit Integrations Section](markdown.md) 
 ## Add New
 
 For creating a flow you must have in mind what events, translators, algorithms, and data will be related in a petition while a webhook/resource.
 Create a translator, involves 3 fundamental steps in the wizard form: “Select the translator”, “Select the webhook” and “Save and done”.
 
+>For view the generic elements in a form go to [Generic Form Actions Section](generic-action_form)
+
 <!-- Image create form 1 -->
-In each step you will fill new fields in the creation form and depending on that, existing mandatory fields, which if they are not predefined beforehand, you can have the option to create them in this same view with a pop-up window.
 
+The flow form is extensive, there are some specifications of the fields to fill out. The others fields as Webhook, Authorization and Connection role, are selection items, if doesn’t exist, you can create them. They appear if are necessary depending on the flow kind.
 
-Set `coverpage` to **true**, and create a `_coverpage.md`:
+    • Event: 
+      Here, you should put the event which you want work. If you select or create one of “Data Event” type, in the form will appear a new field: Source scope, and the field Source data type, will become as mandatory. It isn’t if the event is a Scheduler.
 
-```html
-<!-- index.html -->
+    • Translator(Required): 
+      Select or create the Transformation (Parser, Converter or Template). In the case of converters, only you need fill 2 steps to create the flows, the regards with webhook doesn’t fill.
 
-<script>
-  window.$docsify = {
-    coverpage: true
-  }
-</script>
-<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-```
+    • Before submit: 
+      Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list.
 
-```markdown
-<!-- _coverpage.md -->
+    • Discard events: 
+      It’s a check input, if checked, the events won't be triggered.
 
-![logo](_media/icon.svg)
+    • Active:
+      It’s a check input, it if isn’t checked, the flow will not active when the events or executions from the code call it. Another form of active or deactivate a flow, is through the list, with the Active Icon.
+           
+    • Auto retry:
+      This is a selection Item, its values are: manually or automatic.
 
-# docsify <small>3.5</small>
+    • Notify request:
+      This option, if is checked, allows that the flow notification of request flow will be stored in System notification list.
+    
+    • Notify response:
+      This option, if is checked, allows that the flow notification of response flow will be stored in System notification list.
 
-> A magical documentation site generator.
+    • After process callbacks:
+      Algorithms executed after flow processing, execution state is supplied as argument
 
-- Simple and lightweight (~21kB gzipped)
-- No statically built html files
-- Multiple themes
+>All algorithms involve in a flow should have as parameter the variable: task. For more information see: [Algorithm kinds](algorithms.md)
 
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#docsify)
-```
+Converter flow
+There may be flows that do not have an associated endpoint on which to perform an operation, there are flows in which you want to move data internally, these flows are the converter type, in which we will perform a set of actions based on information that already we have stored.
+To create this kind of flow, we create the flow following the steps mentioned above, we can assigned an event and so, but the Translator it must be of the converter type.
 
-!> A document site can have only one coverpage!
-
-## Custom background
-
-The background color is generated randomly by default. You can customize the background color or a background image:
-
-```markdown
-<!-- _coverpage.md -->
-
-# docsify <small>3.5</small>
-
-[GitHub](https://github.com/docsifyjs/docsify/)
-[Get Started](#quick-start)
-
-<!-- background image -->
-
-![](_media/bg.png)
-
-<!-- background color -->
-
-![color](#f0f0f0)
-```
-
-## Coverpage as homepage
-
-Normally, the coverpage and the homepage appear at the same time. Of course, you can also separate the coverpage by [onlyCover option](configuration.md#onlycover).
-
-## Multiple covers
-
-If your docs site is in more than one language, it may be useful to set multiple covers.
-
-For example, your docs structure is like this
-
-```text
-.
-└── docs
-    ├── README.md
-    ├── guide.md
-    ├── _coverpage.md
-    └── zh-cn
-        ├── README.md
-        └── guide.md
-        └── _coverpage.md
-```
-
-Now, you can set
-
-```js
-window.$docsify = {
-  coverpage: ['/', '/zh-cn/']
-};
-```
-
-Or a special file name
-
-```js
-window.$docsify = {
-  coverpage: {
-    '/': 'cover.md',
-    '/zh-cn/': 'cover.md'
-  }
-};
-```
