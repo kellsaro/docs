@@ -19,31 +19,34 @@ Create a translator, involves 3 fundamental steps in the wizard form: “Select 
 
 The flow form is extensive, there are some specifications of the fields to fill out. The others fields as Webhook, Authorization and Connection role, are selection items, if doesn’t exist, you can create them. They appear if are necessary depending on the flow kind.
 
-    • Event: 
-      Here, you should put the event which you want work. If you select or create one of “Data Event” type, in the form will appear a new field: Source scope, and the field Source data type, will become as mandatory. It isn’t if the event is a Scheduler.
+  • Event: 
+   Here, you should put the event which you want work. If you select or create one of “Data Event” type, in the form will appear a new field: Source scope, and the field Source data type, will become as mandatory. It isn’t if the event is a Scheduler.  
 
-    • Translator(Required): 
-      Select or create the Transformation (Parser, Converter or Template). In the case of converters, only you need fill 2 steps to create the flows, the regards with webhook doesn’t fill.
+  • Translator(Required): 
+    Select or create the Transformation (Parser, Converter or Template). In the case of converters, only you need fill 2 steps to create the flows, the regards with webhook doesn’t fill.
 
-    • Before submit: 
-      Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list.
+  • Before submit: 
+    Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list.
 
-    • Discard events: 
-      It’s a check input, if checked, the events won't be triggered.
+  • Discard events: 
+    It’s a check input, if checked, the events won't be triggered.
 
-    • Active:
-      It’s a check input, it if isn’t checked, the flow will not active when the events or executions from the code call it. Another form of active or deactivate a flow, is through the list, with the Active Icon.
+  • Active:
+    It’s a check input, it if isn’t checked, the flow will not active when the events or executions from the code call it. Another form of active or deactivate a flow, is through the list, with the Active Icon.
            
-    • Auto retry:
-      This is a selection Item, its values are: manually or automatic.
+  • Auto retry:
+    This is a selection Item, its values are: manually or automatic.
 
-    • Notify request:
-      This option, if is checked, allows that the flow notification of request flow will be stored in System notification list.
+  • Notify request:
+    This option, if is checked, allows that the flow notification of request flow will be stored in System notification list.
     
-    • Notify response:
-      This option, if is checked, allows that the flow notification of response flow will be stored in System notification list.
+  • Notify response:
+    This option, if is checked, allows that the flow notification of response flow will be stored in System notification list.
 
-    • After process callbacks:
-      Algorithms executed after flow processing, execution state is supplied as argument
+  • After process callbacks:
+    Algorithms executed after flow processing, execution state is supplied as argument
+
+  • Response Translator:
+    It defines a parser translator where you can handle the data response after a export(POST?UPDATE/DELETE) petition.
 
 >All algorithms involve in a flow should have as parameter the variable: task. For more information go to: [Algorithm kinds](algorithms.md)
