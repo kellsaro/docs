@@ -4,7 +4,7 @@ Flows define how Data is routed between endpoints and all integrations in order 
 
 In a integration generally you must have the need to create three kinds of integration that will depends of the translation kind that you select in the configuration flow. Depending on the translator or the flow kind, Cenit will require you the data to fill in the flow form. The flow types are:
   1. Parser/Import: It refers to Get petitions. The flow will do a Get request and the data will be obtained in the parser translator.
-  2. Converter: It refers to a transformation between two data in Cenit. This kind of flow don't do any request outside Cenit.
+  2. Converter: There may be flows that do not have an associated endpoint in its operation or don't request any petition outside Cenit, it refers to a transformation between two data in Cenit internally, in which we will perform a set of actions based on information that already we have stored in Cenit.
   3. Export/Translator: It refers to a flow where the data is transform in a translator wich result is export while a POST/UPDATE/DELETE petition to a API.
 
 >For more detail of how to do a basic integration go to [Basic Cenit Integrations Section](markdown.md) 
@@ -46,9 +46,4 @@ The flow form is extensive, there are some specifications of the fields to fill 
     • After process callbacks:
       Algorithms executed after flow processing, execution state is supplied as argument
 
->All algorithms involve in a flow should have as parameter the variable: task. For more information see: [Algorithm kinds](algorithms.md)
-
-Converter flow
-There may be flows that do not have an associated endpoint on which to perform an operation, there are flows in which you want to move data internally, these flows are the converter type, in which we will perform a set of actions based on information that already we have stored.
-To create this kind of flow, we create the flow following the steps mentioned above, we can assigned an event and so, but the Translator it must be of the converter type.
-
+>All algorithms involve in a flow should have as parameter the variable: task. For more information go to: [Algorithm kinds](algorithms.md)
