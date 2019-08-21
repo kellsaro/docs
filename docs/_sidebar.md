@@ -18,6 +18,7 @@
     - [Flows](flow.md)
     - [Email Channels](notification.md)
     - [Data Events](data_event.md)
+    - [Schedulers](scheduler.md)
   - [Transforms](plugins.md)
   - [Gatweay](quickstart.md)
   - [Compute](quickstart.md)
