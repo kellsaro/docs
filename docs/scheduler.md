@@ -1,4 +1,4 @@
-## Schedulers
+# Schedulers
 
 Schedulers are events triggered on a certain moment and can be optionally recurrent.
 

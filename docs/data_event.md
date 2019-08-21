@@ -19,9 +19,13 @@ For create one of them go to "Add new" option.
 The evaluations for the triggers are:
 
 - For all fields:
+
     • Is present: It’s used when the record already exists. For example, if we use “Is present” with create_at, the event will trigger when a new record already exists. If it is used in an update_at, the event will trigger when an update of an existing record is made.
+
     • Is blank: The event will be launched when the record exists and is blank.
+
     • Change: The event will be trigger when the record has some change. It may be that it is created from the beginning, or that it already exists.
+    
     • Present and Change: The event will be trigger when the record exists and change any value. It depends of the conditions created.
 
 In addition to these, also for differents kind of data there are:
