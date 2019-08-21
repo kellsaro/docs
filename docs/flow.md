@@ -13,9 +13,9 @@ In a integration generally you must have the need to create three kinds of integ
 For creating a flow you must have in mind what events, translators, algorithms, and data will be related in a petition while a webhook/resource.
 Create a translator, involves 3 fundamental steps in the wizard form: “Select the translator”, “Select the webhook” and “Save and done”.
 
->For view the generic elements in a form go to [Generic Form Actions Section](generic-action_form)
+>For view the generic elements in a form go to [Generic Form Actions Section](generic-action_form.md)
 
-<!-- Image create form 1 -->
+![Create Flow](https://user-images.githubusercontent.com/30662690/63459028-d9e2e000-c421-11e9-82c8-1ebfb5f2c61e.png)
 
 The flow form is extensive, there are some specifications of the fields to fill out. The others fields as Webhook, Authorization and Connection role, are selection items, if doesn’t exist, you can create them. They appear if are necessary depending on the flow kind.
 
