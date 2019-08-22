@@ -49,7 +49,7 @@ The flow form is extensive, there are some specifications of the fields to fill 
   • Response Translator:
     It defines a parser translator where you can handle the data response after a export(POST/UPDATE/DELETE) petition.
 
-> All algorithms involve in a flow structure should have as parameter the variable: task. For more information go to: [Algorithm kinds](algorithms.md)
+> All algorithms involve in a flow structure should have as parameter the variable: task. For more information go to: [Algorithm Section](algorithms.md)
 
 ## Flow tasks
 

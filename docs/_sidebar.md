@@ -22,6 +22,7 @@
   - [Transforms](plugins.md)
   - [Gatweay](quickstart.md)
   - [Compute](quickstart.md)
+    - [Algorithms](algorithms.md)
   - [Integratios](quickstart.md)
   - [Security](quickstart.md)
   - [Ecommerce Packege](quickstart.md)
