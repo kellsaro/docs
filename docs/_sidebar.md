@@ -1,11 +1,13 @@
 -  [Home](/)
+
 - Getting started
 
-  - [Quick start](quickstart.md)
-  - [Installation](installation.md)
+  - [Quick start](quickstart.md)  
   - [Dashboard](quickstart.md)
   - [Create a user](quickstart.md)  
   - [Full Panoramic](quickstart.md)
+
+- [Cenit Installation](installation.md)
 
 - Cenit Components
 
@@ -27,6 +29,11 @@
   - [Security](quickstart.md)
   - [Ecommerce Packege](quickstart.md)
 
+- Generic Elements
+  - [Notifications](notifications.md)
+  - [Generic Form Elements](generic_action_form.md)
+  - [Generic Actions](generic_actions.md)
+  
 - Integration's Guide
 
   - [Principal Concept](quickstart.md)
