@@ -16,8 +16,8 @@ The name of paranmeters besides the logical function of allowing you to recogniz
 
 In case of the algortihm be the type:
 
-    - before_submit: should have as required parameters the variables "options" and "task" in this order.
-    - after_calback: should have as required parameter the variable "task".
+- before_submit: should have as required parameters the variables "options" and "task" in this order.
+- after_calback: should have as required parameter the variable "task".
 
 
 ### Parameter's type
@@ -26,11 +26,11 @@ You can leave a parameter untyped, which means it will accept any value passed o
 
 Currently available types include:
 
-    - integer for integer numbers.
-    - number for floating point precision numbers.
-    - boolean for boolean true or false values.
-    - string for strings of characters.
-    - hash for dictionary-like objects holding a set of key: value pairs. Best to represent complex objects.
+- integer for integer numbers.
+- number for floating point precision numbers.
+- boolean for boolean true or false values.
+- string for strings of characters.
+- hash for dictionary-like objects holding a set of key: value pairs. Best to represent complex objects.
 
 ### Parameter's Many attr    
 
@@ -113,5 +113,14 @@ If the alrotihm has parameters, execute it with this way:
 > If you call an algorithm inside a translator or algorithm with the same namespace, you only can call it with the name:
 `create_image_url()` or `create_image_url([parameters])`
 
+## Algorithm notification
+
+Inside the algorithm code, you can write some notification points.
+
+This is the way:
+
+`Tenant.notify(message: "Something")`
+
+If you want to know the differents types of notifications, go to [Notifications Section](notifications.md)
 
 
