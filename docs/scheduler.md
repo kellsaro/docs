@@ -29,6 +29,8 @@ The schedulers Activated are observing when the condition are true to execute th
 
 ## Associate scheduler to a task
 
+You can associate schedulers to a flow or to an algorithm task.
+
 ### Flow task:
 
 If you want you flow be executed in a periodic time you should first process the flow:
