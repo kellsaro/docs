@@ -3,6 +3,7 @@
 The notification function could be call by task or Tenant object. 
 
 `task.notify(message: "Something")`
+
 `Tenant.notify(message: "Something")`
 
 > The `task.notify` way is used in the environment where the variable "task" is alive. These environments are in translators or in algortihms where the var "task" be a parameter.

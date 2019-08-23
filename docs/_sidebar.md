@@ -7,7 +7,8 @@
   - [Create a user](quickstart.md)  
   - [Full Panoramic](quickstart.md)
 
-- [Cenit Installation](installation.md)
+- Cenit Installation
+  - [Installation Guide](installation.md)
 
 - Cenit Components
 
@@ -21,7 +22,10 @@
     - [Email Channels](notification.md)
     - [Data Events](data_event.md)
     - [Schedulers](scheduler.md)
-  - [Transforms](plugins.md)
+  - [Transforms](transformation.md)
+    - [Template](template.md)
+    - [Converter](converter.md)
+    - [Parser](parser.md)
   - [Gatweay](quickstart.md)
   - [Compute](quickstart.md)
     - [Algorithms](algorithms.md)
@@ -33,7 +37,7 @@
   - [Notifications](notifications.md)
   - [Generic Form Elements](generic_action_form.md)
   - [Generic Actions](generic_actions.md)
-  
+
 - Integration's Guide
 
   - [Principal Concept](quickstart.md)

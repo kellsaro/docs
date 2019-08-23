@@ -57,7 +57,7 @@ A flow execution will always triggers a task. You can see the task associated to
 
 - http://cenit.io/execution
 - http://cenit.io/flow_execution
-- http://system_notification
+- http://cenit.io/system_notification
 
 > You can see more information about tasks in: Task Section
 
@@ -117,23 +117,33 @@ Sometimes you need to execute a flow in determined moment in an algorithm or tra
 
 - Execution of a flow.
 
-  `task = Cenit.namespace('Lazada').flow('Create Product').process(flow_data).task`
+  ```
+  execution = Cenit.namespace('Lazada').flow('Create Product').process(flow_data).task
+  ```
 
-  task: is the task execution object. 
+  execution: is the task execution object. 
 
 - Queuing an execution of a flow behind another task execution.
 
-  `task = Cenit.namespace('Lazada').flow('Create Product').join_process(flow_data, join_task).task`
+  ```
+  task = Cenit.namespace('Lazada').flow('Create Product').join_process(flow_data, join_task).task
+  ```
 
   join_task: task executed previously.
 
 - Parameters to pass into flow_data:
 
-  `flow_data = {
-    connection: Cenit.namespace('Lazada').connection('Conection'), 
+  ```
+  record = Cenit.namespace('Lazada').data_type('Product').where(name: "Axcta" ).first
+
+  cnx = Cenit.namespace('Lazada').connection('Conection')
+
+  flow_data = {
+    connection: cnx, 
     object_ids: [record.id],
-    template_parameters: { channel: channel_name, ecommerce_id: target_record.ecommerce_id },
-  }`
+    template_parameters: { channel: channel_name, ecommerce_id: record.ecommerce_id },
+  }
+  ```
 
   connection: this parameter is set if you want to change the connection with what the flow will be executed.
 
