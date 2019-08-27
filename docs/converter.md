@@ -12,7 +12,6 @@ Code example:
 
 ```
 sources.each do |source|
-  source_variants = JSON.parse(source['variants'].to_json)
     
   target = {
       'ecommerce_id' => source['product_id'],

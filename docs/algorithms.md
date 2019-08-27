@@ -2,15 +2,17 @@
 
 Algorithms are pieces of logic that you can choose to execute and chain in order to process data. They will be found into Compute/Algorithm Menu.
 
-## Algorithm's Name
+## Algorithm's attributes
+
+### Algorithm's Name
 
 Algorithm names must be valid method names and thus must start with a letter and not contain    white spaces or any special characters.
 
-## Algorithm's Parameter
+### Algorithm's Parameter
 
 Algorithms can have many parameters, each with their own individual fields.
 
-### Parameter's name
+#### Parameter's name
 
 The name of paranmeters besides the logical function of allowing you to recognize it on the administration interface, is also used as the name of the variable holding its value in the Algorithm’s code, so it must be a valid variable name.
 
@@ -20,7 +22,7 @@ In case of the algortihm be the type:
 - after_calback: should have as required parameter the variable "task".
 
 
-### Parameter's type
+#### Parameter's type
 
 You can leave a parameter untyped, which means it will accept any value passed on to it, or you can set a type for it in order to easily validate that the code receives what it expects.
 
@@ -32,25 +34,25 @@ Currently available types include:
 - string for strings of characters.
 - hash for dictionary-like objects holding a set of key: value pairs. Best to represent complex objects.
 
-### Parameter's Many attr    
+#### Parameter's Many attr    
 
 If checked the parameter will be treated as an array rather than a singular object.
 
-### Parameter's Required attr   
+#### Parameter's Required attr   
 
 If unchecked a default value must be provided.
 
-### Parameter's Default attr   
+#### Parameter's Default attr   
 
 Only available if the parameter is not required, this value will be used when no value is specified on execution.
 
 It is important to note that all required parameters must be declared before the optional ones.
 
-## Algorithm's Code
+### Algorithm's Code
 
 The actual code of the algorithm, must be written in Ruby, parameters can be accessed by their names.
 
-## Algorithm's Store Output
+### Algorithm's Store Output
 
 If checked Cenit will attempt to store the output of the algorithm on a DataType record (or records if the output is an array).
 
@@ -62,13 +64,17 @@ If checked Cenit will attempt to store the output of the algorithm on a DataType
 
     Only available if an Output DataType is selected for the output storage. This will prevent chaining further algorithm executions in the output cannot be validated against the chosen data type, otherwise, it will fail silently and allow any chaining to carry on.
 
-## Algorithm Excecution
+## Algorithm Excecution ways
 
 An algorithm can be executed in these ways:
 
 - Run Algorithm option.
 - Task algorithm scheduled.
 - Via code.
+- Before_submit field of a flow.
+- After_callback of a flow.
+- As an application action.
+
 
 ### Run Algorithm
 
@@ -113,7 +119,19 @@ If the alrotihm has parameters, execute it with this way:
 > If you call an algorithm inside a translator or algorithm with the same namespace, you only can call it with the name:
 `create_image_url()` or `create_image_url([parameters])`
 
-## Algorithm notification
+### Before_submit field of a flow
+
+This algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list. This algorithm must have the parameters: options and task, in this order. See more information on: [Add New flow](https://cenit-io.github.io/cenit_docs/#/flow?id=add-new)
+
+### After_callback of a flow
+
+Algorithms executed after flow processing, execution state is supplied as argument with the "task" parameter. See more information on: [Add New flow](https://cenit-io.github.io/cenit_docs/#/flow?id=add-new)
+
+### Application's action.
+
+This is the algorithm that the application will execute when its path is consulted. What this algorithm returned will be rendered to the application URL path. This algorithm must have as parameters: control and params. See more information about applications on: [Applications](application.md)
+
+## Algorithm notifications
 
 Inside the algorithm code, you can write some notification points.
 
@@ -122,5 +140,3 @@ This is the way:
 `Tenant.notify(message: "Something")`
 
 If you want to know the differents types of notifications, go to [Notifications Section](notifications.md)
-
-

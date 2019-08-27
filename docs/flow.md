@@ -26,7 +26,7 @@ The flow form is extensive, there are some specifications of the fields to fill 
     Select or create the Transformation (Parser, Converter or Template). In the case of converters, only you need fill 2 steps to create the flows, the regards with webhook doesn’t fill.
 
   • Before submit: 
-    Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list.
+    Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list. This algorithm must have the parameters: options and task, in this order.
 
   • Discard events: 
     It’s a check input, if checked, the events won't be triggered.
@@ -44,7 +44,7 @@ The flow form is extensive, there are some specifications of the fields to fill 
     This option, if is checked, allows that the flow notification of response flow will be stored in System notification list.
 
   • After process callbacks:
-    Algorithms executed after flow processing, execution state is supplied as argument
+    Algorithms executed after flow processing, execution state is supplied as argument with the "task" parameter.
 
   • Response Translator:
     It defines a parser translator where you can handle the data response after a export(POST/UPDATE/DELETE) petition.
