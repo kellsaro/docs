@@ -52,3 +52,4 @@ A transformation for bulkable JSON exporter can be written as following:
 ```
 sources.first.to_json
 ```
+> The code of a template is located into snippets. See more of this on: [Snippet section](snippets.md)

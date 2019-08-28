@@ -15,3 +15,5 @@ In it definition, the Target data type, defines the structure where the data wil
 ```
 
 > target_data_type instruction is equal to said for example: Cenit.namespace('Lazada').data_type('Product'). But how it is defined in the structure of the converter UI, Cenit facilities the access to data_type.
+
+> The code of a Parser is located into snippets. See more of this on: [Snippet section](snippets.md)

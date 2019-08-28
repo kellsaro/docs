@@ -52,6 +52,8 @@ It is important to note that all required parameters must be declared before the
 
 The actual code of the algorithm, must be written in Ruby, parameters can be accessed by their names.
 
+The code of an algortihm is located into snippets. See more of this on: [Snippet section](snippets.md)
+
 ### Algorithm's Store Output
 
 If checked Cenit will attempt to store the output of the algorithm on a DataType record (or records if the output is an array).
