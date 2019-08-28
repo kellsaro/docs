@@ -19,20 +19,20 @@
   - [Workflows](workflow.md)
     - [Notifications](notification.md)
     - [Flows](flow.md)
-    - [Email Channels](notification.md)
     - [Data Events](data_event.md)
     - [Schedulers](scheduler.md)
   - [Transforms](transformation.md)
     - [Template](template.md)
     - [Converter](converter.md)
     - [Parser](parser.md)
-  - [Gatweay](quickstart.md)
+  <!-- - [Gatweay](quickstart.md) -->
   - [Compute](compute.md)
     - [Algorithms](algorithms.md)
     - [Application](application.md)
-  - [Integratios](quickstart.md)
-  - [Security](quickstart.md)
-  - [Ecommerce Packege](quickstart.md)
+    - [Snippets](snippets.md)
+  - [Integratios](integration.md)
+  <!-- - [Security](quickstart.md) -->
+  <!-- - [Ecommerce Packege](quickstart.md) -->
 
 - Generic Elements
   - [Notifications](notifications.md)
