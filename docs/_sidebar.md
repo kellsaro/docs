@@ -1,11 +1,11 @@
 -  [Home](/)
 
-- Getting started
+<!-- - Getting started -->
 
-  - [Quick start](quickstart.md)  
-  - [Dashboard](quickstart.md)
-  - [Create a user](quickstart.md)  
-  - [Full Panoramic](quickstart.md)
+  <!-- - [Quick start](quickstart.md)   -->
+  <!-- - [Dashboard](quickstart.md) -->
+  <!-- - [Create a user](quickstart.md)   -->
+  <!-- - [Full Panoramic](quickstart.md) -->
 
 - Cenit Installation
   - [Installation Guide](installation.md)
@@ -41,15 +41,15 @@
   - [Generic Form Elements](generic_action_form.md)
   - [Generic Actions](generic_actions.md)
 
-- Integration's Guide
+<!-- - Integration's Guide -->
 
-  - [Principal Concept](quickstart.md)
-  - [Process Visualization](quickstart.md)
-  - [Elements](quickstart.md)
-  - [Examples](quickstart.md)
+  <!-- - [Principal Concept](quickstart.md) -->
+  <!-- - [Process Visualization](quickstart.md) -->
+  <!-- - [Elements](quickstart.md) -->
+  <!-- - [Examples](quickstart.md) -->
 
-- Cenit Products
+<!-- - Cenit Products -->
 
-- Cenit Core
+<!-- - Cenit Core -->
 
-- FAQ's
+<!-- - FAQ's -->
