@@ -72,13 +72,13 @@ And there you will see the content of the collection in a .json file that you ca
 
 ## Import a collection
 
-After have a collection file, exported previously, you have the possibility to Import it. It could be by "Import" or "Pull Import" actions.
+After having a collection file exported previously, you have the possibility to Import it. It could be by "Import" or "Pull Import" actions.
 
 ![import_collection](https://user-images.githubusercontent.com/30662690/63890250-8daf1700-c9b0-11e9-8867-f487a531a245.png)
 
 ### Import a .json collection file.
 
-An Import action will import a new collection and the content of this into your tenant. If a element of the collection that you want import already exists in the tenant, this action will overwrite it.
+An Import action will import a new collection and the content of this into your tenant. If an element of the collection that you want to import already exists in the tenant, this action will overwrite it.
 
 After clicked Import Action, you will see this form:
 
