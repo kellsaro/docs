@@ -31,6 +31,8 @@
     - [Application](application.md)
     - [Snippets](snippets.md)
   - [Integratios](integration.md)
+    - [Collections](collection.md)
+    - [Shared Collections](shared_collection.md)
   <!-- - [Security](quickstart.md) -->
   <!-- - [Ecommerce Packege](quickstart.md) -->
 
