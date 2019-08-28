@@ -27,7 +27,7 @@ Alternatively, you can create a custom markdown-based navigation file by setting
 
 <script>
   window.$docsify = {
-    loadNavbar: true
+    loadNavbar: false
   }
 </script>
 <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>

@@ -6,7 +6,7 @@ Algorithms are pieces of logic that you can choose to execute and chain in order
 
 ### Algorithm's Name
 
-Algorithm names must be valid method names and thus must start with a letter and not contain    white spaces or any special characters.
+Algorithm names must be valid method names and this must start with a letter and not contain white spaces or any special characters.
 
 ### Algorithm's Parameter
 
