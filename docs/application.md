@@ -10,7 +10,7 @@ Go to Compute Menu/Application, and there you must view the application's list.
 
 ![application](https://user-images.githubusercontent.com/30662690/63795201-6fbeb500-c8d1-11e9-992d-734d7c550f13.png)
 
-> In a same tenant. you could have many applications but with differents id and slugs.
+> In a same tenant you could have many applications but with differents id and slugs.
 
 ![application_new](https://user-images.githubusercontent.com/30662690/63795788-b1039480-c8d2-11e9-9170-ebd01563c8c0.png)
 
