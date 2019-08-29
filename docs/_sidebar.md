@@ -33,7 +33,8 @@
   - [Integratios](integration.md)
     - [Collections](collection.md)
     - [Shared Collections](shared_collection.md)
-  <!-- - [Security](quickstart.md) -->
+  - [Security](security.md)
+    - [Authorization Concepts](authorization.md)
   <!-- - [Ecommerce Packege](quickstart.md) -->
 
 - Generic Elements

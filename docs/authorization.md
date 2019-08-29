@@ -1,4 +1,4 @@
-# Authorization
+# Authorization Concepts
 
 Cenit access has been improved by the implementation of an OAuth 2.0 authorization protocol, more precisely, the implementation of an OAuth 2.0 Authorization Code Flow. Such authorization flow also complies with the OpenID Connect protocol, so it can be used to retrieve End-User’s identity information.
 
