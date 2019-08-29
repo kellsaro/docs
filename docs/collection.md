@@ -40,7 +40,12 @@ To share a collection go to, Actions Menu of the collection you want to share, a
 
 - Pull Parameters:
 
-    These are defined as generic parameters necessary to establish in a collection when it will be incorporated into another tenant while Pull action. These parameters could be set into template_parameters of connections or webhooks into the collection.
+    These are defined as generic parameters necessary to establish in a collection when it will be incorporated into another tenant while Pull action. 
+    These parameters could be set into:
+    - template_parameters of connections or webhooks into the collection.
+    - any object reference of elements in a collection.
+
+    The pull parameters are optional, and its values aren't shared in a collection, so, when the user does pull to a collection, the pull parameters values will be requested.
 
 - Run asynchronous:
 
