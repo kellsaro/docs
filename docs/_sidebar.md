@@ -35,12 +35,16 @@
     - [Shared Collections](shared_collection.md)
   - [Security](security.md)
     - [Authorization Concepts](authorization.md)
-  <!-- - [Ecommerce Packege](quickstart.md) -->
+    - [Authorization Clients](client.md)
+    - [Client Providers](provider.md)
+    - [Create OAuth 2.0 Authorization](auth_oauth_2.md)
+
+    <!-- - [Ecommerce Packege](quickstart.md) -->
 
 - Generic Elements
   - [Notifications](notifications.md)
   - [Generic Form Elements](generic_action_form.md)
-  - [Generic Actions](generic_actions.md)
+  
 
 <!-- - Integration's Guide -->
 
