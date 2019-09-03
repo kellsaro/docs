@@ -25,7 +25,9 @@
     - [Template](template.md)
     - [Converter](converter.md)
     - [Parser](parser.md)
-  <!-- - [Gatweay](quickstart.md) -->
+  - [Gatweay](gateway.md)
+    - [Connection](connection.md)
+    - [Webhook](webhook.md)
   - [Compute](compute.md)
     - [Algorithms](algorithms.md)
     - [Application](application.md)
