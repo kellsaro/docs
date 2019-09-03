@@ -13,3 +13,11 @@ Data manipulation can occurs in the following main scenarios:
 - Converting data already stored in Cenit: [Converter Translators](converter.md)
 
 - Exporting data outside Cenit: [Templates Translators](template.md)
+
+## How to run a tranlator via code
+
+If you need execute a translator via code, ou can run the follow syntaxis:
+
+`Cenit.namespace('A').translator('B').run({ data: data })`
+
+Where `{data: data}` is the hash where the client should get the parameters list what handle in the translator.

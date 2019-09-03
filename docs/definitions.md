@@ -55,6 +55,26 @@ Records methods:
 Data type methods:
 - In this box, the user could define algorithms linked to some attributes of the records created of the data type. Is like a method for an specific attribute, and it could be execute in a code of your integration.
 
+### How handle data_type via code
+
+Wherever you are in Cenit, you can call the data_type definition by way:
+
+`Cenit.namespace('A').data_type('B')`
+
+If you want access to a record, you can use:
+
+`object = Cenit.namespace('A').data_type('B').where(query).first`
+
+where `query` is a hash with parameters of a query, ex: `.where(name: 'photo', id: '123')`
+
+For obtain all record you can use:
+
+`objects = Cenit.namespace('A').data_type('B').where(query).all`
+
+To save a data_type:
+
+`Cenit.namespace('A').data_type('B').create_from_json!(data.to_json)`
+
 
 <!-- ### File Types -->
 <!-- ### Cenit Types -->
