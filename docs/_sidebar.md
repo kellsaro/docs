@@ -48,10 +48,10 @@
   - [Generic Form Elements](generic_action_form.md)
   
 
-<!-- - Integration's Guide -->
+- Integration's Guide
 
   <!-- - [Principal Concept](quickstart.md) -->
-  <!-- - [Process Visualization](quickstart.md) -->
+  - [Process Visualization](generic_view.md)
   <!-- - [Elements](quickstart.md) -->
   <!-- - [Examples](quickstart.md) -->
 
