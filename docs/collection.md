@@ -2,7 +2,7 @@
 
 A collection is a way to organize a group of elements of an integration that you want save in your tenant, and later, export, import or share it to another account or tenant.
 
-Also, is a way to gorup elements to share them in a same operation.
+Also, is a way to group elements to share them in a same operation.
 
 To go the Collection Section, go to Integration Menu/ Collections.
 
@@ -57,13 +57,13 @@ When you shared the collection you can see it in the [Shared Collection](shared_
 
 Sometimes you could have the needed to export your collection without shared to another account or tenant.
 
-For that needed, in Cenit exists the "Export" action.
+To do this, in Cenit exists the "Export" action.
 
 ![export_collection](https://user-images.githubusercontent.com/30662690/63887953-e29c5e80-c9ab-11e9-8973-7b08c3ecb28f.png)
 
 ### Export collection to JSON format
 
-After select the Expor option, select in the next form the translator: `Basic | Share JSON [Shared]`
+After select the Export option, select in the next form the translator: `Basic | Share JSON [Shared]`
 
 ![export_collection_one](https://user-images.githubusercontent.com/30662690/63888245-85ed7380-c9ac-11e9-8593-839cfdbfec28.png)
 
@@ -77,7 +77,7 @@ And there you will see the content of the collection in a .json file that you ca
 
 ## Import a collection
 
-After having a collection file exported previously, you have the possibility to Import it. It could be by "Import" or "Pull Import" actions.
+After having a collection file exported, you will have the option to Import it. It could be the name of "Import" or "Pull Import" actions.
 
 ![import_collection](https://user-images.githubusercontent.com/30662690/63890250-8daf1700-c9b0-11e9-8867-f487a531a245.png)
 
@@ -118,7 +118,7 @@ After that, you can confirm the operation and see the elements to create or upda
 
 ![pull_option_four](https://user-images.githubusercontent.com/30662690/63892885-c05c0e00-c9b6-11e9-8e31-fa45dae0a009.png)
 
-If you are agree click the Pull button, if not, cancel the task and the collection won't be pulled.
+If you are agree click the Pull button,if not, cancel the task and the collection won't be pulled.
 
 
 
