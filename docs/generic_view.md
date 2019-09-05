@@ -1,6 +1,6 @@
 # Generic Cenit Process
 
-Cenit is an open iPaSS system where, among others functionalities, the most used is to make flows integrations.
+Cenit is an open iPaaS system where, among others functionalities, the most used is to make flows integrations.
 
 The following description shows a basic idea of integration in Cenit.
 
