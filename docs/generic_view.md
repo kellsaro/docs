@@ -4,11 +4,13 @@ Cenit is an open iPaSS system where, among others functionalities, the most used
 
 The following description shows a basic idea of integration in Cenit.
 
-![integration](https://user-images.githubusercontent.com/30662690/64353019-03c40700-cfcb-11e9-96b2-e4e20ca03c5d.jpg)
+![integration_five](https://user-images.githubusercontent.com/30662690/64360139-d03ba980-cfd7-11e9-9ddd-3ad6c7af744f.jpg)
 
 In a basic integration where you need send data from a system A to a system B, you should visualize your scenario in the follow way:
 
 You need obtain data to a system A, the data will be saved in Cenit, where you will storage the information needed. Later, the data A, will be mapped to B, and in B you will storage the information needed send to system B.
+
+For implement that integration in Cenit, each Process defined, is usually traduced in Cenit as a flow.
 
 Before make any process of flows, you should be the API's connection or authorization done in Cenit to have the possibility to make requests.
 
@@ -16,7 +18,9 @@ Also, be defined the [operations/webhooks](gateway.md) neded for each endpoint.
 
 > See more information about that in: [Gateway Menu/Connections](connection.md) and [Authorizations](authorization.md)
 
-## Flow A
+
+
+## Process A
 
 In general: 
 
@@ -27,7 +31,7 @@ As the image indicates, this flow will need the creation of the elemets describe
 
 See more information how create a flow on [Flow Section](flow.md)
 
-## Flow B
+## Process B
 
 In general: 
 
@@ -36,7 +40,7 @@ In general:
 See more information how create a flow on [Flow Section](flow.md)
 
 
-## Flow C
+## Process C
 
 In general: 
 
