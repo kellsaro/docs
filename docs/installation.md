@@ -13,7 +13,7 @@
 * Deploy it with: `git push heroku master`
 * Open in the browser: `heroku open`
 
-##  With Docker compose.
+##  With Docker compose
 
 After [install docker compose](https://docs.docker.com/compose/install)
 
@@ -35,7 +35,7 @@ and visit the browser: `localhost:3000`
 * RabbitMQ for internal pipeline messages.
 
 
-# Create your own Cenit IO local server.
+# Create your own Cenit IO local server
 
 Clone the [GitHub cenit-io/cenit repo](https://github.com/cenit-io/cenit) and move to the **cenit** folder.
 
