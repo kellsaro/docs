@@ -8,4 +8,4 @@ For each submenu on each data type, you can see the objects linked. To link a ne
 
 ![New Object](https://user-images.githubusercontent.com/30662690/63295930-e3424000-c29b-11e9-8bba-77142fe0c812.jpg "New Object")
 
-There you only must selet the data type that you want to list, and you will see the link in the left menu under Object Menu.
+Once there, select the data type that you want to list, and you will see the link in the left menu under Object Menu.
