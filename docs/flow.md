@@ -32,7 +32,7 @@ The flow form is extensive, there are some specifications of the fields to fill 
   • Before submit: 
     Is the algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list. This algorithm must have the parameters: options and task, in this order.
 
-  > See how to create an Algorithms on [Algorithm Section](algorithms.md), and about Before Submit [here](https://cenit-io.github.io/cenit_docs/#/algorithms?id=before_submit-field-of-a-flow)
+  > See how to create an Algorithms on [Algorithm Section](algorithms.md), and about Before Submit [here](https://cenit-io.github.io/docs/#/algorithms?id=before_submit-field-of-a-flow)
   
   • Discard events: 
     It’s a check input, if checked, the events of another flows won't be triggered.

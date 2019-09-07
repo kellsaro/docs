@@ -7,11 +7,11 @@
     "email": "cinwell.li@gmail.com",
     "url": "https://github.com/QingWei-Li"
   },
-  "homepage": "https://sandryaw06.github.io/cenit_docs",
+  "homepage": "https://sandryaw06.github.io/docs",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandryaw06/cenit_docs.git"
+    "url": "git+https://github.com/sandryaw06/docs.git"
   },
   "main": "lib/docsify.js",
   "unpkg": "lib/docsify.min.js",

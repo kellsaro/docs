@@ -123,11 +123,11 @@ If the alrotihm has parameters, execute it with this way:
 
 ### Before_submit field of a flow
 
-This algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list. This algorithm must have the parameters: options and task, in this order. See more information on: [Add New flow](https://cenit-io.github.io/cenit_docs/#/flow?id=add-new)
+This algorithm that you want to be executed before the translator of the flow is executed. It’s listed in the algorithms list. This algorithm must have the parameters: options and task, in this order. See more information on: [Add New flow](https://cenit-io.github.io/docs/#/flow?id=add-new)
 
 ### After_callback of a flow
 
-Algorithms executed after flow processing, execution state is supplied as argument with the "task" parameter. See more information on: [Add New flow](https://cenit-io.github.io/cenit_docs/#/flow?id=add-new)
+Algorithms executed after flow processing, execution state is supplied as argument with the "task" parameter. See more information on: [Add New flow](https://cenit-io.github.io/docs/#/flow?id=add-new)
 
 ### Application's action.
 
