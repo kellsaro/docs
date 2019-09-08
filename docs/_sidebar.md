@@ -7,12 +7,13 @@
   <!-- - [Create a user](quickstart.md)   -->
   <!-- - [Full Panoramic](quickstart.md) -->
 
-- Cenit Installation
+- Installation
   - [Installation Guide](installation.md)
+  - [Kubenetes](kubernetes.md)
 
 - [Basic Integration](generic_view.md)
 
-- Cenit Components
+- Components
 
   - [Data](data.md)
     - [Definitions](definitions.md)
