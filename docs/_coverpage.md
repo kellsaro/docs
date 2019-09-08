@@ -1,6 +1,6 @@
 ![logo](_media/logo.png)
 
-# Cenit io
+# Cenit IO
 
 > The perfect tool to help you out.
 

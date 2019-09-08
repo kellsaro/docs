@@ -10,11 +10,9 @@
 
 <!-- [![Follow on Twitter][twitterFollow-image]][twitterFollow-link] -->
 
-* [Cenit IO](https://cenit.io)  [(https://cenit.io)](https://cenit.io)
-* [Join our Slack][join-slack-link]
-[(cenitio.slack.com)][join-slack-link]
+* [Cenit IO](https://cenit.io)
+* [Join our Slack](https://cenitio.slack.com)
 * [Shared Collections](https://cenit.io/setup~shared_collection)
-* [Wiki](https://github.com/cenit-io/cenit/wiki)
 * support@cenit.io
 
 [Cenit](https://cenit.io) is a 100% open integration Platform (iPaaS) that's modern, powerful, yet hackable to the core, ready to use in the cloud https://cenit.io or on-premises. It is designed to solve unique integrations needs, orchestrate data flows that may involve types of protocols and data formats, and provide API management capabilities. All of which can support wide range of integration use cases. Is particular valuable to embrace a pervasive integration approach.
@@ -28,10 +26,6 @@ Many are familiar with services such as Zapier and IFTTT, which addresses common
 The proliferation and growing importance of decentralized integration tasks driven by business and IT trends are forcing to rethink organizational models and technology platforms to an approach to pervasive integration.
 
 None of the vendor leaders in the market really offers a completely open and transparent solution, with the freedom to use, customize or modified without restriction, we believe that is one of the keys to a wide adoption, and relevant to making the decision to use on-premise.
-
-**Mission**
-
-Enable everyone to contribute and benefit from the use of a modern Integration Platform (iPaaS).
 
 **Value proposition**
 
@@ -50,7 +44,6 @@ Cenit makes possible that benefits of a modern iPaaS should be accessible to the
 **Goals**
 
 * Be the most open integration platform on the market.
-* Become one of the most popular iPaaS solutions.
 * Be a viable option for enterprises.
 
 
@@ -63,7 +56,6 @@ Cenit makes possible that benefits of a modern iPaaS should be accessible to the
 * **Data integration**: Data validation, transformation, mapping, and data quality. Exchange support for multiple formats (JSON, XML, ASN), standards (EDIFACT, X12, UBL) and protocol connectors (HTTP(S), FTP, SFTP, SCP).
 
 * **Third party service integrations**: Directory for OpenAPI Spec (Swagger) and Shared Collections - social feature to share integration settings - to connect services as ERP / Fulfilment / Marketing / Communication.
-
 
 **Data Pipelines between APIs**
 
@@ -88,7 +80,7 @@ An example of integration data flow (Fancy <=> Shipstation):
 
 * After the shipments are updated in Cenit, is trigger a Flow to send the tracking update to Fancy.
 
-###Contributing
+### Contributing
 
 Cenit IO is an open source project and we encourage contributions.
 
@@ -108,4 +100,4 @@ Here are some ways **you** can contribute:
 
 Since the challenge is great, we have to build the solution in community. We believe that a successful open source project provides confidence, facilitates creating a broad community, where everyone can share answers to questions, suggestions, and improvements to the platform.
 
-We encourage the community to join the initiative and contribute to the dissemination of the project, sharing integration experiences, collaborating in the detection and resolution of errors or contributing to the development of the project. We hope that those who join us enjoy the collaborative work and the challenge of achieving something innovative and useful that can potentially serve many others.
+We encourage the community to join the initiative and contribute to the dissemination of the project, sharing integration experiences, collaborating in the detection and resolution of errors or contributing to the development of the project. We hope that those who join us enjoy the collaborative work and the challenge of achieving something innovative and useful that can potentially serve to many others.

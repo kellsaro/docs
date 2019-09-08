@@ -1,15 +1,18 @@
 -  [Home](/)
 
-
 - Installation
-  - [Installation Guide](installation.md)
+  - [Ubuntu server](ubuntu_server.md)
+  - [Docker compose](docker_compose.md)
   - [Kubenetes](kubernetes.md)
 
 - Tutorials
   - [Basic Integration](generic_view.md)
+  - [Import collection](import_collection.md)
+  - [Import a cross collection from local](importing_cross_collection_on_cenit_local.md)
+  - [Record creation](record_reation.md)
+  - [User creation via API](user_creation_by_api.md)
 
 - Components
-
   - [Data](data.md)
     - [Definitions](definitions.md)
     - [Files](file.md)
@@ -23,7 +26,7 @@
     - [Template](template.md)
     - [Converter](converter.md)
     - [Parser](parser.md)
-  - [Gatweay](gateway.md)
+  - [Gateway](gateway.md)
     - [Connection](connection.md)
     - [Webhook](webhook.md)
   - [Compute](compute.md)
@@ -43,8 +46,3 @@
   - [Notifications](notifications.md)
   - [Generic Form Elements](generic_action_form.md)
   
-<!-- - Cenit Products -->
-
-<!-- - Cenit Core -->
-
-<!-- - FAQ's -->
