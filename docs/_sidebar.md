@@ -1,17 +1,12 @@
 -  [Home](/)
 
-<!-- - Getting started -->
-
-  <!-- - [Quick start](quickstart.md)   -->
-  <!-- - [Dashboard](quickstart.md) -->
-  <!-- - [Create a user](quickstart.md)   -->
-  <!-- - [Full Panoramic](quickstart.md) -->
 
 - Installation
   - [Installation Guide](installation.md)
   - [Kubenetes](kubernetes.md)
 
-- [Basic Integration](generic_view.md)
+- Tutorials
+  - [Basic Integration](generic_view.md)
 
 - Components
 
@@ -44,20 +39,10 @@
     - [Client Providers](provider.md)
     - [Create OAuth 2.0 Authorization](auth_oauth_2.md)
 
-    <!-- - [Ecommerce Packege](quickstart.md) -->
-
 - Generic Elements
   - [Notifications](notifications.md)
   - [Generic Form Elements](generic_action_form.md)
   
-
-<!-- - Integration's Guide -->
-
-  <!-- - [Principal Concept](quickstart.md) -->
-  <!-- - [Process Visualization](quickstart.md) -->
-  <!-- - [Elements](quickstart.md) -->
-  <!-- - [Examples](quickstart.md) -->
-
 <!-- - Cenit Products -->
 
 <!-- - Cenit Core -->
