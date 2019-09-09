@@ -1,4 +1,4 @@
-# Ubuntu server 10.04
+# Ubuntu server 18.04
 
 ## Frameworks and Tools
 
