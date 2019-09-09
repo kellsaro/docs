@@ -9,7 +9,7 @@
   - [Basic Integration](generic_view.md)
   - [Import collection](import_collection.md)
   - [Import a cross collection from local](importing_cross_collection_on_cenit_local.md)
-  - [Record creation](record_reation.md)
+  - [Record creation](record_creation.md)
   - [User creation via API](user_creation_by_api.md)
 
 - Components
