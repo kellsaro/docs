@@ -1,4 +1,4 @@
-#Records creation on Cenit
+#  Records creation on Cenit
 
 Cenit records belongs to some data type and there are several ways a
 record can be created.
