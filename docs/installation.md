@@ -13,7 +13,7 @@
 * Deploy it with: `git push heroku master`
 * Open in the browser: `heroku open`
 
-##  With Docker compose
+## With Docker compose
 
 After [install docker compose](https://docs.docker.com/compose/install)
 
@@ -23,6 +23,7 @@ Then run docker compose:
 docker-compose build
 docker-compose up
 ```
+
 and visit the browser: `localhost:3000`
 
 This is our actual docker-compose.yml file:
