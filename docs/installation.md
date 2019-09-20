@@ -84,6 +84,7 @@ production:
        connect_timeout: 15
 ...
 ```
+>Note: You need configure a secure connection for connect with MongoDB
 
 >config/mongoid.yml using local database
 
