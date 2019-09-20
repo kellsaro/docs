@@ -13,7 +13,7 @@
 * Deploy it with: `git push heroku master`
 * Open in the browser: `heroku open`
 
-##  With Docker compose
+## With Docker compose
 
 After [install docker compose](https://docs.docker.com/compose/install)
 
@@ -26,7 +26,102 @@ docker-compose up
 
 and visit the browser: `localhost:3000`
 
-# Frameworks and Tools
+This is our actual docker-compose.yml file:
+
+```yaml
+version: '3.7'
+
+volumes:
+  redis-data: {}
+
+services:
+  cenit:
+    environment:
+      - ENABLE_RERECAPTCHA=false
+      - RABBITMQ_BIGWIG_TX_URL=amqp://cenit_rabbit:cenit_rabbit@rabbitmq/cenit_rabbit_vhost
+      - UNICORN_WORKERS=5
+      - MAXIMUM_UNICORN_CONSUMERS=3
+      - REDIS_HOST=redis
+    build: .
+    ports:
+      - "3000:3000"
+    depends_on:
+      - rabbitmq
+      - redis
+    command: ["foreman", "start", "-f", "Procfile"]
+
+  rabbitmq:
+    image: rabbitmq:management
+    ports:
+      - "15672:15672"
+      - "5672:5672"
+    environment:
+      RABBITMQ_DEFAULT_PASS: cenit_rabbit
+      RABBITMQ_DEFAULT_USER: cenit_rabbit
+      RABBITMQ_DEFAULT_VHOST: cenit_rabbit_vhost
+    labels:
+        NAME: "rabbitmq-server"
+
+  redis:
+    image: redis
+    volumes:
+      - redis-data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+```
+
+Our Cenit app need a MongoDB conection, this conection is declared in config/mongoid.yml file, and you can use with environment variable MONGODB_URI and put it in dokcer-compose.yml file. Otherwise if you want to use a local MongoDB you need to change this file and add some environment variables to the docker-compose.yml:
+
+>config/mongoid.yml using external database
+
+```yaml
+...
+production:
+  clients:
+    default:
+     uri: <%= ENV['MONGODB_URI'] %>
+
+     options:
+       connect_timeout: 15
+...
+```
+>Note: You need configure a secure connection for connect with MongoDB
+
+>config/mongoid.yml using local database
+
+```yaml
+...
+production:
+  clients:
+    default:
+      database: <%= ENV['DB_PROD'] || 'cenit_prod' %>
+      hosts:
+        - <%= ENV['DB_PORT'] || 'localhost:27017' %>
+...
+```
+
+If you want to use a local data store you need to add a Mongo docker image to docker-compose.yml file:
+
+```yaml
+volumes:
+  mongodb-data: {}
+.
+.
+.
+services:
+  cenit:
+    environment:
+      - DB_PORT=mongodb
+      - DB_PROD='cenit_prod'
+.
+.
+.
+mongodb:
+    image: mongo:3.2
+    volumes:
+      - mongodb-data:/data/db
+```
+
+## Frameworks and Tools
 
 * Ruby on Rails
 * MongoDB
@@ -35,7 +130,7 @@ and visit the browser: `localhost:3000`
 * RabbitMQ for internal pipeline messages.
 
 
-# Create your own Cenit IO local server
+## Create your own Cenit IO local server
 
 Clone the [GitHub cenit-io/cenit repo](https://github.com/cenit-io/cenit) and move to the **cenit** folder.
 
@@ -103,7 +198,7 @@ It uses Figaro gem to manage app configuration using ENV. Any of this variable i
 
 Then add to `config/application.yml` app configuration as reference review `config/application.example.yml`  
 
-# Dependencies
+## Dependencies
 
 Before generating your application, you will need:
 
@@ -113,7 +208,7 @@ Before generating your application, you will need:
 * A working installation of [RabbitMQ](http://www.rabbitmq.com)
 
 
-## Installing MongoDB
+### Installing MongoDB
 
 If you don't have MongoDB installed on your computer, you'll need to install it and set it up to be always running on
 your computer (run at launch).
@@ -139,7 +234,7 @@ gem 'mongoid', github: 'mongoid/mongoid'
 gem 'bson_ext', '~> 1.8.6'
 ```
 
-## Installing RabbitMQ
+### Installing RabbitMQ
 
 The [RabbitMQ](http://www.rabbitmq.com) website has a good [installation guide](http://www.rabbitmq.com/download.html)
 that addresses many operating systems. On Mac OS X, the fastest way to install RabbitMQ is with
@@ -167,9 +262,9 @@ Note: The RabbitMQ packages that ship with Ubuntu versions earlier than 11.10 ar
 Bunny 0.9.0 and later versions (you will need at least RabbitMQ v2.0 to use with this guide).
 ```
 
-# How to install on Ubuntu server 16.04
+## How to install on Ubuntu server 16.04
 
-## Update OS
+### Update OS
 
 ```
 sudo apt update
@@ -178,13 +273,13 @@ sudo apt autoremove
 reboot
 ```
 
-## Install additional required packages
+### Install additional required packages
 
 ```
 sudo apt install mongodb rabbitmq-server zlib1g-dev build-essential libssl-dev libreadline-dev libyaml-dev libsqlite3-dev sqlite3 libxml2-dev libxslt1-dev libcurl4-openssl-dev python-software-properties libffi-dev nodejs git imagemagick libmagickwand-dev
 ```
 
-## Install Ruby 2.5.5 with rbenv  (alternative RVM)
+### Install Ruby 2.5.5 with rbenv  (alternative RVM)
 
 ```
 git clone https://github.com/rbenv/rbenv.git ~/.rbenv
@@ -199,7 +294,7 @@ rbenv global 2.5.5
 exec $SHELL
 ```
 
-## Confirm Ruby version
+### Confirm Ruby version
 
 ```
 ruby -v
@@ -207,7 +302,7 @@ gem install bundler
 exec $SHELL
 ```
 
-## Install Cenit
+### Install Cenit
 
 ```
 git clone https://github.com/cenit-io/cenit.git
@@ -227,13 +322,13 @@ Update development branch
 git pull origin develop
 ```
 
-## Install Cenit requirements
+### Install Cenit requirements
 
 ```
 bundle install
 ```
 
-## Create Cenit admin user and run Cenit
+### Create Cenit admin user and run Cenit
 
 ```
 exec $SHELL
@@ -241,7 +336,7 @@ rake admin:create
 rails s -p 3000 -b # The IP address of Ubuntu machine
 ```
 
-## Importing first cross collection on Cenit local:
+### Importing first cross collection on Cenit local:
 
 Once you have Cenit running in local you can start importing collections.
 
