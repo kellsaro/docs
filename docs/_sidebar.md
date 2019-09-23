@@ -45,4 +45,7 @@
 - Generic Elements
   - [Notifications](notifications.md)
   - [Generic Form Elements](generic_action_form.md)
+
+- Cenit FAQ's
+  - [Integration's FAQ](integrations_faqs.md)
   
