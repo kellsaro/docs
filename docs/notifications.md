@@ -27,3 +27,20 @@ Optionally, you can define the type of notification:
 `Tenant.notify(message: "Something", type: "warning")`
 
 ![notification_warning](https://user-images.githubusercontent.com/30662690/63546825-b0e14e80-c4f8-11e9-9269-4d3cfd117eaa.png)
+
+## How get an attachment in a notification
+
+If you want trigger a notification with a file, you can do this:
+
+`Tenant.notify({ message: "message", attachment: attachment })
+`
+
+Where attachment is the file:
+
+```
+attachment = {
+    filename: 'backtrace.txt',
+    contentType: 'plain/text',
+    body: "this is the message"
+  }
+```

@@ -31,3 +31,6 @@ Error source handling translation of records of type 'Shopify | Product [My Tena
 No Method Error: undefined method join_process for nil:NilClass: undefined method join_process' for nil:NilClass
 `
 - In this case, the user was trying to execute a flow, that doesn't exist. So, the method join_process isn't valid.
+
+
+## E
