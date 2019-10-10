@@ -210,3 +210,75 @@ Valid access tokens can be used to access the Cenit API by including the Authori
 `Bearer ntM5zxdfzEo8CZzN7BxiQwEyNAUwxq-ppxxLCVJGfxaicT2HsZot7E2bPGJ5`
 
 If the access token expires then the client should get a new one, either by starting a new authorization code flow or by making a token request to the token endpoint using a refresh token previously obtained.
+
+## Handle an authorization via code.
+
+### New Authorization
+
+If you want to create an authorization into a snippet(code of algorithm or translator), you can do it follow this way:
+
+>This example is using an authorization created previously. We can use it as base, copy its properties, and customize it into a new authorization. You must have in mind that the authorization base has a client and provider that will be created in the new authorization too, but also you can change them too into the hash properties of the new authorization.
+
+```
+base_authorization = Cenit.namespace(:Test).authorization(:base)
+dt_auth = base_authorization.try(:class).data_type
+
+auth = base_authorization.to_hash.deep_symbolize_keys
+
+auth[:namespace] = 'Test'
+auth[:name] = 'test_auth'
+auth[:template_parameters] = [{ key: 'shop', value: '123'}]
+
+dt_auth.create_from_json!(new_auth.to_json, primary_field: %w(namespace name))
+```
+
+or 
+
+```
+base_authorization = Cenit.namespace(:Test).authorization(:base)
+dt_auth = base_authorization.try(:class).data_type
+
+auth = base_authorization.to_hash.deep_symbolize_keys
+
+auth.merge!(
+  namespace: 'Test',
+  name: 'test_auth',
+  template_parameters: [{ key: 'shop', value: '123'}]
+)
+
+dt_auth.create_from_json!(new_auth.to_json, primary_field: %w(namespace name))
+```
+
+## Assign authorization to a connection
+
+A connection could be editable to have different authorization depending on the scenario where you need it.
+
+```
+auth = Cenit.namespace('A').authorization('name_auth')
+connection = Cenit.namespace('A').connection('name_connection')
+connection.authorization = auth
+connection.save
+```
+
+## To know if an auth is authorized via code
+
+```
+auth = Cenit.namespace('A').authorization('name_auth')
+auth.authorized?
+```
+
+## Unauthorize an authorization via code
+
+```
+auth = Cenit.namespace('A').authorization('name_auth')
+auth.cancel!
+```
+
+## Delete an authorization via code
+
+```
+auth = Cenit.namespace('A').authorization('name_auth')
+auth.delete
+```
+
+
